@@ -164,4 +164,4 @@ A automação emprega múltiplos agentes de IA especializados em diferentes tare
 
 *   **Planilha de Controle**: [Link para a Planilha](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0)
 *   **Repositório no Github**: [Link para o Repositório](https://github.com/liviatagliari/pareto_content_spark_originais)
-*   **Documentação Técnica do Fluxo**: [Fluxo N8N no Github](https://github.com/liviatagliari/pareto_content_spark_originais/blob/main/Fluxo_N8N.md)
+*   **Documentação Técnica do Fluxo**: [Fluxo N8N no Github](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/Fluxo_N8N.md)
