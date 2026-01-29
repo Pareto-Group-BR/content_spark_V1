@@ -181,11 +181,11 @@ Este agente de IA funciona como uma ferramenta de reengenharia de conteúdo, cuj
 ### Prompt
 
 ```
-# **Objetivo:**
-Automatizar o processo de separação de texto e imagem. Você receberá uma imagem contendo texto e outros elementos de design. Sua tarefa é criar um código HTML que represente essa imagem, identificando especialmente o TEXTO PRINCIPAL, SUBTEXTO DE LEGENDA, MARCA, PRODUTO, gerar uma NOVA IMAGEM DE BASE muito similar à original em termos de design e layout (removendo apenas textos e mantendo todos os outros elementos visuais), e então produzir um código HTML que recoloque o texto sobre essa nova imagem de base, preservando a aparência geral da original.
+#**Objetivo:** Automatizar o processo de separação de texto e imagem. Você receberá uma imagem contendo texto e outros elementos de design. Sua tarefa é criar um código HTML que represente essa imagem, identificando especialmente o TEXTO PRINCIPAL, SUBTEXTO DE LEGENDA, MARCA, PRODUTO, gerar uma NOVA IMAGEM DE BASE muito similar à original em termos de design e layout (removendo apenas textos e mantendo todos os outros elementos visuais), e então produzir um código HTML que recoloque o texto sobre essa nova imagem de base, preservando a aparência geral da original.
 
-# **Entrada:**
+#**Entrada:**
 *   'Imagem de origem': está em sua base de conhecimento (RAG memory).
+
 
 **Passos a Seguir:**
 
@@ -196,10 +196,11 @@ Automatizar o processo de separação de texto e imagem. Você receberá uma ima
     *   **IGNORE e NUNCA inclua no HTML**: logomarcas, nomes de perfis do Instagram (ex: "@motivation"), URLs, elementos de branding, ícones com texto, setas de navegação, pontos de paginação, watermarks, ou qualquer outro elemento textual que NÃO seja o texto principal ou subtexto de legenda.
     *   Analise em detalhes as propriedades do texto principal e subtexto:
         *   **Fonte:** Identifique a exatamente a fonte com base no Google Fonts (ex: serif, Montserrat, Arial), peso (ex: bold, italic) e tamanho.
-        *   **Cor:** Identifique a cor do texto em hexadecimais (ex: #FFFFFF, #000000, #0000FF).
+        *   **Cor:** Identifique a cor do EXATA do texto em hexadecimais (ex: #FFFFFF, #000000, #0000FF).
         *   **Capitalização:** Identifique se a frase está em letras maiúsculas, minúsculas, só a primeira em maiúscula.
         *   **Posição:** Determine a localização exata do texto na imagem (ex: 20 px abaixo da margem superior e 30 px à direita das laterais; se está centralizada, ou mais na parte lateral).
         *   **Estilo Adicional:** Verifique se há sombra de texto (`text-shadow`) ou outros efeitos.
+
 
 2.  **Criação da Nova Imagem de Base:**
 
@@ -226,7 +227,8 @@ Automatizar o processo de separação de texto e imagem. Você receberá uma ima
         - Manter logotipos visuais se forem apenas símbolos/ícones (mas remover qualquer texto dentro deles)
         - Manter a proporção 4:5, 1080x1350px.
         - Manter o fundo da imagem inalterado se ele for um fundo monocromático, sólido.
-        - Remover todo o texto orignial, mas manter o fundo do texto principal, se houver.
+        - Preserve o fundo original completamente, incluindo o gradiente que está atrás do texto. Use inpainting para preencher a área do texto removido.
+        - Não crie uma nova imagem de fundo. Siga as regras acima rigorosamente.
 
     *   Armazene a URL da imagem recém-gerada (`generated_background_url`).
 
@@ -241,7 +243,7 @@ Automatizar o processo de separação de texto e imagem. Você receberá uma ima
     *   Use CSS para estilizar cada texto de forma que corresponda exatamente às propriedades analisadas no Passo 1 (fonte exata, cor, tamanho, peso, posição e sombra). Use técnicas como Flexbox ou posicionamento absoluto para replicar a posição original de cada texto.
     *   Não recrie nenhum outro elemento textual além do texto principal e subtexto de legenda.
 
-# **Saída Esperada:**
+#**Saída Esperada:**
 *   Um único bloco de código contendo o HTML e o CSS (incorporado na tag `<style>`) que renderiza o resultado final. O código deve ser autônomo e não requerer arquivos externos além da `generated_background_url`.
 ```
 
