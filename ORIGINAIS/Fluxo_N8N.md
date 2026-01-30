@@ -33,7 +33,8 @@ Este fluxo de trabalho automatizado em **N8N** foi projetado para criar conteúd
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                  GATILHO / AGENDAMENTO                          │
-│    Programação Diária à meia noite (dias específicos, a escolha do usuário)                  │
+│    Programação Diária à meia noite (dias específicos,           │
+│                                     a escolha do usuário)       │
 └────┬───────────────────────────────────────────────────────────┘
      │
      └──► [FASE 1] Coleta de Dados e Posts
