@@ -118,6 +118,8 @@ O fluxo de trabalho no N8N é ativado por um **Webhook** e segue as seguintes et
 18. **`Atualizar planilha`**: Atualiza a linha original na planilha com o link da pasta do Google Drive e a legenda do post.
 19. **`Send a message1`** e **`Enviar Mensagem Gchat`**: Envia notificações por e-mail e Google Chat informando sobre a conclusão.
 
+Confira mais detalhes sobre o Fluxo do N8N [nesta outra página da documentação.](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Fluxo_N8N.md)
+
 <br>
 
 ### **6. Agentes de IA Utilizados**
@@ -135,3 +137,4 @@ Confira mais dedatlhes sobre os agents de IA na [seção específica aqui na doc
 ### **7. Links e Recursos**
 *   **Planilha de Controle:** [`[Pareto AI Content Hub] Registro dos Conteúdos Criados - Pareto`](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=200832694#gid=200832694)
 *   **Repositório das Artes:** Google Drive (As pastas são criadas dinamicamente e os links inseridos na planilha)
+*   **Arquivo JSON com o Fluxo N8N:** 
