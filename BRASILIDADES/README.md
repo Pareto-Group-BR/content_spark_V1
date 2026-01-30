@@ -28,7 +28,7 @@ O **Agente Criador de Conteúdo** foi desenvolvido para automatizar a criação 
 
 O agente entrega conteúdo pronto para publicação, incluindo imagens e legendas traduzidas e adaptadas para o português, com potencial de viralização e engajamento. A seleção do post de referência se baseia na taxa de engajamento (engajamentos/seguidores) dos posts dos últimos 3 dias para cada perfil de referência listado. Depois de selecionado o post, segue para a adaptação para o português e registro na planilha de conteúdos criados;
 
-*OBS: O fluxo NÃO inclui a publicação automática no Instagram,esse processo exige a validação manual do gestor do Instagram.*
+*OBS: O fluxo NÃO inclui a publicação automática no Instagram, esse processo exige a validação manual do gestor do Instagram.*
 
 ## 2. Estratégia Principal
 
@@ -58,9 +58,11 @@ Também é necessário liberar as permissões do AppScript, o que pode ser feito
 
 A planilha é a interface principal para configurar, operar e visualizar os resultados da ferramenta.
 
-*   **Abas de Resultados:** Nela você encontrará os conteúdos gerados, separados nas abas: `Conteúdo original`, `Conteúdo baseado nas referências` e `Sugestão de temas`.
+*   **Abas de Resultados:** Nela você encontrará os conteúdos gerados, separados nas abas: `ORIGINAL`, `BRASILIDADES` e `SUGESTÃO`. Para o fluxo atual, concentre-se na aba BRASILIDADES.
 *   **Configuração de Perfis:** A lista de perfis do Instagram a serem monitorados fica na aba `perfis de referência`.
 *   **Controles Manuais:** A planilha contém botões para controlar as automações, localizados no menu superior **"Pareto AI"**.
+
+> **Importante:** Não altere ou inclua as colunas da planilha pois isso vai prejudicar a execução do fluxo.
 
 ### Modos de Operação
 
