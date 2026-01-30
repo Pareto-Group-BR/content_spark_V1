@@ -461,6 +461,7 @@ Para erros identificados na automação, favor criar uma Issue associada a este 
 ---
 
 ## 7. Arquivo do Fluxo
+> *Obs: Lembre-se de criar as credenciais anteriormente no N8N, isso facilitará na importação do JSON, permitindo que ele seja preenchido com elas.*
 
 Baixe o arquivo JSON completo aqui:  
 https://cdn.tess.im/assets/uploads/6fc9363a-bd09-4825-9148-cf438927bd58.json
