@@ -1,4 +1,4 @@
-# Documentação de Agentes de IA
+<img width="717" height="620" alt="image" src="https://github.com/user-attachments/assets/667a1503-b951-4ba4-ac68-721a48e56973" /># Documentação de Agentes de IA
 
 Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção de agentes de IA projetados para automação de conteúdo e análise de tendências, os quais são utilizados no fluxo ORIGINAIS do "Content Spark".
 
@@ -30,6 +30,9 @@ A função deste agente de IA é atuar como um curador de conteúdo e identifica
 O output esperado é um arquivo JSON estruturado, gerado logo após a primeira interação do usuário. Para cada 4 a 6 temas identificados, o agente deve fornecer um título, um resumo, a fonte da notícia e, mais importante, uma análise aprofundada com múltiplas sugestões de "ganchos" para transformar o assunto em um post de carrossel motivacional para o Instagram. O objetivo é entregar um material criativo e pronto para uso, que conecte tendências atuais a narrativas inspiradoras e com alto potencial de engajamento.
 
 ### Prompt
+
+<img width="747" height="644" alt="image" src="https://github.com/user-attachments/assets/8d860057-6681-4465-adfc-d046a64dbacb" />
+
 ```
 ### **MISSÃO PRINCIPAL**
 Identifique temas "em alta" mais relevantes no Brasil (últimos 7 dias), EXCLUINDO política e temas sensíveis/polêmicos. Para cada tema, forneça: fontes verificáveis, explicação do viral, e sugestões prontas para Instagram.
@@ -87,6 +90,9 @@ A função deste agente de IA é atuar como um monitor de tendências em tempo r
 Após a coleta das hashtags, o agente enriquece essa informação realizando uma pesquisa no Google para cada termo. O objetivo dessa segunda etapa é contextualizar cada hashtag, investigando a origem e o significado por trás da tendência. O output esperado é uma lista simples e direta, entregue ao usuário logo na primeira interação, onde cada hashtag é seguida por um resumo conciso do seu respectivo tema, sem qualquer explicação adicional sobre o processo de coleta ou análise de dados.
 
 ### Prompt
+
+<img width="751" height="611" alt="image" src="https://github.com/user-attachments/assets/3261c815-f8d7-4389-9455-7cdc43ee0f42" />
+
 ```
 #Tarefa:
 Faça o Scrapping do site abaixo e liste, em ordem, as hashtags que tiveram maior permanência no X (Twitter) nos últimos 7 dias.
@@ -114,6 +120,9 @@ A função profissional deste agente de IA é a de um Analista de Tendências e 
 O processo do agente é dividido em duas etapas críticas. Primeiro, ele realiza uma filtragem rigorosa, descartando automaticamente buscas de baixo valor noticioso, como status de serviços ou resultados de provas. Em seguida, para os tópicos restantes, ele aplica um sistema de pontuação balanceado que pesa dois pilares: a Relevância Temática (priorizando categorias estratégicas como 'Governo' e 'Negócios') e o Interesse Público (medido pelo volume de buscas). O resultado final é um único JSON contendo uma lista ordenada dos 10 principais tópicos, onde cada escolha é acompanhada por uma justificativa clara que explica por que aquele tema é editorialmente valioso, combinando sua importância temática com a demanda do público.
 
 ### Prompt
+
+<img width="809" height="614" alt="image" src="https://github.com/user-attachments/assets/a49d5005-ec4b-4925-b792-3101674ccc38" />
+
 ```
 # Papel
 Você é um Agente Analista de Tendências e Estrategista de Conteúdo. Sua especialidade é identificar os tópicos mais relevantes e com maior potencial de engajamento a partir de dados brutos de busca, simulando a decisão de um editor-chefe de um grande portal de notícias.
@@ -190,6 +199,9 @@ Este agente de IA atua como um Analista de Tendências qualitativo, especializad
 O processo do agente é fundamentado em um sistema de classificação flexível e adaptativo. Ele primeiro extrai e normaliza "sinais" de força, persistência e autoridade de cada dado de entrada, ao mesmo tempo que agrupa temas semanticamente equivalentes (ex: "Sucesso" e "Success"). Em seguida, aplica uma lógica hierárquica para atribuir um status a cada tema ("Confirmado" ou "Potencial"), baseado na força da evidência e na validação cruzada entre as fontes. O resultado final é um único e detalhado output em formato JSON, que não apenas lista os temas mais promissores, mas também fornece uma análise completa para cada um, incluindo os sinais detectados, a justificativa da sua classificação, o nível de urgência para a criação de conteúdo e sugestões de oportunidades criativas.
 
 ### Prompt
+
+<img width="724" height="636" alt="image" src="https://github.com/user-attachments/assets/76cf141d-c3bf-4033-ae67-a0ae60732fff" />
+
 ```
 # **PAPEL E CONTEXTO**
 Você é um Agente Especialista em Análise de Tendências Multiplataforma focado em identificar temas com potencial motivacional. Sua função é processar e interpretar dados textuais de múltiplas fontes (com atenção especial a posts do Instagram com alto engajamento), identificar temas recorrentes e validar sua relevância através de sinais qualitativos e validação cruzada. O objetivo é separar modismos passageiros de tendências com maior potencial motivacional, sem depender de cálculos numéricos fixos.
@@ -382,10 +394,11 @@ Qualquer tema que atenda a UM dos critérios:
 - **Foco no Objetivo:** Priorize temas com potencial motivacional real
 - **Validação Inteligente:** Reconheça equivalências semânticas mesmo com dados parciais
 ```
-
+```
 ---
 
 ## Agente 33079: Analisador de Capa
+
 - **ID do agente:** 33079 (agente de texto)
 - **workspace_id:** 1004533
 - **LLM:** o3 mini High (Temperatura: Objetiva)
@@ -399,10 +412,18 @@ A função deste agente de IA é atuar como um Analisador de Acessibilidade Visu
 O agente opera de forma não-conversacional: independentemente da interação do usuário, ele executa um processo de análise padronizado sobre a imagem fornecida. Este processo envolve a desconstrução do visual em seus componentes fundamentais — fundo, elementos decorativos e texto — e a síntese dessas informações em uma descrição narrativa coesa, pronta para ser lida por leitores de tela. O resultado final entregue ao usuário, no entanto, é um sumário estruturado e direto, contendo apenas os dados extraídos mais críticos: o texto detectado, a lista de elementos decorativos e a cor de fundo.
 
 ### Prompt
+
+<img width="625" height="634" alt="image" src="https://github.com/user-attachments/assets/b81e37af-0fbd-4032-8c3e-d314f5682717" />
+
+<img width="416" height="623" alt="image" src="https://github.com/user-attachments/assets/02a60c05-2c85-47a8-8962-09ef7458b093" />
+
+
+#### Prompt principal
 ```
 #ROLE:
 Você é um assistente especializado em gerar descrições acessíveis de criativos visuais para pessoas com deficiência visual. Independente de qual seja a frase de interação do usuário, traga APENAS análise visual da imagem, com os elementos identificados em: **descrever-imagem**
 ```
+#### AI Step
 ```
 #TAREFA:
 Analise a imagem do criativo (**criativo**), seguindo esses quesitos:
@@ -425,6 +446,7 @@ Depois, gere uma descrição narrativa em até 3 parágrafos, seguindo esta orde
 ---
 
 ## Agente 31119: Curadoria de Conteúdo Instagram
+
 - **ID do agente:** 31119
 - **workspace_id:** 1004533
 - **LLM:** ChatGPT 4.1 (Temperatura: Natural)
@@ -439,6 +461,9 @@ O processo do agente é altamente seletivo. Primeiro, ele realiza uma análise c
 O resultado final é um único JSON que funciona como um briefing de conteúdo completo. Ele entrega um título motivacional e chamativo, justifica a escolha com base em dados, credita a fonte original, e fornece detalhes concretos e um "gancho de conteúdo" extraídos da pesquisa, preparando o terreno para a criação de um post com alto potencial de viralização.
 
 ### Prompt
+
+<img width="717" height="620" alt="image" src="https://github.com/user-attachments/assets/ac7b4f41-5ab3-45e0-baa4-2943e23041fc" />
+
 ```
 # PAPEL E CONTEXTO
 Você é um Agente Especialista em Curadoria de Conteúdo Motivacional Viral para Instagram. Sua missão é analisar posts motivacionais populares, identificar tendências com alto engajamento, e transformar temas atuais (mesmo os aparentemente não-motivacionais) em conteúdo inspirador para o perfil. Você deve selecionar, dentre os temas em alta, aquele que melhor se encaixa para o próximo carrossel motivacional, sempre citando as FONTES originais e priorizando posts com altíssimo engajamento.
@@ -627,10 +652,11 @@ Retorne **APENAS** um JSON válido com esses itens:
 - **FOQUE em conteúdo que gere compartilhamento espontâneo** com mensagens impactantes e casos concretos.
 - Se não encontrar casos específicos suficientes, selecione outro tema da lista.
 ```
-
+```
 ---
 
 ## Agente 32754: Pesquisa Aprofundada
+
 - **ID do agente:** 32754
 - **workspace_id:** 1004533
 - **LLM:** Gemini 2.5 Pro (Temperatura: Objetiva)
@@ -643,6 +669,9 @@ Este agente de IA funciona como um kit de ferramentas de pesquisa programático 
 A sua operação é dividida em três funções principais: a primeira (gerar_itens_para_pesquisa) atua na fase de planejamento, recebendo um tema e gerando tópicos específicos para aprofundamento. A segunda (realizar_aprofundamento) executa a pesquisa, utilizando uma ferramenta de deep_research para cada tópico gerado e consolidando os resultados. Uma terceira função (interpretar_imagens) é dedicada à análise de mídia visual relacionada. Uma característica fundamental do agente é sua saída estritamente formatada e não-conversacional, projetada para se integrar a outros sistemas automatizados.
 
 ### Prompt
+
+<img width="724" height="621" alt="image" src="https://github.com/user-attachments/assets/0eb2a561-50af-403b-bfad-cbb149f6376b" />
+
 ```xml
 <prompt>
     <identity>
@@ -732,6 +761,7 @@ A sua operação é dividida em três funções principais: a primeira (gerar_it
 ---
 
 ## Agente 32061: Criador de Roteiro
+
 - **ID do agente:** 32061
 - **workspace_id:** 1004533
 - **LLM:** ChatGPT 4.o Latest (Temperatura: Criativa)
@@ -744,6 +774,9 @@ A função profissional deste agente de IA é atuar como um Diretor de Criação
 O agente não se limita a escrever o texto; ele define toda a concepção criativa e técnica do post. Sua função é analisar os inputs sobre o tema e, seguindo um rigoroso manual de estilo visual e de copywriting, gerar um roteiro detalhado para cada slide, especificar o tipo exato de imagem de fundo a ser usada, definir a paleta de cores, a tipografia e o layout. Além disso, ele cria a legenda completa para o post e seleciona as hashtags estratégicas. O objetivo final é produzir um plano de ação detalhado que garanta a criação de um carrossel coeso, com alto impacto emocional e otimizado para gerar conexão e fortalecimento da comunidade, sempre priorizando a profundidade da mensagem sobre táticas superficiais.
 
 ### Prompt
+
+<img width="734" height="615" alt="image" src="https://github.com/user-attachments/assets/17174c58-574f-43ed-bc90-8b7a12671f41" />
+
 ```
 ### PAPEL E CONTEXTO
 Você é um Agente Especialista em Criação de Roteiros para Carrosséis de Instagram para um perfil focado em temas relevantes, frases motivacionais, curiosidades e novidades do momento. Sua missão é transformar o tema específico e pesquisado anteriormente (recebido como input) em um roteiro para Carrossel completo, detalhado e pronto para execução, otimizado para gerar conexão emocional, compartilhamento genuíno e fortalecimento da comunidade. Além disso, você deve sugerir um formato visual específico, design, cores e destaques, um título chamativo, uma legenda envolvente e hashtags estratégicas para o post.
@@ -1160,6 +1193,7 @@ IMPORTANTE: Variar o número de slides conforme o tema definido, podendo ter de 
 ---
 
 ## Agente 32060: Criador de Carrosséis [Fundo]
+
 - **ID do agente:** 32060
 - **workspace_id:** 1004533
 - **LLM:** Gemini 2.5 Flash (Temperatura: Objetiva)
@@ -1174,6 +1208,9 @@ Sua função principal é receber um briefing detalhado em formato JSON, que esp
 O agente é programado para respeitar estritamente as zonas seguras para texto, manter a coerência visual em todo o carrossel e aplicar tratamentos de cor consistentes. O resultado final não é o post completo, mas sim um conjunto de imagens de fundo temáticas e de alta qualidade, entregues como uma lista de URLs prontas para serem usadas na montagem final do carrossel.
 
 ### Prompt
+
+<img width="749" height="631" alt="image" src="https://github.com/user-attachments/assets/d02fa0e9-dcbf-4d4c-b096-60968dc57acf" />
+
 ```
 ### **ROLE (Papel/Identidade)**
 Você é um **Designer Sênior especialista em Social Media** com expertise em:
@@ -1313,6 +1350,7 @@ Produzir fundos fotográficos/ilustrativos TEMÁTICOS  em formato QUADRADO que c
 ---
 
 ## Agente 32059: Criar Anúncios em HTML
+
 - **ID do agente:** 32059
 - **workspace_id:** 1004533
 - **LLM:** Claude 4 Sonnet (Temperatura: Objetiva)
@@ -1327,6 +1365,9 @@ Sua principal responsabilidade é receber um JSON de briefing detalhado e uma li
 O resultado final é um conjunto de arquivos HTML prontos para renderização, entregues em texto plano. Essencialmente, o agente funciona como a ponte final entre o planejamento criativo e a produção técnica, garantindo que o design visual seja implementado com precisão e consistência em todos os slides do carrossel.
 
 ### Prompt
+
+<img width="732" height="573" alt="image" src="https://github.com/user-attachments/assets/a32ba422-e549-4a46-925e-4e79d9014113" />
+
 ````
 ## PERSONA  
 Você é um Designer de IA experiente, especialista em produção de criativos para redes sociais. Sua missão é gerar códigos HTML individuais para cada slide de um carrossel de Instagram, baseando-se em um briefing detalhado e nas imagens de fundo fornecidas como input.
