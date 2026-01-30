@@ -500,7 +500,7 @@ Este fluxo integra os seguintes agentes de IA da plataforma Tess:
 
 | Agente | ID | Fase | Função | Entrada | Saída |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Pesquisa Aprofundada - Gerar Temas** | XXXXX | 2 | Gera itens pesquisáveis sobre um tema | Tema, motivo, explicação | Lista de temas pesquisáveis |
+| **Pesquisa Aprofundada - Gerar Temas** | 32754 | 2 | Gera itens pesquisáveis sobre um tema | Tema, motivo, explicação | Lista de temas pesquisáveis |
 | **Pesquisa Aprofundada - Aprofundar** | `32754` | 2 | Realiza pesquisa detalhada sobre os temas | ID da resposta anterior | Pesquisa aprofundada em texto |
 | **Criador de Roteiro de Post Instagram** | `32061` | 3 | Estrutura o conteúdo em formato de carrossel | Tema + pesquisa | JSON com roteiro (textos, dimensões, diretrizes) |
 | **Agente Criador Carrosséis [FUNDO]** | `32060` | 4 | Gera imagens de fundo para cada slide | Roteiro do carrossel | URLs de imagens (1080x1080px) |
