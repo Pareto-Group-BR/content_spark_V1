@@ -137,4 +137,4 @@ Confira mais dedatlhes sobre os agents de IA na [seção específica aqui na doc
 ### **7. Links e Recursos**
 *   **Planilha de Controle:** [`[Pareto AI Content Hub] Registro dos Conteúdos Criados - Pareto`](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=200832694#gid=200832694)
 *   **Repositório das Artes:** Google Drive (As pastas são criadas dinamicamente e os links inseridos na planilha)
-*   **Arquivo JSON com o Fluxo N8N:** 
+*   **Arquivo JSON com o Fluxo N8N:** [Arquivo JSON com o fluxo SUGESTÕES](https://cdn.tess.im/assets/uploads/a28b15f4-b907-4c13-959a-73a303b206c2.json?_gl=1*oiy62f*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjIyNDgwMTQ1My4xNzY5ODA1MjY4LjE3Njk4MDg3NjY.*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3Njk4MDA1NjAkbzYkZzEkdDE3Njk4MDg3NjYkajYwJGwwJGgw*_ga_9D17W435GL*czE3Njk4MDA1NjAkbzI2JGcxJHQxNzY5ODA4NzY2JGo2MCRsMCRoMA..)
