@@ -95,6 +95,9 @@ graph TD
 
 Esta fase inicial é responsável por acionar o fluxo e buscar os dados de entrada da planilha.
 
+<img width="504" height="393" alt="image" src="https://github.com/user-attachments/assets/e7bf3367-e76f-472d-be7a-dce5c906031f" />
+
+
 #### **Nó 1: `Webhook`**
 *   **Tipo:** `n8n-nodes-base.webhook`
 *   **Descrição:** Ponto de entrada da automação. Aguarda uma requisição `POST` disparada por um gatilho na planilha do Google Sheets, indicando que uma nova sugestão de tema foi adicionada.
@@ -129,6 +132,9 @@ Esta fase inicial é responsável por acionar o fluxo e buscar os dados de entra
 ### FASE 2: Pesquisa Aprofundada
 
 Nesta fase, um agente de IA realiza uma pesquisa aprofundada sobre o tema proposto para enriquecer o contexto.
+
+<img width="919" height="389" alt="image" src="https://github.com/user-attachments/assets/09911f86-8288-4ae9-9aa2-592f8f9c7ea6" />
+
 
 #### **Nó 4: `Pré Pesquisa Aprofundada1`**
 *   **Tipo:** `n8n-nodes-base.code`
@@ -198,6 +204,9 @@ Nesta fase, um agente de IA realiza uma pesquisa aprofundada sobre o tema propos
 
 Nesta fase, o agente de IA transforma a pesquisa em um roteiro estruturado para o carrossel do Instagram.
 
+<img width="1022" height="416" alt="image" src="https://github.com/user-attachments/assets/90fcc7b9-db7f-4138-9f95-4007066c3e2d" />
+
+
 #### **Nó 9: `Pós Pesquisa Aprofundada`**
 *   **Tipo:** `n8n-nodes-base.code`
 *   **Descrição:** Formata o resultado da pesquisa e o tema em um payload estruturado para o agente de roteiros.
@@ -256,6 +265,9 @@ Nesta fase, o agente de IA transforma a pesquisa em um roteiro estruturado para 
 ### FASE 4: Geração Visual
 
 Nesta fase, dois agentes de IA trabalham em paralelo conceitual para gerar imagens de fundo e montar os slides em HTML.
+
+<img width="1270" height="298" alt="image" src="https://github.com/user-attachments/assets/4a24383e-f68e-4269-a23a-bbe46c3e15d9" />
+
 
 #### **Nó 13: `Pós criação de roteiro`**
 *   **Tipo:** `n8n-nodes-base.code`
@@ -436,6 +448,9 @@ Nesta fase, os arquivos HTML são convertidos em imagens PNG e salvos no Google 
 ### FASE 6: Atualização e Notificação
 
 Nesta fase final, a planilha é atualizada com os resultados e notificações são enviadas aos stakeholders.
+
+<img width="757" height="453" alt="image" src="https://github.com/user-attachments/assets/7eec7c8f-7c72-4a6f-8455-6e6cd26b5574" />
+
 
 #### **Nó 29: `Atualizar planilha`**
 *   **Tipo:** `n8n-nodes-base.googleSheets`
