@@ -797,7 +797,7 @@ O 'Tema Escolhido' terá uma estrutura similar a essa:
   "content_hook": "string",          
   "oportunidades": "string",          
 }
-```
+
 
 2) 'PESQUISA APROFUNDADA SOBRE O TEMA': **pesquisa-sobre-o-tema**
 
