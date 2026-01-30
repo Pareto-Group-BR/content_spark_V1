@@ -87,6 +87,9 @@ A seguir, detalhamos cada nó do fluxo de automação, organizados de acordo com
 
 ### **FASE 1: Coleta de Dados e Posts**
 
+<img width="1057" height="395" alt="image" src="https://github.com/user-attachments/assets/9edcbad7-e7e6-42f8-b7c7-ab64898d4fde" />
+
+
 Nesta fase inicial, o fluxo é acionado e executa coletas de dados em paralelo de múltiplas fontes: agentes TESS para tendências e hashtags, SerpAPI para tendências do Google e Apify para coletar posts recentes do Instagram.
 
 *   **1.1. Gatilho por Agendamento**
@@ -163,6 +166,10 @@ Com os dados brutos coletados, esta fase foca em limpar, filtrar, unificar e pre
 
 Nesta fase, agentes de IA analisam os dados consolidados para identificar padrões, selecionar um tema principal e aprofundar a pesquisa sobre ele.
 
+<img width="855" height="221" alt="image" src="https://github.com/user-attachments/assets/9cb4e0ad-80ff-4f55-a99b-29515629fb56" />
+
+<img width="1069" height="367" alt="image" src="https://github.com/user-attachments/assets/786d200e-8b5b-4d6c-99e3-09e7bcb04451" />
+
 *   **3.1. Identificação de Tendências Relevantes (TESS)**
     *   **Tipo**: HTTP Request (POST)
     *   **Descrição**: Envia o JSON consolidado para o agente TESS (`31104`), que identifica os padrões e sugere temas potenciais.
@@ -186,6 +193,8 @@ Nesta fase, agentes de IA analisam os dados consolidados para identificar padrõ
 ### **FASE 4: Criação de Conteúdo**
 
 Com um tema validado e pesquisado, o foco se volta para a geração do conteúdo em si: roteiro, legendas e os elementos visuais em formato HTML.
+
+<img width="1235" height="208" alt="image" src="https://github.com/user-attachments/assets/25d7d13b-56e5-458e-8bc2-04bd56c367d6" />
 
 *   **4.1. Criação do Roteiro do Post (TESS)**
     *   **Tipo**: HTTP Request (POST)
@@ -229,6 +238,8 @@ Esta fase transforma o código HTML gerado em arquivos de imagem, faz o download
 
 A fase final é responsável por registrar o trabalho concluído em uma planilha e notificar as partes interessadas.
 
+<img width="700" height="261" alt="image" src="https://github.com/user-attachments/assets/5217eae1-fc01-4451-9be9-8b6c8fc5e9f0" />
+
 *   **6.1. Preparação dos Dados para Registro**
     *   **Tipo**: Code Node
     *   **Função**: Extrai os dados finais do conteúdo (tema, motivo da escolha, legenda) e o link da pasta do Google Drive para registrar na planilha.
@@ -246,7 +257,6 @@ A fase final é responsável por registrar o trabalho concluído em uma planilha
     *   **Tipo**: HTTP Request (POST)
     *   **Função**: Envia uma mensagem em formato de "card" para um espaço específico no Google Chat, com as mesmas informações e links do e-mail, permitindo uma notificação rápida e integrada.
 
----
 
 ---
 
