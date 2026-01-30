@@ -56,7 +56,7 @@ Também é necessário liberar as permissões do AppScript, o que pode ser feito
 #### **A Planilha de Controle: O Centro de Comando**
 A planilha é a interface principal para operar o fluxo e visualizar os resultados.
 
-*   **Abas de Resultados:** Nela você encontrará os conteúdos gerados, separados nas abas: `SUGESTÕES`, `BRASILIDADES` e `SUGESTÃO`. Para o fluxo atual, concentre-se na aba ORIGINAIS. Lá, você irá inserir o tema desejado, o motivo da escolha, uma explicação e um link de referência (opcional). Quando o Carrossel for criado, as artes e texto serão adicionados nesta mesma linha da planilha, nas colunas à direita.
+*   **Abas de Resultados:** Nela você encontrará os conteúdos gerados, separados nas abas: `SUGESTÕES`, `BRASILIDADES` e `SUGESTÃO`. Para o fluxo atual, concentre-se na aba SUGESTÕES. Lá, você irá inserir o tema desejado, o motivo da escolha, uma explicação e um link de referência (opcional). Quando o Carrossel for criado, as artes e texto serão adicionados nesta mesma linha da planilha, nas colunas à direita.
 *   **Config**: Contém configurações técnicas da automação. **Não altere esta aba** sem orientação.
 *   **Controles Manuais:** A planilha contém botões para controlar as automações, localizados no menu superior **"Pareto AI"**.
 
@@ -75,8 +75,10 @@ A execução do fluxo de sugestões é acionada **manualmente** ao fornecer um t
     *   `Explicacao do Tema`
     *   `Referência (opcional)`
 3.  **Acione a Automação:** A automação é acionada por um webhook que detecta a nova linha preenchida.   Para isso, selecione o menu: selecione `Pareto AI` -> `ORIGINAIS` -> `Executar fluxo`.
-4.   **Aguarde:** Uma mensagem de aviso informará que o fluxo foi iniciado (ele poderá levar de 20 a 25 minutos). Você poderá fechar o pop up (inclusive, a planilha pode ser fechada sem nenhum problema);
-5.  **Verifique o Resultado:** Após a execução (que pode levar alguns minutos), o conteúdo gerado aparecerá nas colunas **`Artes`** (com o link para a pasta no Google Drive) e **`Legenda`**. A coluna "Post sugerido?" será atualizada para `true`.
+   <img width="631" height="200" alt="image" src="https://github.com/user-attachments/assets/658c4548-056e-4884-8b54-fd6e2b4af812" />
+
+5.   **Aguarde:** Uma mensagem de aviso informará que o fluxo foi iniciado (ele poderá levar de 20 a 25 minutos). Você poderá fechar o pop up (inclusive, a planilha pode ser fechada sem nenhum problema);
+6.  **Verifique o Resultado:** Após a execução (que pode levar alguns minutos), o conteúdo gerado aparecerá nas colunas **`Artes`** (com o link para a pasta no Google Drive) e **`Legenda`**. A coluna "Post sugerido?" será atualizada para `true`.
 
 #### **Solução de Problemas (Troubleshooting)**
 *   **A automação não iniciou?** Verifique se as colunas `Tema`, `Motivo da Escolha` e `Explicacao do Tema` foram preenchidas corretamente na planilha. Certifique-se também de que a coluna "Post sugerido?" está como `false`.
