@@ -68,7 +68,7 @@ A planilha é a interface principal para configurar, operar e visualizar os resu
 
 #### Execução Automatizada (Agendada)
 A ferramenta possui um fluxo que roda automaticamente para garantir um fornecimento constante de conteúdo novo, baseado no melhor post dos perfis de referência.
-*   **Frequência:** O fluxo roda à meia-noite nos dias que forem selecionados pelo usuário na planilha. ELe poderá selecionar quantos quiser via menu da planilha: **Segunda, Terça,Quarta, Quinta, Sábado e Domingo**.
+*   **Frequência:** O fluxo roda à meia-noite nos dias que forem selecionados pelo usuário na planilha. É possível selecionar quantos quiser via menu da planilha: **Segunda, Terça,Quarta, Quinta, Sábado e Domingo**.
 
 #### Execução Manual via Menu sob Demanda
 Para buscar posts de referência e gerar um conteúdo imediatamente, sem repetir o perfil anterior.
