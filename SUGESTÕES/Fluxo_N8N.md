@@ -507,3 +507,11 @@ O fluxo segue a seguinte sequência de processamento:
 | 10 | FASE 6 | < 10s | Envio de notificações (Email + GChat) |
 
 **Tempo Total Estimado:** 15-25 minutos (para um carrossel de 6-10 slides).
+
+
+## 7. Arquivo JSON
+
+> Importe este arquivo JSOn para utilização no N8N com as etapas descritas acima. Lembre-se de criar as credenciais necessárias anteriormente, de modo que elas sejam preenchidas no fluxo importado. >
+
+[Arquivo JSON com o fluxo SUGESTÕES](https://cdn.tess.im/assets/uploads/a28b15f4-b907-4c13-959a-73a303b206c2.json?_gl=1*oiy62f*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjIyNDgwMTQ1My4xNzY5ODA1MjY4LjE3Njk4MDg3NjY.*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3Njk4MDA1NjAkbzYkZzEkdDE3Njk4MDg3NjYkajYwJGwwJGgw*_ga_9D17W435GL*czE3Njk4MDA1NjAkbzI2JGcxJHQxNzY5ODA4NzY2JGo2MCRsMCRoMA..)
+
