@@ -76,12 +76,12 @@ Você pode gerar conteúdo de duas formas:
 
 2.  **Execução Automática (Agendada)**
     *   **Quando usar**: Este é o modo padrão, ideal para manter um fluxo constante de conteúdo.
-    *   **Como funciona**: A automação é executada automaticamente toda **segunda-feira** e **quarta-feira** à meia-noite (00h00).
+    *   **Como funciona**: A automação é executada automaticamente em todos os dias programados (à escolha do usuário atrabés do Menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=1213580918#gid=1213580918)) à meia-noite (00h00).
 
 ### Gerenciando as Automações Agendadas
 Através do menu **"Pareto AI"** na planilha, você pode controlar os agendamentos:
 
-*   **Pausar execução automática**: Interrompe os ciclos automáticos de segunda e quarta. É útil durante períodos de férias, pausas estratégicas ou para manutenções. A execução manual continua disponível.
+*   **Pausar execução automática**: Interrompe os ciclos automáticos agendados. É útil durante períodos de férias, pausas estratégicas ou para manutenções. A execução manual continua disponível.
 *   **Ativar execução automática**: Reativa os ciclos automáticos caso eles estejam pausados.
 
 ### Solução de Problemas (Troubleshooting)
