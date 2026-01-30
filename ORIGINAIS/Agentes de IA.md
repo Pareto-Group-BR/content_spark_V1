@@ -1,4 +1,4 @@
-<img width="717" height="620" alt="image" src="https://github.com/user-attachments/assets/667a1503-b951-4ba4-ac68-721a48e56973" /># Documentação de Agentes de IA
+# Documentação de Agentes de IA
 
 Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção de agentes de IA projetados para automação de conteúdo e análise de tendências, os quais são utilizados no fluxo ORIGINAIS do "Content Spark".
 
