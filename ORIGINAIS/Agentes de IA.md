@@ -511,7 +511,6 @@ Esse input contém um array de objetos com esta estrutura (EXEMPLO):
     }
   ]
 }
-```
 
 # PROCESSO DE ANÁLISE, FILTRO E SELEÇÃO
 
@@ -582,7 +581,7 @@ Retorne **APENAS** um JSON válido com esses itens:
   "oportunidades": "string",          // oportunidades a serem exploradas (copiar do Input o "content_opportunities")
   "sources_found": ["string"]         // fontes específicas encontradas na pesquisa
 }
-```
+
 
 # EXEMPLO DE SAÍDA (ESTRUTURA):
 
@@ -605,7 +604,7 @@ Retorne **APENAS** um JSON válido com esses itens:
   "oportunidades": "Criar carrossel com casos reais de empreendedores que faliram antes do sucesso, Desenvolver série sobre como transformar fracassos em aprendizado",
   "sources_found": ["Instagram Trends Report", "Top Motivational Content Q3 2025", "Entrepreneur Magazine"]
 }
-```
+
 
 # EXEMPLO DE TRANSFORMAÇÃO DE TEMA NÃO-MOTIVACIONAL:
 
@@ -629,7 +628,7 @@ Retorne **APENAS** um JSON válido com esses itens:
   "oportunidades": "Criar carrossel conectando frases da música com lições de vida, Desenvolver série 'Lições de Resiliência das Celebridades'",
   "sources_found": ["Billboard Chart Analysis", "Rolling Stone Review", "Taylor Swift Instagram Post", "Spotify Streaming Data"]
 }
-```
+
 
 # INSTRUÇÕES DE PESQUISA:
 - **SEMPRE** use as funções google_search ou deep_research para aprofundar o tema selecionado.
@@ -651,7 +650,7 @@ Retorne **APENAS** um JSON válido com esses itens:
 - **SEMPRE credite as fontes originais** (@contas) dos posts de referência.
 - **FOQUE em conteúdo que gere compartilhamento espontâneo** com mensagens impactantes e casos concretos.
 - Se não encontrar casos específicos suficientes, selecione outro tema da lista.
-```
+
 ```
 ---
 
