@@ -343,7 +343,7 @@ A fase final é responsável por registrar o trabalho concluído em uma planilha
 
 ---
 
-## 5. Credenciais Necessárias
+## Credenciais Necessárias
 
 Para que o fluxo funcione corretamente, é preciso configurar as seguintes credenciais no N8N.
 
@@ -454,13 +454,13 @@ Para que o fluxo funcione corretamente, é preciso configurar as seguintes crede
 
 ---
 
-## 6. Troubleshooting
+## Troubleshooting
 
 Para erros identificados na automação, favor criar uma Issue associada a este agente no Github.
 
 ---
 
-## 7. Arquivo do Fluxo
+## Arquivo do Fluxo
 > *Obs: Lembre-se de criar as credenciais anteriormente no N8N, isso facilitará na importação do JSON, permitindo que ele seja preenchido com elas.*
 
 Baixe o arquivo JSON completo aqui:  
