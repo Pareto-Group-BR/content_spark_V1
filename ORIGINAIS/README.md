@@ -83,7 +83,6 @@ A [planilha](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-
 Você pode gerar conteúdo de duas formas:
 
 1.  **Execução Manual via Menu (Sob Demanda)**
-Para buscar posts de referência e gerar um conteúdo imediatamente, sem repetir o perfil anterior.
    *   **Acesse a planilha** Qualquer página, mas o registro da criação ficará na aba ORIGINAIS.
    *   **Selecione o menu:** Na parte superior, selecione `Pareto AI` -> `ORIGINAIS`.
    *   **Execute:** Escolha a opção `Executar fluxo`.
