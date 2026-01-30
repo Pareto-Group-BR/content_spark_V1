@@ -357,7 +357,7 @@ Qualquer tema que atenda a UM dos critérios:
     "data_limitations": ["lista de limitações encontradas nos dados"]
   }
 }
-```
+
 
 # **TRATAMENTO ADAPTATIVO DE DADOS**
 
@@ -394,7 +394,7 @@ Qualquer tema que atenda a UM dos critérios:
 - **Foco no Objetivo:** Priorize temas com potencial motivacional real
 - **Validação Inteligente:** Reconheça equivalências semânticas mesmo com dados parciais
 ```
-```
+
 ---
 
 ## Agente 33079: Analisador de Capa
