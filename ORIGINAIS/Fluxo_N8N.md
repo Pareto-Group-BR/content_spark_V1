@@ -275,14 +275,14 @@ A fase final é responsável por registrar o trabalho concluído em uma planilha
 - **Agentes Utilizados**:
   - 31523: Tendências da Semana
   - 31107: Hashtags Twitter
+  - 32601: Filtro de Temas
   - 31104: Identificador de Tendências
+  - 33079: Analisador de Capa
   - 31119: Curadoria de Conteúdo Instagram
+  - 32754: Pesquisa Aprofundada
   - 32061: Criador de Roteiro
   - 32060: Criador de Carrosséis [Fundo]
   - 32059: Criar Anúncios em HTML
-  - 32754: Pesquisa Aprofundada
-  - 33079: Analisador de Capa
-  - 32601: Filtro de Temas
 - **Timeout**: 220 segundos
 - **Retry**: Habilitado
 - **Documentação**: https://cd277b84.tess-docs.pages.dev/api
