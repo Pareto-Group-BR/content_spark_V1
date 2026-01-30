@@ -4,7 +4,6 @@
 
 > Cabe destacar que esse foco motivacional foi pré-definido devido ao objetivo original deste fluxo, com base nas boas práticas de mercaso. **Ao duplicar o fluxo, é possível  alterar esse foco Motivacional diretamente nos prompts dos agentes de IA, em caso de de desejar fazer uma mudança de objetivo.**
 
-
 ---
 
 ## 📖 Índice
@@ -28,6 +27,8 @@
 Esta automação foi desenhada para resolver o desafio de criar conteúdo de alta qualidade e engajamento para o Instagram, um processo que tradicionalmente consome tempo e exige pesquisa constante de tendências.
 
 O **Agente de Criação de Conteúdo** transforma temas e tendências atuais em conteúdo visual completo (carrosséis), de forma totalmente automatizada. O objetivo é fornecer, em minutos, um carrossel com 6 a 10 imagens, textos otimizados e legendas prontas para publicação, com foco em perfis de nicho motivacional. A sua única tarefa é monitorar, aprovar e publicar o conteúdo gerado.
+
+*OBS: O fluxo NÃO inclui a publicação automática no Instagram, esse processo exige a validação manual do gestor do Instagram.*
 
 ## 2. Estratégia Principal
 
@@ -56,27 +57,43 @@ O resultado final é um conteúdo original e coeso, baseado em dados de tendênc
 ## 3. Manual de Operação (Para Usuários)
 
 ### Pré-requisitos
-*   **Acesso de Editor** à [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0).
-*   Conta Google para acessar a planilha e o Google Drive.
-*   Fazer parte do canal do Google Chat para receber as notificações (Opcional).
+*   **Acesso de Editor** à [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0) e Conta Google para acessar a planilha e o Google Drive.
+
+Também é necessário liberar as permissões do AppScript, o que pode ser feito via menu da planilha **"Permissões do Script"**. Essa liberação é feita uma única vez, ao utilizar a planilha pela primeira vez.
+
+<img width="319" height="83" alt="image" src="https://github.com/user-attachments/assets/9b342bb8-9a77-48d3-8e21-97906da01e8b" />
+  
+*   Fazer parte do canal do Google Chat para receber as notificações (Opcional para receber as notificações).
+
+
+> **Importante:** Não é necessário ter acesso direto ao ambiente do n8n. Toda a interação é feita através desta planilha.
+  
 
 ### A Planilha de Controle: O Centro de Comando
 A [planilha](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0) é a interface principal para gerenciar toda a automação. As abas mais importantes são:
 
-*   **Conteúdo Original**: Onde você acompanha, revisa e aprova todo o conteúdo gerado pela automação. Contém o tema, a legenda pronta, o link para as artes no Google Drive e as colunas de status.
+*   **Abas de Resultados:** Nela você encontrará os conteúdos gerados, separados nas abas: `ORIGINAL`, `BRASILIDADES` e `SUGESTÃO`. Para o fluxo atual, concentre-se na aba ORIGINAIS. Lá, você verifica o tema, a legenda pronta, o link para as artes no Google Drive e as colunas de status.
 *   **Perfis de Referência**: Lista de perfis do Instagram que a IA utiliza como inspiração para entender padrões visuais e de conteúdo. Você pode adicionar ou remover perfis nesta aba.
 *   **Config**: Contém configurações técnicas da automação. **Não altere esta aba** sem orientação.
+*   **Controles Manuais:** A planilha contém botões para controlar as automações, localizados no menu superior **"Pareto AI"**.
+
+> **Importante:** Não altere ou inclua as colunas da planilha pois isso vai prejudicar a execução do fluxo.
 
 ### Modos de Operação
 Você pode gerar conteúdo de duas formas:
 
-1.  **Execução Manual (Sob Demanda)**
-    *   **Quando usar**: Para gerar conteúdo imediatamente, sem esperar o próximo ciclo agendado.
-    *   **Como fazer**: Na planilha, acesse o menu **Pareto AI > ORIGINAIS > Executar fluxo**. Uma confirmação aparecerá, e o processo iniciará em segundo plano, levando de 20 a 25 minutos. Você será notificado via e-mail e Google Chat quando terminar.
+1.  **Execução Manual via Menu (Sob Demanda)**
+Para buscar posts de referência e gerar um conteúdo imediatamente, sem repetir o perfil anterior.
+   *   **Acesse a planilha** Qualquer página, mas o registro da criação ficará na aba ORIGINAIS.
+   *   **Selecione o menu:** Na parte superior, selecione `Pareto AI` -> `ORIGINAIS`.
+   *   **Execute:** Escolha a opção `Executar fluxo`.
+   *   **Aguarde:** Uma mensagem de aviso informará que o fluxo foi iniciado (ele poderá levar de 20 a 25 minutos). Você poderá fechar o pop up (inclusive, a planilha pode ser fechada sem nenhum problema);
+   *   **Verifique o Resultado:** Após rodar a automação, o conteúdo gerado aparecerá na última linha preenchida da aba `ORIGINAIS`. Também serão enviados 2 avisos (e-mail e Google Chat) após a finalização da criação.
+
 
 2.  **Execução Automática (Agendada)**
     *   **Quando usar**: Este é o modo padrão, ideal para manter um fluxo constante de conteúdo.
-    *   **Como funciona**: A automação é executada automaticamente em todos os dias programados (à escolha do usuário atrabés do Menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=1213580918#gid=1213580918)) à meia-noite (00h00).
+    *   **Como funciona**: A automação é executada automaticamente em todos os dias programados (à escolha do usuário atrabés do Menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=1213580918#gid=1213580918)) à meia-noite (00h00). É possível selecionar quantos quiser via menu da planilha: **Segunda, Terça,Quarta, Quinta, Sábado e Domingo**.
 
 ### Gerenciando as Automações Agendadas
 Através do menu **"Pareto AI"** na planilha, você pode controlar os agendamentos:
