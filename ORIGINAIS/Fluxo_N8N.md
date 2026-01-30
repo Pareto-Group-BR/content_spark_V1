@@ -136,7 +136,10 @@ Nesta fase inicial, o fluxo é acionado e executa coletas de dados em paralelo d
 
 ### **FASE 2: Processamento de Tendências**
 
-Com os dados brutos coletados, esta fase foca em limpar, filtrar, unificar e preparar as informações para a análise de IA.
+Com os dados brutos coletados, esta fase foca em limpar, filtrar, unificar e preparar as informações para a análise de IA. (Obs: os nós descritos nessa etapa aparecem em prints das etapas 1 e 2, são os nós de tratamento de dados)
+
+<img width="573" height="443" alt="image" src="https://github.com/user-attachments/assets/04d80d8d-b3f1-428f-b452-6f5b581b8a1d" />
+
 
 *   **2.1. Filtragem de Posts do Instagram**
     *   **Tipo**: Filter Node
