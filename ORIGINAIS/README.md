@@ -172,6 +172,19 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 | **Legenda** | "Enquanto muitos buscam reconhecimento, os verdadeiros vencedores treinam no silêncio. 💭<br><br>Disciplina não é sobre aplausos — é sobre persistir mesmo sem plateia. É no escuro dos bastidores que a luz do sucesso começa a brilhar. ✨<br><br>Qual parte da sua rotina ninguém vê, mas você sabe que te transforma?<br><br>#DisciplinaSilenciosa #Autodomínio #CrescimentoPessoal #FocoInterior" |
 | **Dados da Criação** | <ul><li>**ID:** `411221`</li><li>**Data:** `12-01-2026`</li><li>**Plataforma:** `Instagram`</li></ul> |
 
+### Artes Geradas no Exemplo
+
+<img width="360" height="360" alt="77964a49-8325-4522-8104-c33c88aeede7" src="https://github.com/user-attachments/assets/c31d7ae5-3f0b-4349-bb13-b51529e8e2e9" />
+<img width="360" height="360" alt="1866ea6a-9d0a-4101-a44e-b9e736aab0f6" src="https://github.com/user-attachments/assets/c4b2e072-ddef-4813-842b-3bd137acd61f" />
+<img width="360" height="360" alt="cba67a10-6cb0-4982-a490-17c1babd794a" src="https://github.com/user-attachments/assets/a8473d73-af9a-4701-ace0-08690e593647" />
+<img width="360" height="360" alt="8e3cbde6-4c1e-4e25-9730-ae9d81c23eca" src="https://github.com/user-attachments/assets/bf8efc81-c686-4721-b001-85aa71cb7f85" />
+<img width="360" height="360" alt="e1f94b53-213f-4c11-94a3-4c5029fb8cba" src="https://github.com/user-attachments/assets/9a883ad9-432c-4dc8-a217-6b3bafbee9fb" />
+<img width="360" height="360" alt="6f00aa92-36d4-494d-b60d-d8e3ee26d542" src="https://github.com/user-attachments/assets/e2b8a143-adc5-4f9a-af3a-b34426b371f3" />
+<img width="360" height="360" alt="8e3cbde6-4c1e-4e25-9730-ae9d81c23eca" src="https://github.com/user-attachments/assets/c776e563-217d-4948-8926-e22b0d3da23e" />
+<img width="360" height="360" alt="005e9ffa-ae1d-49b5-9f16-75b136422a1d" src="https://github.com/user-attachments/assets/cd54eb66-db14-4ff1-b0dc-c8576303871e" />
+<img width="360" height="360" alt="566e8258-a476-4c97-b5a5-13b0b938a1db" src="https://github.com/user-attachments/assets/1d842b9a-4c5f-42b1-aa26-b66bd5caec8a" />
+
+
 ---
 
 
