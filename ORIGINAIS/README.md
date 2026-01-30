@@ -160,7 +160,20 @@ A automação emprega múltiplos agentes de IA especializados em diferentes tare
 
 ## 7. Exemplos de Saída da Automação
 
-*(Esta seção será preenchida com exemplos concretos de carrosséis e legendas gerados pela automação).*
+## Exemplo de Carrossel Gerado
+
+Abaixo, um exemplo da saída completa da automação, desde a escolha do tema até a legenda final para o Instagram.
+
+| Campo | Descrição |
+| :--- | :--- |
+| **Tema** | `Disciplina silenciosa: O segredo dos vencedores que ninguém vê` |
+| **Artes** | [Link para a pasta com as imagens](https://drive.google.com/drive/folders/1FzK_F_TEUh0eoREpGsvrOUe7cuP3k_R4) |
+| **Motivo da Seleção** | A análise de tendências indicou alto engajamento com o tema "disciplina silenciosa" em perfis motivacionais. A escolha foi validada por posts de referência com milhares de interações, como o de `@agentsteven` (8.348 likes), confirmando a ressonância do tópico com o público. |
+| **Legenda** | "Enquanto muitos buscam reconhecimento, os verdadeiros vencedores treinam no silêncio. 💭<br><br>Disciplina não é sobre aplausos — é sobre persistir mesmo sem plateia. É no escuro dos bastidores que a luz do sucesso começa a brilhar. ✨<br><br>Qual parte da sua rotina ninguém vê, mas você sabe que te transforma?<br><br>#DisciplinaSilenciosa #Autodomínio #CrescimentoPessoal #FocoInterior" |
+| **Dados da Criação** | <ul><li>**ID:** `411221`</li><li>**Data:** `12-01-2026`</li><li>**Plataforma:** `Instagram`</li></ul> |
+
+---
+
 
 ## 8. Links e Recursos
 
