@@ -506,6 +506,8 @@ Este fluxo integra os seguintes agentes de IA da plataforma Tess:
 | **Agente Criador Carrosséis [FUNDO]** | `32060` | 4 | Gera imagens de fundo para cada slide | Roteiro do carrossel | URLs de imagens (1080x1080px) |
 | **Criar anúncios de Imagem em HTML** | `32059` | 4 | Monta slides em formato HTML | Roteiro + imagens de fundo | Múltiplos documentos HTML |
 
+Confira mais dedatlhes sobre os agents de IA na [seção específica aqui na documentação.](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Agentes_de_IA.md)
+
 ---
 
 ## 6. Fluxo de Processamento em Tempo Real
