@@ -75,585 +75,178 @@ Este fluxo de trabalho automatizado em **N8N** foi projetado para criar conteúd
 
 ---
 
+Com certeza! Reorganizei e reescrevi a seção "Etapas Detalhadas" para que cada passo corresponda exatamente às 6 fases descritas na arquitetura do fluxo. A nova estrutura segue a lógica de cada fase, tornando a documentação mais clara e coesa.
+
+Aqui está a versão revisada:
+
+---
+
 ## Etapas Detalhadas
 
-### **FASE 1: COLETA INICIAL DE DADOS (TENDÊNCIAS + POSTS DO INSTAGRAM)**
+A seguir, detalhamos cada nó do fluxo de automação, organizados de acordo com as 6 fases principais do processo.
 
-#### 1.1 Programação Diária à meia noite
-- **Tipo**: Gatilho (Trigger) por Agendamento
-- **Frequência**: Segundas e Quartas-feiras à meia noite
-- **Função**: Inicia o fluxo automaticamente
-- **Saída**: Dispara 4 fluxos paralelos:
-  - TESS - Tendências da Semana
-  - TESS - Hashtags Twitter (Semana)
-  - Conexão SerpAPI
-  - Format Apify run input | Instagram Scraper (ramo Apify / Instagram)
+### **FASE 1: Coleta de Dados e Posts**
 
-#### 1.2 TESS - Tendências da Semana
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/31523/execute`
-- **Método**: POST
-- **Descrição**: Obtém a lista de tendências da semana através do agente TESS
-- **Payload**:
-  ```json
-  {
-    "messages": [
-      {
-        "role": "user",
-        "content": "Oi, pode me enviar a lista de tendências da semana?"
-      }
-    ],
-    "wait_execution": false
-  }
-  ```
-- **Próximo Nó**: Wait (45s)
-- **Retry**: Habilitado
+Nesta fase inicial, o fluxo é acionado e executa coletas de dados em paralelo de múltiplas fontes: agentes TESS para tendências e hashtags, SerpAPI para tendências do Google e Apify para coletar posts recentes do Instagram.
 
-#### 1.3 TESS - Hashtags Twitter (Semana)
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/31107/execute`
-- **Método**: POST
-- **Descrição**: Coleta as hashtags mais relevantes do Twitter/X
-- **Payload**:
-  ```json
-  {
-    "messages": [
-      {
-        "role": "user",
-        "content": "Oi, pode me enviar a lista de hashtags?"
-      }
-    ],
-    "wait_execution": false
-  }
-  ```
-- **Próximo Nó**: Wait1
-- **Retry**: Habilitado
+*   **1.1. Gatilho por Agendamento**
+    *   **Tipo**: Trigger
+    *   **Frequência**: Segundas e Quartas-feiras à meia-noite.
+    *   **Função**: Inicia o fluxo automaticamente, disparando os ramos de coleta de dados em paralelo.
 
-#### 1.4 Conexão SerpAPI
-- **Tipo**: HTTP Request (GET)
-- **API**: `https://serpapi.com/search`
-- **Parâmetros**:
-  - `engine`: google_trends_trending_now
-  - `geo`: BR (Brasil)
-  - `api_key`: [Chave da SerpAPI]
-- **Descrição**: Busca as tendências de pesquisa do Google em tempo real
-- **Próximo Nó**: Code in JavaScript
-- **Formato de Resposta**: JSON com trending searches
+*   **1.2. Coleta de Tendências da Semana (TESS)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Descrição**: Executa o agente TESS (`31523`) para obter a lista de tendências da semana. A execução é assíncrona.
+    *   **Próximo Nó**: Wait (para aguardar a resposta).
 
-#### 1.5 Code in JavaScript - Preparação dos dados do Google Trends
-- **Tipo**: Code Node (JavaScript)
-- **Função**: Filtra e limpa as tendências vindas da SerpAPI, removendo categorias indesejadas (por exemplo, ids 17 e 20 conforme configurado no fluxo)
-- **Lógica principal**:
-  ```javascript
-  const trendingData = item.json;
+*   **1.3. Coleta de Hashtags do Twitter (TESS)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Descrição**: Executa o agente TESS (`31107`) para coletar as hashtags mais relevantes da semana no Twitter/X. A execução é assíncrona.
+    *   **Próximo Nó**: Wait (para aguardar a resposta).
 
-  if (trendingData && trendingData.trending_searches) {
-    const dadosFiltrados = trendingData.trending_searches.filter(searchItem => {
-      return !searchItem.categories.some(categoria =>
-        categoria.id === 17 || categoria.id === 20
-      );
-    });
+*   **1.4. Coleta de Google Trends (SerpAPI)**
+    *   **Tipo**: HTTP Request (GET)
+    *   **API**: `https://serpapi.com/search`
+    *   **Descrição**: Busca as tendências de pesquisa do Google no Brasil em tempo real usando o motor `google_trends_trending_now`.
 
-    item.json.trending_searches = dadosFiltrados;
-  }
+*   **1.5. Preparação para Coleta de Posts (Apify)**
+    *   **Tipo**: Code Node (JavaScript)
+    *   **Descrição**: Formata o objeto `run_input` com os parâmetros para o scraper do Instagram, definindo perfis-alvo, hashtags, e o limite de posts (recentes, dos últimos 2 dias).
 
-  return items;
-  ```
-- **Próximo Nó**: Output2 (Set) → JSON Parse4 → Agente de Filtro para Temas Relevantes (nas fases seguintes)
+*   **1.6. Execução do Instagram Scraper (Apify)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **API**: `https://api.apify.com/v2/acts/shu8hvrXbJbY3Eb9W/run-sync`
+    *   **Descrição**: Dispara a execução do ator no Apify para coletar posts de referência que servirão de base para a análise.
 
-#### 1.6 Format Apify run input | Instagram Scraper
-- **Tipo**: Code Node (JavaScript)
-- **Descrição**: Formata os parâmetros de entrada para o scraper do Instagram (Apify). Esse nó já é disparado diretamente pelo gatilho inicial, em paralelo com as coletas de TESS e SerpAPI.
-- **Configuração (exemplo)**:
-  ```javascript
-  const run_input = {
-    "addParentData": false,
-    "directUrls": [
-      "https://www.instagram.com/valorgi",
-      "https://www.instagram.com/motivation_mondays/",
-      "https://www.instagram.com/motivationmafia/",
-      // ... mais URLs
-    ],
-    "enhanceUserSearchWithFacebookPage": false,
-    "isUserReelFeedURL": false,
-    "isUserTaggedFeedURL": false,
-    "onlyPostsNewerThan": "2 days",
-    "resultsLimit": 6,
-    "resultsType": "posts",
-    "searchLimit": 1,
-    "searchType": "hashtag"
-  }
+*   **1.7. Aguardo e Validação da Coleta (Apify)**
+    *   **Tipo**: Loop com Wait e IF
+    *   **Descrição**: O fluxo aguarda e verifica periodicamente (`GET | Last Run Apify`) o status da execução no Apify. Ele só prossegue quando o status for `SUCCEEDED`.
 
-  return { run_input }
-  ```
-- **Próximo Nó**: POST | Execute Apify
+*   **1.8. Recuperação dos Posts Coletados (Apify)**
+    *   **Tipo**: HTTP Request (GET)
+    *   **API**: `https://api.apify.com/v2/actor-runs/{run_id}/dataset/items`
+    *   **Descrição**: Após a conclusão bem-sucedida, faz o download do dataset contendo os posts coletados (caption, imagens, likes, etc.).
 
-#### 1.7 POST | Execute Apify
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://api.apify.com/v2/acts/shu8hvrXbJbY3Eb9W/run-sync`
-- **Descrição**: Executa o Instagram Scraper do Apify para coletar posts de referência logo no início do fluxo, em paralelo às demais coletas (TESS, SerpAPI).
-- **Body**:
-  - `jsonBody`: `={{ $json.run_input }}` (objeto preparado no nó anterior)
-- **Parâmetros principais (via `run_input`)**:
-  - Hashtags e perfis para buscar
-  - Limite de resultados: 6
-  - Apenas posts dos últimos 2 dias
-  - Tipo de resultado: posts
-- **Próximo Nó**: Wait5
+*   **1.9. Recuperação dos Resultados (TESS)**
+    *   **Tipo**: Wait e HTTP Request (GET)
+    *   **Descrição**: Após um período de espera para garantir que os agentes TESS concluíram a execução, o fluxo recupera os resultados (tendências e hashtags) através da API de respostas (`GET /agent-responses/{response_id}`).
 
-#### 1.8 Wait5
-- **Tipo**: Wait
-- **Duração**: 10 segundos (conforme configurado no fluxo)
-- **Função**: Dá um pequeno intervalo antes de consultar o status da última execução do scraper no Apify, garantindo que o run esteja registrado.
-- **Próximo Nó**: GET | Last Run Apify
+### **FASE 2: Processamento de Tendências**
 
-#### 1.9 GET | Last Run Apify
-- **Tipo**: HTTP Request (GET)
-- **API**: `https://api.apify.com/v2/acts/apify~instagram-scraper/runs/last?token={seu-token-apify}`
-- **Descrição**: Obtém informações sobre a última execução do scraper do Instagram.
-- **Próximo Nó**: If (validação de conclusão)
+Com os dados brutos coletados, esta fase foca em limpar, filtrar, unificar e preparar as informações para a análise de IA.
 
-#### 1.10 If (Validação de conclusão do Apify)
-- **Tipo**: Nó Condicional (IF)
-- **Condições (baseadas no JSON do Apify)**:
-  - `data.status` = `"SUCCEEDED"`
-- **Branches**:
-  - ✅ **SIM**: Prossegue para GET | Dataset Items Apify
-  - ❌ **NÃO**: Volta para GET | Last Run Apify (loop de retry até a conclusão)
-- **Função**: Garante que os posts só sejam consumidos depois da execução bem-sucedida do scraper.
+*   **2.1. Filtragem de Posts do Instagram**
+    *   **Tipo**: Filter Node
+    *   **Função**: Filtra os posts coletados pelo Apify com base em critérios de qualidade, como remover posts fixados (`isPinned`) ou com baixo engajamento.
 
-#### 1.11 GET | Dataset Items Apify
-- **Tipo**: HTTP Request (GET)
-- **API**:  
-  `https://api.apify.com/v2/actor-runs/{{ $json.data.id }}/dataset/items?format=json`
-- **Descrição**: Recupera os posts coletados pelo scraper do Instagram.
-- **Headers** (exemplo):
-  - `Accept: application/json`
-  - `Authorization: Bearer {seu-token-apify}`
-- **Formato**: JSON com array de posts (caption, imagens, likes, hashtags, etc.)
-- **Próximo Nó**: instagram_posts
+*   **2.2. Agregação dos Posts**
+    *   **Tipo**: Aggregate Node
+    *   **Função**: Consolida todos os posts filtrados em um único array (`instagram_posts`) para facilitar o processamento.
 
-#### 1.12 instagram_posts (Set Variable)
-- **Tipo**: Set Node
-- **Campo**: `instagram_posts`
-- **Valor**: Array de posts do Instagram retornados pelo dataset do Apify
-- **Função**: Normaliza a estrutura de saída para encaixar no Merge de dados de tendências.
-- **Próximo Nó**: Filter1
+*   **2.3. Filtragem de Categorias do Google Trends**
+    *   **Tipo**: Code Node (JavaScript)
+    *   **Função**: Processa as tendências vindas da SerpAPI, removendo categorias indesejadas (ex: política, esportes) para focar em temas mais alinhados ao objetivo.
 
-#### 1.13 Filter1
-- **Tipo**: Filter Node
-- **Função**: Filtra posts de Instagram por critérios de qualidade conforme configurado no fluxo (por exemplo: posts não fixados, ou outros campos como likes/engajamento).
-- **Próximo Nó**: Aggregate
+*   **2.4. Armazenamento e Estruturação dos Dados**
+    *   **Tipo**: Set Variable
+    *   **Função**: Organiza os dados de cada fonte (TESS, Twitter, Google Trends, Instagram) em variáveis separadas (`tendencias_tess`, `hashtags`, `top_10_trends`, `instagram_posts`).
 
-#### 1.14 Aggregate
-- **Tipo**: Aggregate Node
-- **Função**: Consolida todos os posts filtrados em um array único
-- **Output**: Estrutura unificada de `instagram_posts` pronta para entrar no nó Merge junto com:
-  - `tendencias_tess`
-  - `hashtags`
-  - `top_10_trends`
-- **Próximo Nó**: Merge (na fase de consolidação de dados)
+*   **2.5. Merge (Unificação dos Dados)**
+    *   **Tipo**: Merge Node
+    *   **Função**: Consolida todos os dados coletados e processados (tendências, hashtags e posts) em um único objeto JSON.
+
+*   **2.6. Formatação Final para IA**
+    *   **Tipo**: JSON Stringify (Code Node)
+    *   **Função**: Converte o objeto unificado em uma string JSON, preparando o payload completo para ser enviado ao primeiro agente de análise.
+
+### **FASE 3: Análise e Curadoria**
+
+Nesta fase, agentes de IA analisam os dados consolidados para identificar padrões, selecionar um tema principal e aprofundar a pesquisa sobre ele.
+
+*   **3.1. Identificação de Tendências Relevantes (TESS)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Descrição**: Envia o JSON consolidado para o agente TESS (`31104`), que identifica os padrões e sugere temas potenciais.
+
+*   **3.2. Análise das Capas de Carrosséis (TESS)**
+    *   **Tipo**: Loop e HTTP Request (POST)
+    *   **Descrição**: O fluxo itera sobre os posts de referência e utiliza um agente TESS específico (`33079`) para analisar os elementos visuais das capas (cores, composição, legibilidade), enriquecendo os dados.
+
+*   **3.3. Seleção do Tema Final (TESS)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Descrição**: Com base nas tendências e na análise visual, o agente de curadoria TESS (`31119`) seleciona o tema com maior potencial (relevância, viralidade, alinhamento) e fornece uma justificativa.
+
+*   **3.4. Pesquisa Aprofundada sobre o Tema (TESS)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Descrição**: Utilizando o agente TESS de pesquisa (`32754`), o fluxo realiza uma análise detalhada do tema escolhido, buscando histórico, dados estatísticos, sentimento do público e oportunidades de nicho.
+
+*   **3.5. Formatação da Pesquisa**
+    *   **Tipo**: Code Node
+    *   **Função**: Estrutura o resultado da pesquisa aprofundada, preparando-o para ser o insumo principal da fase de criação de conteúdo.
+
+### **FASE 4: Criação de Conteúdo**
+
+Com um tema validado e pesquisado, o foco se volta para a geração do conteúdo em si: roteiro, legendas e os elementos visuais em formato HTML.
+
+*   **4.1. Criação do Roteiro do Post (TESS)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Descrição**: O agente criador de roteiros TESS (`32061`) recebe os dados da pesquisa e gera a estrutura completa do post: textos para cada slide do carrossel, hooks, CTA e a legenda principal.
+
+*   **4.2. Criação do Briefing para Imagens (TESS)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Descrição**: Com base no roteiro, o agente TESS (`32060`) cria descrições detalhadas (briefings) para as imagens de fundo de cada slide, garantindo coerência visual com o tema e o texto.
+
+*   **4.3. Geração do HTML dos Slides (TESS)**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Descrição**: O agente criador de HTML TESS (`32059`) combina o roteiro (textos) e os briefings de imagem para gerar o código HTML de cada slide do carrossel, já estilizado e pronto para ser convertido em imagem.
+
+### **FASE 5: Processamento de Imagens**
+
+Esta fase transforma o código HTML gerado em arquivos de imagem, faz o download e os armazena de forma organizada no Google Drive.
+
+*   **5.1. Divisão dos Arquivos HTML**
+    *   **Tipo**: Code Node
+    *   **Função**: Separa a saída do agente, que pode conter múltiplos blocos `<html>...</html>`, em itens individuais para processamento em lote.
+
+*   **5.2. Conversão de HTML para Imagem (PNG)**
+    *   **Tipo**: Loop e HTML/CSS to Image
+    *   **Descrição**: Em um loop, cada código HTML é enviado à API do Htmlcsstoimg (`https://hcti.io/v1/convert`) para ser convertido em uma imagem PNG de 1080x1080 pixels.
+
+*   **5.3. Download das Imagens Geradas**
+    *   **Tipo**: HTTP Request (GET)
+    *   **Função**: O fluxo faz o download do arquivo binário de cada imagem a partir da URL retornada pela API de conversão.
+
+*   **5.4. Criação de Pasta no Google Drive**
+    *   **Tipo**: Google Drive Node
+    *   **Operação**: `Create folder`
+    *   **Função**: Cria uma pasta no Google Drive com um nome único para a execução, usando o tema, o ID da execução e a data atual.
+
+*   **5.5. Upload das Imagens para o Google Drive**
+    *   **Tipo**: Google Drive Node
+    *   **Operação**: `Upload file`
+    *   **Função**: Sobe cada imagem baixada para a pasta recém-criada no Google Drive.
+
+### **FASE 6: Finalização**
+
+A fase final é responsável por registrar o trabalho concluído em uma planilha e notificar as partes interessadas.
+
+*   **6.1. Preparação dos Dados para Registro**
+    *   **Tipo**: Code Node
+    *   **Função**: Extrai os dados finais do conteúdo (tema, motivo da escolha, legenda) e o link da pasta do Google Drive para registrar na planilha.
+
+*   **6.2. Registro em Google Sheets**
+    *   **Tipo**: Google Sheets Node
+    *   **Operação**: `Append row`
+    *   **Função**: Adiciona uma nova linha à planilha de controle com todas as informações do conteúdo gerado, incluindo o link para as artes no Drive.
+
+*   **6.3. Envio de Notificação por E-mail (Gmail)**
+    *   **Tipo**: Gmail Node
+    *   **Função**: Envia um e-mail formatado em HTML para a equipe, informando sobre a conclusão do processo e incluindo botões para acessar diretamente a pasta de artes e a planilha de registro.
+
+*   **6.4. Envio de Notificação no Google Chat**
+    *   **Tipo**: HTTP Request (POST)
+    *   **Função**: Envia uma mensagem em formato de "card" para um espaço específico no Google Chat, com as mesmas informações e links do e-mail, permitindo uma notificação rápida e integrada.
 
 ---
-
-### **FASE 2: PROCESSAMENTO E AGUARDAMENTO**
-
-#### 2.1 Wait Nodes (Wait, Wait1, Wait 30s etc.)
-- **Tipo**: Wait (Espera)
-- **Duração**: 30–60 segundos (conforme cada nó)
-- **Função**: Aguarda a conclusão da execução dos agentes TESS antes de buscar resultados via `GET /agent-responses`.
-- **Motivo**: As APIs TESS executam de forma assíncrona e podem levar alguns segundos até o output estar disponível.
-
-#### 2.2 GET | TESS - Tendências da Semana
-- **Tipo**: HTTP Request (GET)
-- **API**: `https://tess.pareto.io/api/agent-responses/{response_id}`
-- **Descrição**: Recupera o resultado da execução do agente de tendências.
-- **URL Dinâmica**: Usa o ID da resposta anterior (`responses[0].id`).
-- **Próximo Nó**: If Output is Not Empty
-
-#### 2.3 If Output is Not Empty (Validações)
-- **Tipo**: Nó Condicional (IF)
-- **Condição**: Verifica se o campo `output` não está vazio
-- **Branches**:
-  - ✅ **SIM**: Continua com a etapa seguinte
-  - ❌ **NÃO**: Volta ao wait e tenta novamente
-
-#### 2.4 Output2 (Set Variable)
-- **Tipo**: Set Variable
-- **Função**: Armazena os trending searches filtrados do Google Trends em um campo estruturado para uso posterior.
-- **Próximo Nó**: JSON Parse4 / Agente de Filtro para Temas Relevantes
-
----
-
-### **FASE 3: MERGE E CONSOLIDAÇÃO DE DADOS**
-
-#### 3.1 tendencias_tess (Set Variable)
-- **Tipo**: Set Variable
-- **Campo**: `tendencias_tess`
-- **Valor**: Output da validação TESS (Tendências da Semana)
-- **Próximo Nó**: Merge
-
-#### 3.2 hashtags twitter (Set Variable)
-- **Tipo**: Set Variable
-- **Campo**: `hashtags`
-- **Valor**: Output das hashtags do Twitter
-- **Próximo Nó**: Merge
-
-#### 3.3 top_10_trends (Set Variable)
-- **Tipo**: Set Variable
-- **Campo**: `top_10_trends`
-- **Valor**: Top 10 tendências filtradas do Google Trends
-- **Próximo Nó**: Merge
-
-#### 3.4 instagram_posts (via Aggregate)
-- **Origem**: Pipeline Apify já executado na Fase 1 (Format Apify → Execute Apify → GET Last Run → GET Dataset Items → Filter1 → Aggregate).
-- **Campo**: `instagram_posts`
-- **Conteúdo**: Array consolidado de posts do Instagram para servir como base de referência visual e textual.
-- **Destino**: Uma das entradas do Merge.
-
-#### 3.5 Merge
-- **Tipo**: Merge Node
-- **Modo**: Combinar por Posição (`combineByPosition`)
-- **Número de Entradas**: 4
-- **Função**: Consolida todos os dados coletados em um único objeto:
-  - `tendencias_tess`
-  - `hashtags`
-  - `top_10_trends`
-  - `instagram_posts` (via Apify)
-- **Próximo Nó**: JSON Stringify
-
-#### 3.6 JSON Stringify
-- **Tipo**: Code Node
-- **Função**: Converte o objeto JavaScript em string JSON, concatenando:
-  - dados da API do Google Trends,
-  - dados da pesquisa TESS,
-  - hashtags do Twitter,
-  - posts de perfis públicos do Instagram.
-- **Próximo Nó**: TESS - Agente Identificador de Tendências
-
----
-
-### **FASE 4: IDENTIFICAÇÃO E SELEÇÃO DE TENDÊNCIAS**
-
-#### 4.1 TESS - Agente Identificador de Tendências
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/31104/execute`
-- **Descrição**: Agente IA que identifica as tendências mais relevantes a partir dos dados consolidados.
-- **Payload (conceitual)**:
-  ```json
-  {
-    "messages": [
-      {
-        "role": "user",
-        "content": "Processar tendências e identificar padrões"
-      }
-    ],
-    "wait_execution": true
-  }
-  ```
-- **Próximo Nó**: Wait 30s
-- **Retry**: Habilitado
-
-#### 4.2 JSON Formatter
-- **Tipo**: Code Node
-- **Função**: Formata a resposta JSON do agente, removendo possíveis marcações de markdown (``` ``` ```json) e garantindo que a estrutura seja um JSON válido.
-- **Próximo Nó**: suggested_themes (Split Out)
-
-#### 4.3 Agente de Filtro para Temas Relevantes
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/32601/execute`
-- **Função**: Filtra os temas mais relevantes a partir do conjunto de tendências identificadas.
-- **Próximo Nó**: top_10_trends (Set) / fluxo de curadoria
-
-#### 4.4 suggested_themes (Split Out)
-- **Tipo**: Split Out
-- **Campo**: `suggested_themes`
-- **Função**: Divide cada tema sugerido em um item separado, preparando para o processamento em lote.
-- **Próximo Nó**: Loop Over Items1
-
----
-
-### **FASE 5: CURADORIA E ANÁLISE DE CONTEÚDO**
-
-#### 5.1 Loop Over Items1 (Split in Batches)
-- **Tipo**: Split In Batches
-- **Função**: Processa cada tema sugerido em iteração.
-- **Próximo Nó**: Filter ou reference_posts
-
-#### 5.2 reference_posts (Split Out)
-- **Tipo**: Split Out
-- **Campo**: `reference_posts`
-- **Função**: Separa cada post de referência para análise individual.
-- **Próximo Nó**: Instagram Post (IF)
-
-#### 5.3 Instagram Post (IF Conditional)
-- **Tipo**: Nó Condicional
-- **Função**: Verifica se o item é um post válido do Instagram de acordo com os campos esperados (URL, imagem, etc.).
-- **Próximo Nó**: post_url ou Loop Over Items1 (skip)
-
-#### 5.4 post_url (IF Conditional)
-- **Tipo**: Nó Condicional
-- **Função**: Valida a URL do post (por exemplo, se é `post_url` ou `display_url`).
-- **Branch 1**: TESS - Analisador de Capa dos Carrosséis
-- **Branch 2**: display_url
-
-#### 5.5 TESS - Analisador de Capa dos Carrosséis
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/33079/execute`
-- **Descrição**: Analisa a capa/thumbnail do carrossel:
-  - Cores, composição, legibilidade, elementos visuais
-- **Próximo Nó**: Loop Over Items1 (retorna para o fluxo de temas)
-
-#### 5.6 display_url (IF Conditional)
-- **Tipo**: Nó Condicional
-- **Função**: Processa URLs de exibição de imagens (`display_url`) para análise complementar.
-- **Branch 1**: TESS - Analisador de Capa dos Carrosséis1
-- **Branch 2**: Loop Over Items1
-
-#### 5.7 Filter & Include Image Description
-- **Tipo**: Filter + Code Node
-- **Função**:
-  - Filtra itens com base em flags como `isPinned` etc.
-  - Adiciona descrições de imagem geradas por IA aos objetos de post (campo `image_description`), percorrendo os `reference_posts` no array resultante.
-- **Próximo Nó**: JSON Parse
-
----
-
-### **FASE 6: SELEÇÃO DO TEMA E PESQUISA APROFUNDADA**
-
-#### 6.1 JSON Parse
-- **Tipo**: Code Node
-- **Função**: Converte o output JSON da filtragem e enriquecimento (descrições de imagem) em um objeto pronto para ser enviado ao agente de curadoria.
-- **Próximo Nó**: TESS - Agente de Curadoria de Conteúdo Instagram
-
-#### 6.2 TESS - Agente de Curadoria de Conteúdo Instagram
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/31119/execute`
-- **Descrição**: Seleciona o melhor tema entre as tendências identificadas, com base em:
-  - Relevância de tendência
-  - Qualidade dos posts de referência
-  - Potencial viral
-  - Alinhamento com audiência
-- **Output**: Um tema selecionado com justificativa e metadados.
-- **Próximo Nó**: Pré Pesquisa Aprofundada
-
-#### 6.3 Pré Pesquisa Aprofundada
-- **Tipo**: Code Node
-- **Função**: Prepara o payload para o agente de pesquisa aprofundada (estrutura de `chosen_theme`, `motivo_da_escolha`, etc.).
-- **Próximo Nó**: TESS - Agente de Pesquisa Aprofundada - Gerar temas
-
-#### 6.4 TESS - Agente de Pesquisa Aprofundada - Gerar temas
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/32754/execute`
-- **Descrição**: Gera temas alternativos e inicia a cadeia de aprofundamento.
-- **Output**: Lista de temas com análise detalhada.
-- **Próximo Nó**: TESS - Agente de Pesquisa Aprofundada - Aprofundar
-
-#### 6.5 TESS - Agente de Pesquisa Aprofundada - Aprofundar
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/32754/execute`
-- **Descrição**: Realiza análise aprofundada do tema selecionado:
-  - Histórico e origem da tendência
-  - Dados estatísticos
-  - Sentimento do público
-  - Oportunidades de nicho
-- **Próximo Nó**: Wait 60s + GET | TESS - Agente Identificador de Tendências1
-
-#### 6.6 Pós Pesquisa Aprofundada
-- **Tipo**: Code Node
-- **Função**: Formata o resultado da pesquisa aprofundada para alimentar o criador de roteiro (tema, dados de pesquisa, etc.).
-- **Próximo Nó**: TESS - Criador de Roteiro de Post Instagram
-
----
-
-### **FASE 7: CRIAÇÃO DE ROTEIRO E BRIEFING**
-
-#### 7.1 TESS - Criador de Roteiro de Post Instagram
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/32061/execute`
-- **Descrição**: Cria o roteiro completo do post com:
-  - Estrutura do carrossel
-  - Textos para cada slide
-  - Hooks visuais
-  - CTA (Call to Action)
-  - Legenda principal
-- **Output**: JSON com roteiro estruturado.
-- **Próximo Nó**: Pós criação de roteiro
-
-#### 7.2 Pós criação de roteiro
-- **Tipo**: Code Node
-- **Função**: Prepara briefing para criação de imagens de fundo do carrossel, com instruções claras sobre coerência entre tema, textos e imagens.
-- **Instrução (conceitual)**:
-  ```
-  "Transformar o tema escolhido em um roteiro completo para carrossel,
-  onde as imagens sejam coerentes com o tema, textos e entre si."
-  ```
-- **Próximo Nó**: TESS - Agente Criador Carrosséis Instagram [FUNDO]
-
-#### 7.3 TESS - Agente Criador Carrosséis Instagram [FUNDO]
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/32060/execute`
-- **Descrição**: Gera descrições detalhadas para as imagens de fundo de cada slide.
-- **Output** (por slide):
-  - `tipo_imagem_fundo`: Descrição rica para geração via IA
-  - `estilo`: Paleta de cores / mood
-  - `composição`: Elementos visuais principais
-  - `tipografia`: Recomendações de uso de texto no visual
-- **Próximo Nó**: Wait 30s1 → GET | TESS - Agente Criador Carrosséis Instagram
-
----
-
-### **FASE 8: GERAÇÃO DE HTML E ANÚNCIOS**
-
-#### 8.1 GET | TESS - Agente Criador Carrosséis Instagram
-- **Tipo**: HTTP Request (GET)
-- **API**: Recupera resultado da geração de imagens de fundo e especificações de design.
-- **Próximo Nó**: If Output is Not Empty3
-
-#### 8.2 If Output is Not Empty3
-- **Tipo**: Nó Condicional
-- **Função**: Garante que o `output` do agente de criação de carrosséis [FUNDO] não está vazio antes de seguir.
-- **Branch SIM**: Nome do Perfil do Instagram
-
-#### 8.3 Nome do Perfil do Instagram
-- **Tipo**: Google Sheets Read
-- **Função**: Obtém o nome do perfil de Instagram configurado na aba de Config do Google Sheets.
-- **Próximo Nó**: JSON Parse5
-
-#### 8.4 JSON Parse5
-- **Tipo**: Code Node
-- **Função**: Monta o payload final para o agente de criação de anúncios em HTML, combinando:
-  - briefing do roteiro
-  - URLs das imagens de fundo
-  - nome do perfil do Instagram
-- **Próximo Nó**: TESS - Criar anúncios de Imagem em HTML
-
-#### 8.5 TESS - Criar anúncios de Imagem em HTML
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://tess.pareto.io/api/agents/32059/execute`
-- **Descrição**: Gera HTML para cada slide do carrossel.
-- **Saída**: HTMLs prontos para:
-  - Conversão em imagem (PNG)
-  - Uso em ferramentas de design
-  - Testes A/B
-- **Próximo Nó**: Wait 30s2 → GET | TESS - Criar anúncios de Imagem em HTML → Dividir saída em arquivos HTML diferentes
-
----
-
-### **FASE 9: CONVERSÃO DE HTML PARA IMAGEM**
-
-#### 9.1 Dividir saída em arquivos HTML diferentes
-- **Tipo**: Code Node
-- **Função**: Separa múltiplos documentos HTML concatenados em itens individuais.
-- **Lógica**:
-  - Usa regex para identificar blocos `<html>...</html>`.
-  - Retorna um item do n8n para cada HTML encontrado.
-- **Output**: Array de itens com campo `html` contendo o código de cada slide.
-- **Próximo Nó**: Loop Over Items
-
-#### 9.2 Loop Over Items
-- **Tipo**: Split In Batches
-- **Função**: Processa cada HTML em iteração (batch).
-- **Próximo Nó**: Gerar imagem pelo HTML
-
-#### 9.3 Gerar imagem pelo HTML
-- **Tipo**: HTML CSS to Image (Htmlcsstoimg)
-- **API**: `https://hcti.io/v1/convert`
-- **Parâmetros principais**:
-  - `html_content`: Código HTML do slide
-  - `viewport_height`: 1080px
-  - `viewport_width`: 1080px
-  - `response_format_html`: png
-- **Output**: URL da imagem gerada
-- **Próximo Nó**: Baixar imagem
-
-#### 9.4 Baixar imagem
-- **Tipo**: HTTP Request (GET)
-- **URL Dinâmica**: `{{ $json.image_url }}`
-- **Função**: Faz download do binário da imagem gerada.
-- **Próximo Nó**: Subir imagem no drive
-
----
-
-### **FASE 10: ARMAZENAMENTO EM GOOGLE DRIVE**
-
-#### 10.1 Subir imagem no drive
-- **Tipo**: Google Drive
-- **Operação**: Upload de arquivo
-- **Credenciais**: Google Drive OAuth2 API
-- **Destino**: Pasta criada para este conteúdo (ver Create folder)
-- **Próximo Nó**: Wait4 → Loop Over Items (para continuar o processamento dos demais HTMLs)
-
-#### 10.2 Create folder
-- **Tipo**: Google Drive
-- **Operação**: Create folder
-- **Nome da Pasta**:
-  - `{{ $json.tema }} - {{ $execution.id }} - {{ $today.format('dd/MM/yyyy') }}`
-- **Exemplo**:
-  - `Tendência XYZ - exec-123456 - 27/01/2026`
-- **Próximo Nó**: Dividir saída em arquivos HTML diferentes
-
----
-
-### **FASE 11: REGISTRO EM GOOGLE SHEETS**
-
-#### 11.1 Dados do conteúdo
-- **Tipo**: Code Node
-- **Função**: Extrai dados principais do conteúdo criado a partir dos nós:
-  - Pós Pesquisa Aprofundada
-  - TESS - Criador de Roteiro de Post Instagram
-- **Variáveis Extraídas**:
-  - `tema`: Tema selecionado
-  - `motivo_da_escolha`: Justificativa
-  - `legenda`: Texto completo da legenda
-- **Próximo Nó**: Create folder (pasta que será referenciada na planilha)
-
-#### 11.2 Atualizar planilha
-- **Tipo**: Google Sheets
-- **Operação**: Append row
-- **Credenciais**: Google Sheets OAuth2 API
-- **Planilha ID**: [ID configurado no seu ambiente]
-- **Aba**: Página / Config definida no fluxo
-- **Colunas Preenchidas (exemplo)**:
-  | Coluna                     | Valor                          |
-  |----------------------------|--------------------------------|
-  | Tema                       | Nome do tema                   |
-  | Motivo da Seleção do Tema | Justificativa                  |
-  | Legenda                    | Texto da legenda               |
-  | ID da criação              | ID da execução (`$execution`) |
-  | Artes                      | Link da pasta no Drive        |
-  | Plataforma                 | Instagram                      |
-  | Data de Criação           | Data/hora atual                |
-
-- **Próximo Nó**: Send a message1
-
----
-
-### **FASE 12: NOTIFICAÇÕES**
-
-#### 12.1 Send a message1
-- **Tipo**: Gmail
-- **Função**: Envia email com relatório da criação de conteúdo.
-- **Destinatários**: Configurados no ambiente (ex.: time de marketing).
-- **Assunto**: "Finalização da Geração do Carrossel"
-- **Corpo**: HTML formatado com:
-  - Tema do carrossel
-  - Botões para acessar as artes (pasta do Drive)
-  - Link para planilha de registro
-  - Branding profissional da Pareto
-- **Próximo Nó**: Enviar Mensagem Gchat
-
-#### 12.2 Enviar Mensagem Gchat
-- **Tipo**: HTTP Request (POST)
-- **API**: `https://chat.googleapis.com/v1/spaces/{space_id}/messages`
-- **Função**: Envia notificação no Google Chat para o espaço configurado.
-- **Formato**: Card com:
-  - Logo profissional
-  - Título: "Nova Criação de Conteúdo - ORIGINAIS"
-  - Tema do carrossel
-  - Botão para acessar artes no Drive
-  - Botão para abrir planilha de registro
-- **Próximo Nó**: FIM
 
 ---
 
