@@ -1,4 +1,4 @@
-# Documentação: Agente de Criação de Conteúdo (Fluxo de Sugestões)
+# Agente de Criação de Conteúdo (Fluxo de Sugestões) - Manual de Operação
 
 > Este repositório contém a documentação completa do Agente de Criação de Conteúdo - SUGESTÕES ("Content Spark - SUGESTÕES"), uma automação projetada para gerar Carrosséis com **foco motivacional** para Instagram com alto potencial de engajamento, baseados em tendências do momento. Com isso, as artes e a comunicação serão mais voltadas para esse objetivo.
 
