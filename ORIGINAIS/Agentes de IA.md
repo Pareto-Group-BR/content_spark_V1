@@ -1,4 +1,4 @@
-# Documentação de Agentes de IA
+# Agentes de IA - Fluxo ORIGINAIS
 
 Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção de agentes de IA projetados para automação de conteúdo e análise de tendências, os quais são utilizados no fluxo ORIGINAIS do "Content Spark".
 
