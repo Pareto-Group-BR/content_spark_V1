@@ -146,8 +146,6 @@ Com as credenciais e a planilha prontas, o passo final é conectar tudo.
    <img width="976" height="252" alt="image" src="https://github.com/user-attachments/assets/299d431a-4ba0-43bd-b4f2-771e1475f88a" />
    <img width="977" height="241" alt="image" src="https://github.com/user-attachments/assets/4a492da7-4af6-4e16-bc9a-ec9f2186ecf4" />
    <img width="938" height="333" alt="image" src="https://github.com/user-attachments/assets/749844a9-ddbf-46b2-b05a-94cbe1a2a09e" />
-
-
     *   **Substitua o link antigo** pelo novo URL que você copiou do seu N8N.
     *   Clique no ícone de "Salvar projeto" (disquete).
 4.  **Verifique os Nós Manualmente:**
