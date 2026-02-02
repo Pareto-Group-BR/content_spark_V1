@@ -106,7 +106,8 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
     *   **Agentes de IA:** Nos nós que fazem chamadas para a Tess AI, **substitua os IDs dos agentes antigos pelos novos IDs** que você criou.
 5.  **Verifique os Nós Manualmente:** Percorra os demais nós para confirmar se suas credenciais foram associadas corretamente.
 
-
+>*Observação: É importante ressaltar que, para UTILIZAR a planilha de Criação de Conteúdo, não é necessário ter acesso ao N8N. Mas sim, ter as permissões do Google AppScript configuradas.*
+>
 
 ## 3. Etapas Detalhadas
 
