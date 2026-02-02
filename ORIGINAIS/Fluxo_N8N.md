@@ -89,7 +89,7 @@ Nesta fase inicial, o fluxo é acionado e executa coletas de dados em paralelo d
 
 *   **1.1. Gatilho por Agendamento**
     *   **Tipo**: Trigger
-    *   **Frequência**: Ocorre em dias programados (à escolha do usuário através do Menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=1213580918#gid=1213580918)) à meia-noite.
+    *   **Frequência**: Ocorre em dias programados (à escolha do usuário através do Menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0) à meia-noite.
     *   **Função**: Inicia o fluxo automaticamente, disparando os ramos de coleta de dados em paralelo.
 
 *   **1.2. Coleta de Tendências da Semana (TESS)**
