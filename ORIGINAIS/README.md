@@ -1,4 +1,4 @@
-# Agente de Criação de Conteúdo - Manual de Operação
+# Agente de Criação de Conteúdo (ORIGINAIS) - Manual de Operação
 
 > Este repositório contém a documentação completa do Agente de Criação de Conteúdo - Originais ("Content Spark - Originais"), uma automação projetada para gerar Carrosséis com **foco motivacional** para Instagram com alto potencial de engajamento, baseados em tendências do momento.
 
