@@ -43,7 +43,7 @@ A estratégia do fluxo de **Sugestões** se baseia em um processo de enriquecime
 ### **3. Manual de Operação (Para Usuários)**
 
 #### **Pré-requisitos**
-*   **Acesso de Editor** à [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0) e Conta Google para acessar a planilha e o Google Drive.
+*   **Acesso de Editor** à [Planilha de Controle](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0) e Conta Google para acessar a planilha e o Google Drive.
 
 Também é necessário liberar as permissões do AppScript, o que pode ser feito via menu da planilha **"Permissões do Script"**. Essa liberação é feita uma única vez, ao utilizar a planilha pela primeira vez.
 
@@ -167,8 +167,8 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 
 
 ### **8. Links e Recursos**
-*   **Planilha de Controle:** [`[Pareto AI Content Hub] Registro dos Conteúdos Criados - Pareto`](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=200832694#gid=200832694)
-*   **Repositório das Artes:** Google Drive (As pastas são criadas dinamicamente e os links inseridos na planilha)
+*   **Planilha de Controle (template):** [`[Pareto AI Content Hub] Registro dos Conteúdos Criados - Pareto`](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0)
+*   **Repositório das Artes:** Google Drive (Crie uma pasta "mãe" para armazenamento das artes criadas e substitua o OD no fluxo N8N)
 *   **Arquivo JSON com o Fluxo N8N:** [Arquivo JSON com o fluxo SUGESTÕES](https://cdn.tess.im/assets/uploads/1e647c64-55a6-49fe-bc75-6bfaf532953b.json?_gl=1*11y8f7p*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
 
 
