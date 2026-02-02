@@ -71,7 +71,7 @@ Também é necessário liberar as permissões do AppScript, o que pode ser feito
   
 
 ### A Planilha de Controle: O Centro de Comando
-A [planilha](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0) é a interface principal para gerenciar toda a automação. As abas mais importantes são:
+A [planilha](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0) é a interface principal para gerenciar toda a automação. As abas mais importantes são:
 
 *   **Abas de Resultados:** Nela você encontrará os conteúdos gerados, separados nas abas: `ORIGINAL`, `BRASILIDADES` e `SUGESTÃO`. Para o fluxo atual, concentre-se na aba ORIGINAIS. Lá, você verifica o tema, a legenda pronta, o link para as artes no Google Drive e as colunas de status.
 *   **Perfis de Referência**: Lista de perfis do Instagram que a IA utiliza como inspiração para entender padrões visuais e de conteúdo. Você pode adicionar ou remover perfis nesta aba.
@@ -93,7 +93,7 @@ Você pode gerar conteúdo de duas formas:
 
 2.  **Execução Automática (Agendada)**
     *   **Quando usar**: Este é o modo padrão, ideal para manter um fluxo constante de conteúdo.
-    *   **Como funciona**: A automação é executada automaticamente em todos os dias programados (à escolha do usuário atrabés do Menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=1213580918#gid=1213580918)) à meia-noite (00h00). É possível selecionar quantos quiser via menu da planilha: **Segunda, Terça,Quarta, Quinta, Sábado e Domingo**.
+    *   **Como funciona**: A automação é executada automaticamente em todos os dias programados (à escolha do usuário atrabés do Menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0) à meia-noite (00h00). É possível selecionar quantos quiser via menu da planilha: **Segunda, Terça,Quarta, Quinta, Sábado e Domingo**.
 
 ### Gerenciando as Automações Agendadas
 Através do menu **"Pareto AI"** na planilha, você pode controlar os agendamentos:
@@ -215,7 +215,7 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 *   **Planilha de Controle**: [Link para a Planilha](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0)
 *   **Repositório Completo do "Content Spark V1" no Github**: [Link para o Repositório](https://github.com/Pareto-Group-BR/content_spark_V1/tree/main)
 *   **Documentação Técnica do Fluxo**: [Fluxo N8N no Github](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/Fluxo_N8N.md)
-*   **Arquivo JSON com Fluxo do N8N**: [Link para Download] (https://cdn.tess.im/assets/uploads/4398f2bb-cb87-42a5-891e-145c28453430.json?_gl=1*y0v0db*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
+*   **Arquivo JSON com Fluxo do N8N**: [Link para Download](https://cdn.tess.im/assets/uploads/4398f2bb-cb87-42a5-891e-145c28453430.json?_gl=1*y0v0db*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
 
 
 ## 9. Passo a Passo para Replicar o Fluxo ORIGINAIS
@@ -243,7 +243,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 ### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
-1.  **Importe o arquivo JSON** deste fluxo (`ORIGINAIS`) para a sua instância do N8N. [Link para Download] (https://cdn.tess.im/assets/uploads/4398f2bb-cb87-42a5-891e-145c28453430.json?_gl=1*y0v0db*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
+1.  **Importe o arquivo JSON** deste fluxo (`ORIGINAIS`) para a sua instância do N8N. [Link para Download](https://cdn.tess.im/assets/uploads/4398f2bb-cb87-42a5-891e-145c28453430.json?_gl=1*y0v0db*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
 2.  **Copie o URL do seu novo Webhook** no nó `Webhook` (aba "Production").
 3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_ORIGINAIS`, e salve.
 4.  **Atualize os IDs no N8N:**
