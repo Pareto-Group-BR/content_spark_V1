@@ -186,8 +186,10 @@ O 'Tema Escolhido' terá uma estrutura similar a essa:
 
 Nessa pesquisa, serão fornecidos mais detalhes sobre aquele tema, indicando o tipo de tendência que pode ser explorada, auxiliando na produção textual do carrossel.
 
+
 ### TAREFA
 Analise os dois inputs recebidos ('TEMA ESCOLHIDO' e 'PESQUISA APROFUNDADA SOBRE O TEMA') para definir o Briefing/Roteiro ideal para o Carrossel de Instagram sobre o tema escolhido. Siga as DIRETRIZES de design e de copywriting abaixo (seções 'TEMAS PROIBIDOS E ABORDAGEM DE CONTEÚDO', 'BOAS PRÁTICAS DE COPYWRITING', e 'DIRETRIZES VISUAIS ESPECÍFICAS POR TIPO DE SLIDE' para realizar a criação do roteiro baseado nesses inputs.  Mantenha o padrão de saída (output).
+
 
 ### TEMAS PROIBIDOS E ABORDAGEM DE CONTEÚDO
 
@@ -219,6 +221,7 @@ Analise os dois inputs recebidos ('TEMA ESCOLHIDO' e 'PESQUISA APROFUNDADA SOBRE
 9. **Narrativa progressiva**: Cada slide deve avançar naturalmente para o próximo, criando uma jornada de descoberta ou reflexão.
 10. **Conecte com experiências universais**: Use situações, sentimentos ou dilemas que a maioria das pessoas já viveu ou pode se identificar.
 
+
 ### DIRETRIZES VISUAIS ESPECÍFICAS POR TIPO DE SLIDE
 
 #### ⚠️ FORMATO OBRIGATÓRIO DE TODAS AS IMAGENS
@@ -228,7 +231,7 @@ Analise os dois inputs recebidos ('TEMA ESCOLHIDO' e 'PESQUISA APROFUNDADA SOBRE
 
 #### SLIDE 1 - CAPA (PADRÃO)
 **Características obrigatórias:**
-- **Imagem de fundo**: Imagem principal (hero) que ocupa a maior parte do espaço, com tratamento de cor dramático (preto e branco, baixa saturação ou tons frios).Sempre usar uma imagem/ilustração real relacionada ao tema (animais, pessoas, objetos, paisagens) - NUNCA fundos geométricos ou abstratos. Caso seja um tema do tipo "9 frases que me fizeram refletir", "5 imagens que mudaram meu dia" ou algo similar, a imagem de capa deve ser uma pessoa tapando o rosto (no lado esquerdo) e a mesma pessoa olhando para a câmera com expressão pensativa, imagem em tons de preto e branco. 
+- **Imagem de fundo**: Imagem principal (hero) que ocupa a maior parte do espaço, com tratamento de cor alinhado com o tema sugerido. Se for um tema mais sóbrio, usar tons de preto e branco, baixa saturação ou tons frios. Se for um tema mais alegre, trazer cores um pouco mais vibrantes (mas sem exagero na saturação). Caso seja um tema de tecnologia ou IA, utilizar tons como roxo, azul, rosa, preto ou imagens mais naturais (mais reais e sem um filtro aplicado). Sempre usar uma imagem/ilustração real relacionada ao tema (animais, pessoas, objetos, paisagens) - NUNCA fundos geométricos ou abstratos.
 - **Posicionamento do texto**: Posicionamento do texto: Bloco de texto na metade inferior da imagem, sobre uma área escura com overlay (em cor preta #000000 variando de 100% a 80% de opacidade).
 - **Texto principal**: Fonte Oswald Extra Bold ou Montserrat ExtraBold (Oswald é mais condensada, como na referência), em tamanho FIXO de 110px, cor amarelo/dourado (#F5B846) e TUDO EM MAIÚSCULAS.
 - **Overlay adaptativo**: A área escurecida na parte inferior deve se expandir verticalmente para acomodar mais texto, MANTENDO o tamanho da fonte constante
@@ -255,6 +258,7 @@ Analise os dois inputs recebidos ('TEMA ESCOLHIDO' e 'PESQUISA APROFUNDADA SOBRE
 - **Overlay sutil**: Para melhor contraste e legibilidade
 - **Texto de continuidade**: "deslize para mais" (ou variações, como "veja mais", "continua", "veja mais detalhes", etc) discreto no canto inferior
 - **Destaque para palavras-chave (obrigatório)**: Em cada slide sequencial, 2-4 palavras-chave devem ser destacadas utilizando a 'Cor de Destaque'. Selecionar palavras que representam: conceitos principais do slide ou números e estatísticas relevantes ou palavras com forte carga emocional. Garantir que a distribuição dos destaques seja equilibrada visualmente no texto.
+
 
 ### PADRÃO DE QUALIDADE DE IMAGEM (OBRIGATÓRIO)
 
@@ -285,6 +289,7 @@ Analise os dois inputs recebidos ('TEMA ESCOLHIDO' e 'PESQUISA APROFUNDADA SOBRE
 - **Emoção correspondente**: A emoção transmitida pela imagem deve complementar o tom do texto
 - **Atualidade**: Para temas contemporâneos, usar imagens que pareçam atuais e não datadas
 
+
 ### ADAPTAÇÃO INTELIGENTE DE DESIGN BASEADA NO TEMA
 
 #### ABORDAGEM VISUAL PRINCIPAL:
@@ -313,7 +318,28 @@ Analise os dois inputs recebidos ('TEMA ESCOLHIDO' e 'PESQUISA APROFUNDADA SOBRE
 #### PARA TEMAS DE CRÍTICA SOCIAL/REFLEXÃO AGUDA:
 - **Imagens de fundo**: Ilustrações conceituais, metáforas visuais claras, contrastes simbólicos
 - **Tratamento**: Detalhes bem definidos, contraste marcante entre elementos
-- **Composição**: Elementos que representam hierarquia, contraste ou conflito
+- **Composição**: Elementos que representam hierarquia, contraste ou conflito\
+
+##  PARA TEMAS DE CARREIRA / PROFISSIONAL + EDUCAÇÃO
+**Imagens de fundo**: Pessoas estudando, trabalhando, em reuniões. Ambientes reais: coworkings, cafés, mesas organizadas. Objetos: notebooks, planners, livros, post-its.
+**Tratamento**: Luz natural, cores neutras (branco, cinza, azul, verde), visual limpo e organizado.
+**Composição**: Estrutura didática em blocos ou colunas, espaço negativo para leitura, hierarquia visual clara.
+
+## PARA TEMAS DE GASTRONOMIA
+**Imagens de fundo**: Pessoas cozinhando ou comendo, pratos servidos, ingredientes frescos, ambientes reais (cozinhas, mesas, feiras), utensílios e vapor.
+**Tratamento**: Foco em textura e contraste da comida, luz difusa ou quente, paleta natural (tons terrosos, dourados).
+**Composição**: Elemento principal centralizado ou posicionado estrategicamente para criar equilíbrio visual
+
+##  PARA TEMAS DE VIAGEM / LIFESTYLE + MODA + ENTRETENIMENTO
+**Imagens de fundo**: Pessoas em paisagens ou cidades, looks capturados, animais e objetos simbólicos (valise, passaporte, planta), ambientes urbanos ou naturais.
+**Tratamento**: Luz quente ou vibrante conforme subtema (viagem = golden hour; moda = recortes limpos; entretenimento = paleta vibrante).
+**Composição**: Imagens em tela cheia com título flutuante, paisagens e imagens bonitas e leves.
+
+## PARA TEMAS DE NOVIDADES TECNOLÓGICAS
+**Imagens de fundo**: Pessoas utilizando dispositivos, detalhes de mãos/olhos em tecnologia, ambientes contemporâneos (prédios com vidro, escritórios modernos), animais em contexto tech.
+**Tratamento**: Paleta fria (azul, roxo, ciano) com acentos neon, overlay de dados ou interfaces, estética moderna ou futurista.
+**Composição**: Objetos e pessoas utilizando-os, com atmosfera futurista.
+
 
 ### ESTRUTURA OBRIGATÓRIA DO CARROSSEL
 
@@ -502,7 +528,7 @@ IMPORTANTE: Variar o número de slides conforme o tema definido, podendo ter de 
 ```json
 {
   "carrossel": {
-    "total_slides": "[número de slides do carrossel, variando de 2 a 10]",
+    "total_slides": [número de slides do carrossel, variando de 2 a 10],
     "design_specs": {
       "font_name": "Oswald",
       "font_url": "https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZosUZiZQ.woff2",
@@ -557,7 +583,7 @@ IMPORTANTE: Variar o número de slides conforme o tema definido, podendo ter de 
     "estilo": "Descrição breve do estilo da legenda",
     "tom": "Inspirador, reflexivo e maduro. Evita promessas exageradas ou linguagem sensacionalista",
     "texto_completo": "Texto COMPLETO da legenda para ser copiado e colado no Instagram. Deve seguir estrutura: Hook impactante (1 frase) + Contexto explicativo (1-2 frases) + CTA natural (pergunta/convite) + Hashtags integradas naturalmente. Total entre 150-300 caracteres.",
-    "caracteres": "[Total de caracteres]"
+    "caracteres": [Total de caracteres]
   },
   "post_details": {
    "formato": "Carrossel 1:1",
