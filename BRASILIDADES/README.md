@@ -19,6 +19,7 @@ Este repositório contém a documentação completa do Agente de Criação de Co
 6.  [**Agentes de IA Utilizados**](#6-agentes-de-ia-utilizados)
 7.  [**Exemplos de Saída da Automação**](#7-exemplos-de-saída-da-automação)
 8.  [**Links e Recursos**](#8-links-e-recursos)
+9.  [**Passo a Passo para Replicar o Fluxo BRASILIDADES**](#9-passo-a-passo-para-replicar-o-fluxo-BRASILIDADES)  
 
 ---
 
