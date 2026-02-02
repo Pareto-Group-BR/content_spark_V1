@@ -185,7 +185,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 1.  **Credenciais no N8N:** Acesse sua instância do N8N e, na seção **Credentials**, crie as credenciais essenciais para este fluxo (Google Sheets, Google Drive, Tess AI, Htmlcsstoimg API, etc.).
 2.  **Agentes na Tess AI:** Os IDs dos agentes são únicos por workspace. Você precisa recriá-los:
-    *   Consulte a seção **"6. Agentes de IA Utilizados"** deste documento para ver a lista de agentes (ex: 32754, 32061, etc.).
+    *   Consulte a seção **[Agentes de IA - Fluxo SUGESTÕES](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Agentes_de_IA.md)** deste repositório para ver a lista de agentes e seus prompts detalhados.
     *   Em seu próprio workspace da Tess AI, **crie ou duplique cada agente**, utilizando os mesmos prompts e configurações do fluxo original.
     *   Anote os **novos IDs** de cada um dos seus agentes.
 3.  **Pasta no Drive:** Crie uma pasta principal no seu Google Drive onde as artes serão salvas e copie o **ID da pasta** (a parte final do URL).
