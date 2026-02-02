@@ -61,8 +61,9 @@ O resultado final é um conteúdo original e coeso, baseado em dados de tendênc
 *   **Acesso de Editor** à [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0) e Conta Google para acessar a planilha e o Google Drive.
 
 Também é necessário liberar as permissões do AppScript, o que pode ser feito via menu da planilha **"Permissões do Script"**. Essa liberação é feita uma única vez, ao utilizar a planilha pela primeira vez.
-<img width="319" height="83" alt="image" src="https://github.com/user-attachments/assets/9b342bb8-9a77-48d3-8e21-97906da01e8b" />
-  
+
+  <img width="408" height="132" alt="image" src="https://github.com/user-attachments/assets/8f642898-e25b-40fe-be0f-82782259bc75" />
+
 *   Fazer parte do canal do Google Chat para receber as notificações (Opcional para receber as notificações).
 
 
