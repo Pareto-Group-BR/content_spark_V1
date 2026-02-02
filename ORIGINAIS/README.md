@@ -209,3 +209,5 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 *   **Planilha de Controle**: [Link para a Planilha](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0)
 *   **Repositório Completo do "Content Spark V1" no Github**: [Link para o Repositório](https://github.com/Pareto-Group-BR/content_spark_V1/tree/main)
 *   **Documentação Técnica do Fluxo**: [Fluxo N8N no Github](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/Fluxo_N8N.md)
+*   **Arquivo JSON com Fluxo do N8N**: 
+
