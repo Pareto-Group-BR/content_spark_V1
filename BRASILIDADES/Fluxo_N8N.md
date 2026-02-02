@@ -86,12 +86,12 @@ O fluxo pode ser iniciado de duas maneiras:
 
 #### 1.1 Programação (Schedule)
 - **Nó**: `n8n-nodes-base.scheduleTrigger`
-- **Configuração**: Executa a automação em dias e horários pré-definidos à meia noite (o usuário configura essa programação na [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=1213580918#gid=1213580918)).
+- **Configuração**: Executa a automação em dias e horários pré-definidos à meia noite (o usuário configura essa programação na [Planilha de Controle](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0).
 - **Exemplo**: A cada segunda-feira, quinta-feira e domingo à meia-noite.
 
 #### 1.2 Webhook
 - **Nó**: `n8n-nodes-base.webhook`
-- **Finalidade**: Permite que a automação seja iniciada por uma chamada de API externa, através do menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=1213580918#gid=1213580918).
+- **Finalidade**: Permite que a automação seja iniciada por uma chamada de API externa, através do menu da [Planilha de Controle](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0).
 - **Vantagem**: Oferece flexibilidade para execuções independentes da programação.
 
 <img width="258" height="341" alt="image" src="https://github.com/user-attachments/assets/d042ed42-1215-4f71-b29d-dabd9cf479fa" />
