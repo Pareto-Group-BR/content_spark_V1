@@ -15,7 +15,8 @@
 4.  [**Arquitetura e Ferramentas**](#4-arquitetura-e-ferramentas)
 5.  [**Fluxo de Trabalho no N8N (Execução Técnica)**](#5-fluxo-de-trabalho-no-n8n-execução-técnica)
 6.  [**Agentes de IA Utilizados**](#6-agentes-de-ia-utilizados)
-7.  [**Links e Recursos**](#8-links-e-recursos)
+7.  [**Exemplos de Saída da Automação**](#7-exemplos-de-saída-da-automação)
+8.  [**Links e Recursos**](#8-links-e-recursos)
 
 <br>
 
@@ -134,7 +135,29 @@ Confira mais dedatlhes sobre os agents de IA na [seção específica aqui na doc
 
 <br>
 
-### **7. Links e Recursos**
+
+## 7. Exemplos de Saída da Automação
+
+## Exemplo de Carrossel Gerado
+
+Abaixo, um exemplo da saída completa da automação, desde a escolha do tema até a legenda final para o Instagram.
+
+| Campo | Descrição |
+| :--- | :--- |
+| **Tema** | `Diferença entre IA tradicional e IA Generativa` |
+| **Artes** | [Link para a pasta com as imagens](https://drive.google.com/drive/folders/1-6YN6FGYvfckCf28Xne7lPjIvFQ8GTbO) |
+| **Motivo da Escolha** | Ajudar profissionais de qualquer área a saber como trabalhar melhor com a grande revolução tecnológica do momento, a IA GENERATIVA.  |
+| **Explicacao do Tema** | Essa é uma excelente pergunta e fundamental para entender o atual momento tecnológico. Como a Pareto atua fortemente na integração dessas duas frentes, posso explicar não apenas a teoria, mas como elas coexistem no mercado.
+
+A principal distinção é que a **IA Tradicional (ou Analítica/Discriminativa)** foca em **analisar** dados existentes para encontrar padrões e fazer previsões, enquanto a **IA Generativa** foca em **criar** novos dados e conteúdos a partir do que aprendeu.  |
+| **Legenda** | "Nem toda inteligência artificial funciona do mesmo jeito. 📡 Algumas seguem regras. Outras criam o inesperado. Saber a diferença pode mudar sua forma de pensar tecnologia. Você sabia disso? Qual das duas você usaria agora? 💡 #inteligenciaartificial #tecnologia #inovacao #reflexão" |
+| **Data de Criação** | 17-12-2025 |
+
+### Artes Geradas no Exemplo
+
+
+
+### **8. Links e Recursos**
 *   **Planilha de Controle:** [`[Pareto AI Content Hub] Registro dos Conteúdos Criados - Pareto`](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=200832694#gid=200832694)
 *   **Repositório das Artes:** Google Drive (As pastas são criadas dinamicamente e os links inseridos na planilha)
 *   **Arquivo JSON com o Fluxo N8N:** [Arquivo JSON com o fluxo SUGESTÕES](https://cdn.tess.im/assets/uploads/a28b15f4-b907-4c13-959a-73a303b206c2.json?_gl=1*oiy62f*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjIyNDgwMTQ1My4xNzY5ODA1MjY4LjE3Njk4MDg3NjY.*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3Njk4MDA1NjAkbzYkZzEkdDE3Njk4MDg3NjYkajYwJGwwJGgw*_ga_9D17W435GL*czE3Njk4MDA1NjAkbzI2JGcxJHQxNzY5ODA4NzY2JGo2MCRsMCRoMA..)
