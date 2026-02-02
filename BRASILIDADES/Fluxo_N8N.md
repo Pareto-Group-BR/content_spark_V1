@@ -403,3 +403,7 @@ Este fluxo automático de criação de conteúdo integra múltiplas APIs e agent
 A robustez do fluxo é garantida através de validação de dados, retry automático e tratamento de erros em pontos críticos.
 
 ---
+## 9. Arquivo JSON
+
+**Link de Acesso ao arquivo JSON do Fluxo:**
+- [Arquivo JSON do Fluxo N8N](https://cdn.tess.im/assets/uploads/8bdc782a-b147-4f6a-842d-70edb6220f36.json)
