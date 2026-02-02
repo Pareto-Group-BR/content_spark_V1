@@ -25,7 +25,7 @@ Este fluxo de trabalho, orquestrado no N8N, automatiza a criação de conteúdo 
 
 O fluxo segue 5 fases principais: **Ativação**, **Pesquisa**, **Criação**, **Geração Visual** e **Finalização**.
 
-### 1.1. Passo a Passo para Replicar o Fluxo SUGESTÕES
+### Passo a Passo para Replicar o Fluxo SUGESTÕES
 
 Para replicar este fluxo em seu próprio ambiente, siga as etapas abaixo.
 
