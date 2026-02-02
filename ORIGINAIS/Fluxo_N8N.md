@@ -76,12 +76,6 @@ Este fluxo de trabalho automatizado em **N8N** foi projetado para criar conteúd
 
 ---
 
-Com certeza! Reorganizei e reescrevi a seção "Etapas Detalhadas" para que cada passo corresponda exatamente às 6 fases descritas na arquitetura do fluxo. A nova estrutura segue a lógica de cada fase, tornando a documentação mais clara e coesa.
-
-Aqui está a versão revisada:
-
----
-
 ## Etapas Detalhadas
 
 A seguir, detalhamos cada nó do fluxo de automação, organizados de acordo com as 6 fases principais do processo.
