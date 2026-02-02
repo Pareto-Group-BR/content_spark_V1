@@ -199,7 +199,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 1.  **Importe o arquivo JSON** deste fluxo (`SUGESTÕES`) para a sua instância do N8N. [Link para Download](https://cdn.tess.im/assets/uploads/8ca5709e-b748-4d5d-986d-0c7fa67ca41a.json?_gl=1*1laijpv*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDY0Mzky*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjQzOTIkajM2JGwwJGgw*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDY0MzkyJGozNiRsMCRoMA..)
 
-2.  **Copie o URL do seu novo Webhook** no nó `Webhook` (aba "Production").
+2.  **Copie o URL do seu novo Webhook** abra cada um dos nós de `Webhook` do fluxo "[PARETO] Gerenciamento do fluxo de criação de conteúdo" e copie a URL de  "Production" específico deles [Link para Download do arquivo JSON](https://cdn.tess.im/assets/uploads/a3812340-f54f-4953-8a3e-ff1d4c998d3b.json).
 3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_SUGESTOES`, e salve.
 4.  **Atualize os IDs no N8N:**
     *   **Pasta do Drive:** No nó `Create folder1`, cole o **ID da sua pasta** no campo "Parent Folder ID".
