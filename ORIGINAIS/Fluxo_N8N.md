@@ -2,8 +2,8 @@
 
 ## 📚 Índice
 
-1. [Visão Geral](#visão-geral)
-2. [Arquitetura do Fluxo](#arquitetura-do-fluxo)
+1. [Visão Geral](#1-visão-geral)
+2. [Arquitetura do Fluxo e Replicação](#2-arquitetura-do-fluxo-e-replicação)
 3. [Etapas Detalhadas](#etapas-detalhadas)
 4. [APIs Utilizadas](#apis-utilizadas)
 5. [Credenciais Necessárias](#credenciais-necessárias)
@@ -12,7 +12,7 @@
 
 ---
 
-## Visão Geral
+## 1. Visão Geral
 
 Este fluxo de trabalho automatizado em **N8N** foi projetado para criar conteúdo de alta qualidade para Instagram, desde a identificação de tendências até a geração de imagens e carrosséis. O workflow executa as seguintes funcionalidades principais:
 
@@ -26,7 +26,7 @@ Este fluxo de trabalho automatizado em **N8N** foi projetado para criar conteúd
 
 ---
 
-## Arquitetura do Fluxo
+## 2. Arquitetura do Fluxo e Replicação
 
 ### Estrutura Geral
 
