@@ -110,6 +110,7 @@ Através do menu **"Pareto AI"** na planilha, o usuário pode:
 *   **Verificar o Status** (ativo ou inativo) de cada fluxo.
 *   **Selecionar os Dias de Execução** para os fluxos agendados.
 
+
 ## 5. Passo a Passo para Replicar
 
 Para replicar a suíte Content Spark em seu próprio ambiente, siga as etapas abaixo. Este guia assume que você possui uma instância do N8N e uma Conta Google.
@@ -132,17 +133,33 @@ Você precisará de sua própria versão da planilha que serve como centro de co
 2.  Abra sua nova planilha e acesse o menu **`Extensões > Apps Script`**.
 3.  Na tela do Apps Script, clique em `Execuções` e depois no botão para **conceder as permissões necessárias**. Esta ação é obrigatória e precisa ser feita apenas uma vez.
 
-### **Etapa 3: Importar o Fluxo e Conectar as Ferramentas**
+### **Etapa 3: Importar e Configurar o Fluxo de Gerenciamento**
 
-Com as credenciais e a planilha prontas, o passo final é conectar tudo.
+Para simplificar a duplicação e o gerenciamento dos fluxos, a lógica de ativação, pausa e agendamento foi centralizada em um workflow à parte. É a partir dele que você obterá os webhooks para controlar os fluxos de criação de conteúdo diretamente pela planilha.
 
-1.  **Importe o arquivo JSON** de um dos fluxos para a sua instância do N8N.
-2.  **Copie o URL do seu novo Webhook:**
-    *   Dentro do fluxo recém-importado no N8N, clique no primeiro nó, chamado **`Webhook`**.
-    *   No painel à direita, na seção "Webhook URLs", copie o URL da aba **"Production"**.
-3.  **Cole o Webhook na sua Planilha:**
+1.  **Importe o Fluxo de Gerenciamento:**
+    *   Importe o arquivo [`(PARETO) Gerenciamento do fluxo de criação de conteúdo.json`](https://cdn.tess.im/assets/uploads/a3812340-f54f-4953-8a3e-ff1d4c998d3b.json) para a sua instância do N8N.
+    *   Este fluxo contém os webhooks que serão conectados aos botões da sua Planilha de Controle.
+
+2.  **Copie os URLs dos Webhooks de Gerenciamento:**
+    *   Abra o fluxo "Gerenciamento do fluxo de criação de conteúdo" que você acabou de importar.
+    *   Você verá vários nós de webhook. Para cada fluxo de conteúdo que você for usar (`Originais`, `Brasilidades`, `Sugestões`), você precisará copiar os URLs de **Production** dos seguintes nós:
+        *   **Ativar Fluxo**: Ex: `Webhook - Ativar Fluxo - Originais`
+        *   **Pausar/Desativar Fluxo**: Ex: `Webhook - Desativar Fluxo - Originais`
+    *   Além desses, copie o URL de **Production** do nó `Webhook` (localizado próximo ao nó "Switch"). Este webhook é responsável por **Definir o Agendamento**.
+
+3.  **Cole os Webhooks na sua Planilha:**
     *   Volte para o **Apps Script** da sua planilha (menu `Extensões > Apps Script`).
-    *   No código, localize as **URL de cada Webhook** (tem uma para ATIVAR, uma para PAUSAR e outra para RODAR MANUALMENTE o fluxo).
+    *   No código, localize as variáveis que armazenam as URLs para **ATIVAR**, **PAUSAR** e **DEFINIR AGENDAMENTO** para cada fluxo.
+    *   **Substitua os links antigos** pelos novos URLs correspondentes que você copiou do seu fluxo de gerenciamento no N8N.
+    *   Clique no ícone de "Salvar projeto" (disquete).
+
+### **Etapa 4: Importar e Configurar os Fluxos de Criação de Conteúdo**
+
+Agora, com o gerenciamento configurado, você importará os fluxos que efetivamente criam o conteúdo.
+
+1.  **Importe o Fluxo de Conteúdo Desejado:**
+    *   Importe o arquivo JSON de um dos fluxos principais (`ORIGINAIS`, `BRASILIDADES` ou `SUGESTÕES`) para a sua instância do N8N.
 
     <img width="976" alt="Imagem do código no Apps Script mostrando a URL do webhook para ativar" src="https://github.com/user-attachments/assets/299d431a-4ba0-43bd-b4f2-771e1475f88a">
 
@@ -150,13 +167,11 @@ Com as credenciais e a planilha prontas, o passo final é conectar tudo.
 
     <img width="938" alt="Imagem do código no Apps Script mostrando a URL do webhook para rodar manualmente" src="https://github.com/user-attachments/assets/749844a9-ddbf-46b2-b05a-94cbe1a2a09e">
 
-    *   **Substitua o link antigo** pelo novo URL que você copiou do seu N8N.
-    *   Clique no ícone de "Salvar projeto" (disquete).
 4.  **Verifique os Nós Manualmente:**
     *   Percorra os nós do fluxo de trabalho no N8N para confirmar se suas credenciais foram associadas corretamente.
     *   Fique atento a nós de **Requisição HTTP (HTTP Request)**, que podem exigir a inclusão manual de um Token ou API Key diretamente no nó, caso a associação automática falhe.
 
-Repita a **Etapa 3** para cada um dos fluxos que desejar replicar. Após isso, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
+5.  **Repita a Etapa 4** para cada um dos outros fluxos (`BRASILIDADES`, `SUGESTÕES`) que desejar replicar. Após isso, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
 
 > Para cada um dos fluxos de Criação de Conteúdo (BRASILIDADES, ORIGINAIS e SUGESTÕES), recomenda-se configurar um "Error Workflow" no N8N, de modo a ser alertado em casos de erro nos fluxos. Pode ser um workflow que ative uma mensagem em canais de mensageria (como Google Chat), envie um E-mail, ou outra ação desejada. Segue um exemplo:
 >
