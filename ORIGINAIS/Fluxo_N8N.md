@@ -98,7 +98,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 #### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
-1.  **Importe o arquivo JSON** deste fluxo (`ORIGINAIS`) para a sua instância do N8N.
+1.  **Importe o arquivo JSON** deste fluxo (`ORIGINAIS`) para a sua instância do N8N. [Link para Download](https://cdn.tess.im/assets/uploads/4398f2bb-cb87-42a5-891e-145c28453430.json?_gl=1*y0v0db*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
 2.  **Copie o URL do seu novo Webhook** no nó `Webhook` (aba "Production").
 3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_ORIGINAIS`, e salve.
 4.  **Atualize os IDs no N8N:**
@@ -505,4 +505,4 @@ Para erros identificados na automação, favor criar uma Issue associada a este 
 > *Obs: Lembre-se de criar as credenciais anteriormente no N8N, isso facilitará na importação do JSON, permitindo que ele seja preenchido com elas.*
 
 Baixe o arquivo JSON completo aqui:  
-https://cdn.tess.im/assets/uploads/6fc9363a-bd09-4825-9148-cf438927bd58.json
+[Link para Download](https://cdn.tess.im/assets/uploads/4398f2bb-cb87-42a5-891e-145c28453430.json?_gl=1*y0v0db*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
