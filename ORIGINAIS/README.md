@@ -217,34 +217,28 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 
 Para replicar este fluxo em seu próprio ambiente, siga as etapas abaixo.
 
-### **Etapa 1: Preparar as Credenciais no N8N**
+### **Etapa 1: Preparar Ativos (Credenciais, Agentes e Pasta)**
 
-Antes de importar o fluxo, configure suas credenciais no N8N para garantir que o mapeamento seja feito corretamente. Para este fluxo, você precisará de credenciais para:
-*   Google Sheets
-*   Google Drive
-*   SerpAPI (para Google Trends)
-*   Twitter API
-*   Apify
-*   Htmlcsstoimg API
-*   Tess AI
-*   Google Chat / E-mail (para notificações)
+Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
-> **Dica:** Crie as credenciais **antes** de importar o JSON. Assim, o N8N preencherá os campos automaticamente.
+1.  **Credenciais no N8N:** Acesse sua instância do N8N e, na seção **Credentials**, crie as credenciais necessárias para este fluxo (Google Sheets, Google Drive, SerpAPI, Twitter, Apify, Tess AI, Htmlcsstoimg, etc.).
+2.  **Agentes na Tess AI:** Os IDs dos agentes são únicos por workspace. Você precisa recriá-los:
+    *   Consulte a seção **"6. Agentes de IA Utilizados"** deste documento para ver a lista de agentes.
+    *   Em seu próprio workspace da Tess AI, **crie ou duplique cada agente**, utilizando os mesmos prompts e configurações do fluxo original.
+    *   Anote os **novos IDs** de cada um dos seus agentes.
+3.  **Pasta no Drive:** Crie uma pasta principal no seu Google Drive onde as artes serão salvas e copie o **ID da pasta** (a parte final do URL).
 
 ### **Etapa 2: Replicar a Planilha de Controle**
 
-1.  **Faça uma cópia** do template da planilha: [**Template - Planilha de Controle**](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit)
+1.  **Faça uma cópia** do template da planilha: [**Template - Planilha de Controle**](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit).
 2.  Em sua nova planilha, acesse **`Extensões > Apps Script`** e conceda as permissões de execução do script.
 
-### **Etapa 3: Importar o Fluxo e Conectar as Ferramentas**
+### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
 1.  **Importe o arquivo JSON** deste fluxo (`ORIGINAIS`) para a sua instância do N8N.
-2.  **Copie o URL do seu novo Webhook:**
-    *   No fluxo recém-importado, clique no nó **`Webhook`**.
-    *   No painel à direita, copie o URL da aba **"Production"**.
-3.  **Cole o Webhook na sua Planilha:**
-    *   Volte ao **Apps Script** da sua planilha.
-    *   Localize a variável referente a este fluxo.
-    *   **Substitua o link antigo** pelo novo URL do seu N8N e salve o projeto.
-4.  **Verifique os Nós Manualmente:**
-    *   Percorra os nós no N8N para confirmar se suas credenciais foram associadas corretamente. Verifique especialmente os nós de **Requisição HTTP**.
+2.  **Copie o URL do seu novo Webhook** no nó `Webhook` (aba "Production").
+3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_ORIGINAIS`, e salve.
+4.  **Atualize os IDs no N8N:**
+    *   **Pasta do Drive:** No nó que cria a pasta no Drive (ex: `Create folder`), cole o **ID da sua pasta** no campo apropriado.
+    *   **Agentes de IA:** Nos nós que fazem chamadas para a Tess AI, **substitua os IDs dos agentes antigos pelos novos IDs** que você criou.
+5.  **Verifique os Nós Manualmente:** Percorra os demais nós para confirmar se suas credenciais foram associadas corretamente.
