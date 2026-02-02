@@ -157,6 +157,6 @@ Repita a **Etapa 3** para cada um dos fluxos que desejar replicar. Após isso, s
 
 > Para cada um dos fluxos de Criação de Conteúdo (BRASILIDADES, ORIGINAIS e SUGESTÕES), recomenda-se configurara um  "Error Workflow" no N8N, de modo a ser alertado em casos de erro nos fluxos. Pode ser um workflow que ative uma mensagem em canais de mensageria (como Google Chat), envie um E-mail, ou outra ação desejada. Segue um exemplo:
 >
-> <img width="224.5" height="133.25" alt="image" src="https://github.com/user-attachments/assets/491c4f49-e4a8-40b6-8a77-d279f93bbf6d" />
+> <img width="449" height="266.5" alt="image" src="https://github.com/user-attachments/assets/491c4f49-e4a8-40b6-8a77-d279f93bbf6d" />
 
 
