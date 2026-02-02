@@ -113,6 +113,7 @@ Antes de importar o fluxo, configure suas credenciais no N8N para garantir que o
     *   Percorra os nós no N8N para confirmar se suas credenciais foram associadas corretamente. Verifique especialmente os nós de **Requisição HTTP**.
 
 
+
 ## 3. Etapas Detalhadas
 
 A seguir, detalhamos cada nó do fluxo de automação, organizados de acordo com as 6 fases principais do processo.
