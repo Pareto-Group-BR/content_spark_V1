@@ -60,7 +60,7 @@ Fim
 
 Para replicar este fluxo em seu próprio ambiente, siga as etapas abaixo.
 
-### **Etapa 1: Preparar Ativos (Credenciais, Agentes e Pasta)**
+#### **Etapa 1: Preparar Ativos (Credenciais, Agentes e Pasta)**
 
 Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
@@ -71,12 +71,12 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
     *   Anote os **novos IDs** de cada um dos seus agentes.
 3.  **Pasta no Drive:** Crie uma pasta principal no seu Google Drive onde as artes serão salvas e copie o **ID da pasta** (a parte final do URL).
 
-### **Etapa 2: Replicar a Planilha de Controle**
+#### **Etapa 2: Replicar a Planilha de Controle**
 
 1.  **Faça uma cópia** do template da planilha: [**Template - Planilha de Controle**](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit).
 2.  Em sua nova planilha, acesse **`Extensões > Apps Script`** e conceda as permissões de execução do script.
 
-### **Etapa 3: Importar e Configurar o Fluxo no N8N**
+#### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
 1.  **Importe o arquivo JSON** deste fluxo (`BRASILIDADES`) para a sua instância do N8N.
 2.  **Copie o URL do seu novo Webhook** no nó `Webhook` (aba "Production").
@@ -86,7 +86,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
     *   **Agentes de IA:** Nos nós que fazem chamadas para a Tess AI, **substitua os IDs dos agentes antigos pelos novos IDs** que você criou.
 5.  **Verifique os Nós Manualmente:** Percorra os demais nós para confirmar se suas credenciais foram associadas corretamente.
 
-*Observação: É importante ressaltar que, para UTILIZAR a planilha de Criação de Conteúdo, não é necessário ter acesso ao N8N. Mas sim, ter as permissões do Google AppScript configuradas.*
+>*Observação: É importante ressaltar que, para UTILIZAR a planilha de Criação de Conteúdo, não é necessário ter acesso ao N8N. Mas sim, ter as permissões do Google AppScript configuradas.*
 
 
 ---
