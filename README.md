@@ -152,6 +152,7 @@ Com as credenciais e a planilha prontas, o passo final é conectar tudo.
     *   Percorra os nós do fluxo de trabalho no N8N para confirmar se suas credenciais foram associadas corretamente.
     *   Fique atento a nós de **Requisição HTTP (HTTP Request)**, que podem exigir a inclusão manual de um Token ou API Key diretamente no nó, caso a associação automática falhe.
 
+<br>
 Repita a **Etapa 3** para cada um dos fluxos que desejar replicar. Após isso, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
 
 > Para cada um dos fluxos de Criação de Conteúdo (BRASILIDADES, ORIGINAIS e SUGESTÕES), recomenda-se configurara um  "Error Workflow" no N8N, de modo a ser alertado em casos de erro nos fluxos. Pode ser um workflow que ative uma mensagem em canais de mensageria (como Google Chat), envie um E-mail, ou outra ação desejada. Segue um exemplo:
