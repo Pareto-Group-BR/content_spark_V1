@@ -169,3 +169,38 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 *   **Planilha de Controle:** [`[Pareto AI Content Hub] Registro dos Conteúdos Criados - Pareto`](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=200832694#gid=200832694)
 *   **Repositório das Artes:** Google Drive (As pastas são criadas dinamicamente e os links inseridos na planilha)
 *   **Arquivo JSON com o Fluxo N8N:** [Arquivo JSON com o fluxo SUGESTÕES](https://cdn.tess.im/assets/uploads/a28b15f4-b907-4c13-959a-73a303b206c2.json?_gl=1*oiy62f*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjIyNDgwMTQ1My4xNzY5ODA1MjY4LjE3Njk4MDg3NjY.*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3Njk4MDA1NjAkbzYkZzEkdDE3Njk4MDg3NjYkajYwJGwwJGgw*_ga_9D17W435GL*czE3Njk4MDA1NjAkbzI2JGcxJHQxNzY5ODA4NzY2JGo2MCRsMCRoMA..)
+
+
+
+## 9. Passo a Passo para Replicar o Fluxo SUGESTÕES
+
+Para replicar este fluxo em seu próprio ambiente, siga as etapas abaixo.
+
+### **Etapa 1: Preparar as Credenciais no N8N**
+
+Antes de importar o fluxo, configure suas credenciais no N8N. Para este fluxo, as credenciais essenciais são:
+*   Google Sheets
+*   Google Drive
+*   Tess AI (para os múltiplos agentes de IA)
+*   Htmlcsstoimg API
+*   Google Chat / E-mail (para notificações)
+
+> **Dica:** Crie as credenciais **antes** de importar o JSON para que o N8N preencha os campos automaticamente.
+
+### **Etapa 2: Replicar a Planilha de Controle**
+
+1.  **Faça uma cópia** do template da planilha: [**Template - Planilha de Controle**](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit)
+2.  Em sua nova planilha, acesse **`Extensões > Apps Script`** e conceda as permissões de execução do script.
+
+### **Etapa 3: Importar o Fluxo e Conectar as Ferramentas**
+
+1.  **Importe o arquivo JSON** deste fluxo (`SUGESTÕES`) para a sua instância do N8N.
+2.  **Copie o URL do seu novo Webhook:**
+    *   No fluxo recém-importado, clique no nó **`Webhook`**.
+    *   No painel à direita, copie o URL da aba **"Production"**.
+3.  **Cole o Webhook na sua Planilha:**
+    *   Volte ao **Apps Script** da sua planilha.
+    *   Localize a variável referente a este fluxo.
+    *   **Substitua o link antigo** pelo novo URL do seu N8N e salve o projeto.
+4.  **Verifique os Nós Manualmente:**
+    *   Percorra os nós no N8N para confirmar se suas credenciais foram associadas corretamente. Verifique com atenção os nós que fazem chamadas aos agentes da **Tess AI** para garantir que os IDs e tokens estão corretos.
