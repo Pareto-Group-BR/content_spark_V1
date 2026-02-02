@@ -120,7 +120,7 @@ O fluxo de trabalho no N8N é ativado por um **Webhook** e segue as seguintes et
 18. **`Atualizar planilha`**: Atualiza a linha original na planilha com o link da pasta do Google Drive e a legenda do post.
 19. **`Send a message1`** e **`Enviar Mensagem Gchat`**: Envia notificações por e-mail e Google Chat informando sobre a conclusão.
 
-Confira mais detalhes sobre o Fluxo do N8N [nesta outra página da documentação.](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Fluxo_N8N.md)
+Confira mais detalhes sobre o Fluxo do N8N, com todas as suas etapas, nós, APIs utilizadas e Credenciais [nesta outra página da documentação.](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Fluxo_N8N.md)
 
 <br>
 
@@ -132,7 +132,7 @@ Este fluxo utiliza múltiplos agentes da plataforma Tess AI, encadeados para rea
 *   **Agente Criador Carrosséis Instagram [FUNDO] (ID: 32060):** Gera as imagens de fundo para o carrossel com base no roteiro.
 *   **Criar anúncios de Imagem em HTML (ID: 32059):** Monta os slides do carrossel combinando textos e imagens em formato HTML.
 
-Confira mais dedatlhes sobre os agents de IA na [seção específica aqui na documentação.](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Agentes_de_IA.md)
+Confira mais dedatlhes sobre os agentes de IA, prompts e LLMs usados na [seção específica aqui na documentação.](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Agentes_de_IA.md)
 
 <br>
 
