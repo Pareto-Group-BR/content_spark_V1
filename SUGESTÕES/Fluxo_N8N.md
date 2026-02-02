@@ -4,7 +4,7 @@ Claro! Aqui está um índice para sua documentação, formatado para funcionar c
 
 ## Índice
 
-*   [1. Visão Geral da Arquitetura + Replicação](#1-visão-geral-da-arquitetura-+-replicação)
+*   [1. Visão Geral da Arquitetura + Replicação](#1-visão-geral-da-arquitetura-e-replicação)
 *   [2. Diagrama do Fluxo](#2-diagrama-do-fluxo-mermaid---por-fases)
 *   [3. Detalhamento do Fluxo por Fases](#3-detalhamento-do-fluxo-por-fases)
     *   [FASE 1: Ativação e Coleta de Dados](#fase-1-ativação-e-coleta-de-dados)
@@ -19,7 +19,7 @@ Claro! Aqui está um índice para sua documentação, formatado para funcionar c
 *   [7. Arquivo JSON](#7-arquivo-json)
 
 
-## 1. Visão Geral da Arquitetura + Replicação
+## 1. Visão Geral da Arquitetura e Replicação
 
 Este fluxo de trabalho, orquestrado no N8N, automatiza a criação de conteúdo para redes sociais a partir de temas sugeridos em uma planilha do Google. A arquitetura utiliza um modelo orientado a eventos, iniciado por um webhook. Ele integra diversas APIs, incluindo **Google Workspace (Sheets, Drive, Gmail, Chat)** para manipulação de dados e notificações, a plataforma **Tess AI** para as tarefas de inteligência artificial (pesquisa, roteirização e geração de conteúdo), e o serviço **HTML/CSS-to-Image** para a conversão de código em imagens.
 
