@@ -124,7 +124,7 @@ Com as credenciais e a planilha prontas, o passo final é conectar tudo.
     *   No painel à direita, na seção "Webhook URLs", copie o URL da aba **"Production"**.
 3.  **Cole o Webhook na sua Planilha:**
     *   Volte para o **Apps Script** da sua planilha (menu `Extensões > Apps Script`).
-    *   No código, localize as URL de cada Webhook (tem uma para ATIVAR, uma para PAUSAR e outra para RODAR MANUALMENTE o fluxo)
+    *   No código, localize as **URL de cada Webhook** (tem uma para ATIVAR, uma para PAUSAR e outra para RODAR MANUALMENTE o fluxo)
    <img width="976" height="252" alt="image" src="https://github.com/user-attachments/assets/299d431a-4ba0-43bd-b4f2-771e1475f88a" />
    <img width="977" height="241" alt="image" src="https://github.com/user-attachments/assets/4a492da7-4af6-4e16-bc9a-ec9f2186ecf4" />
    <img width="938" height="333" alt="image" src="https://github.com/user-attachments/assets/749844a9-ddbf-46b2-b05a-94cbe1a2a09e" />
