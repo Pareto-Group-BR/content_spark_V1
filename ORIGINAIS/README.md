@@ -165,6 +165,9 @@ O processo é dividido em fases sequenciais e paralelas, executadas dentro do N8
 ```
 **Tempo Total Estimado**: 20-25 minutos.
 
+Confira mais dedatlhes sobre o fluxo do N8N, com os nós, APIs e Credenciais usadas na seção específica de [Documentação Técnica - Fluxo N8N: Agente de Criação de Conteúdo (ORIGINAIS)](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/Fluxo_N8N.md).
+
+
 ## 6. Agentes de IA Utilizados
 
 A automação emprega múltiplos agentes de IA especializados em diferentes tarefas ao longo do fluxo:
@@ -174,6 +177,8 @@ A automação emprega múltiplos agentes de IA especializados em diferentes tare
 *   **Agente Pesquisador**: Aprofunda-se no tema selecionado, buscando dados, contexto histórico e ângulos únicos para enriquecer o conteúdo.
 *   **Agente Roteirista e Copywriter**: Estrutura a narrativa do carrossel, cria os textos para cada slide (hooks, desenvolvimento, CTA) e redige a legenda final para o Instagram.
 *   **Agente Designer Gráfico**: Traduz as descrições de texto em composições visuais (via código HTML) que são então convertidas em imagens, seguindo uma identidade visual coesa.
+
+Confira mais dedatlhes sobre os agentes de IA, prompts e LLMs usados [na seção específica sobre Agentes de IA do fluxo ORIGINAIS](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/Agentes%20de%20IA.md).
 
 ## 7. Exemplos de Saída da Automação
 
