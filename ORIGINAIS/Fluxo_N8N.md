@@ -4,11 +4,11 @@
 
 1. [Visão Geral](#1-visão-geral)
 2. [Arquitetura do Fluxo e Replicação](#2-arquitetura-do-fluxo-e-replicação)
-3. [Etapas Detalhadas](#etapas-detalhadas)
-4. [APIs Utilizadas](#apis-utilizadas)
-5. [Credenciais Necessárias](#credenciais-necessárias)
-6. [Troubleshooting](#troubleshooting)
-7. [Arquivo do Fluxo](#arquivo-do-fluxo)
+3. [Etapas Detalhadas](#3-etapas-detalhadas)
+4. [APIs Utilizadas](#4-apis-utilizadas)
+5. [Credenciais Necessárias](#5-credenciais-necessárias)
+6. [Troubleshooting](#6-troubleshooting)
+7. [Arquivo do Fluxo em JSON](#7-arquivo-do-fluxo-em-json)
 
 ---
 
@@ -76,7 +76,7 @@ Este fluxo de trabalho automatizado em **N8N** foi projetado para criar conteúd
 
 ---
 
-## Etapas Detalhadas
+## 3. Etapas Detalhadas
 
 A seguir, detalhamos cada nó do fluxo de automação, organizados de acordo com as 6 fases principais do processo.
 
@@ -258,7 +258,7 @@ A fase final é responsável por registrar o trabalho concluído em uma planilha
 
 ---
 
-## APIs Utilizadas
+## 4. APIs Utilizadas
 
 ### 1. **TESS - Pareto**
 - **Base URL**: `https://tess.pareto.io/api`
@@ -351,7 +351,7 @@ A fase final é responsável por registrar o trabalho concluído em uma planilha
 
 ---
 
-## Credenciais Necessárias
+## 5. Credenciais Necessárias
 
 Para que o fluxo funcione corretamente, é preciso configurar as seguintes credenciais no N8N.
 
@@ -462,13 +462,13 @@ Para que o fluxo funcione corretamente, é preciso configurar as seguintes crede
 
 ---
 
-## Troubleshooting
+## 6. Troubleshooting
 
 Para erros identificados na automação, favor criar uma Issue associada a este agente no Github.
 
 ---
 
-## Arquivo do Fluxo
+## 7. Arquivo do Fluxo em JSON
 > *Obs: Lembre-se de criar as credenciais anteriormente no N8N, isso facilitará na importação do JSON, permitindo que ele seja preenchido com elas.*
 
 Baixe o arquivo JSON completo aqui:  
