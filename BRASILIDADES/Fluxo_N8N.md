@@ -13,7 +13,7 @@ O fluxo é projetado para ser robusto, tratando diferentes tipos de posts (image
 
 ---
 
-## 2. Arquitetura do Fluxo
+## 2. Arquitetura do Fluxo e Replicação
 
 O fluxo é dividido em várias etapas lógicas, que são executadas em sequência. Abaixo está a descrição da arquitetura macro.
 
@@ -36,6 +36,41 @@ Notificação
     ↓
 Fim
 ```
+
+### Passo a Passo para Replicar o Fluxo BRASILIDADES
+
+Para replicar este fluxo em seu próprio ambiente, siga as etapas abaixo.
+
+#### **Etapa 1: Preparar as Credenciais no N8N**
+
+Antes de importar o fluxo, configure suas credenciais no N8N. Para este fluxo, você precisará principalmente de credenciais para:
+*   Google Sheets API
+*   Google Drive API
+*   Apify
+*   Tess AI API
+*   HtmlCssToImage API
+*   Google Chat / E-mail (para notificações)
+
+> **Dica:** Crie as credenciais **antes** de importar o JSON para que o N8N preencha os campos automaticamente.
+
+#### **Etapa 2: Replicar a Planilha de Controle**
+
+1.  **Faça uma cópia** do template da planilha: [**Template - Planilha de Controle**](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit)
+2.  Em sua nova planilha, acesse **`Extensões > Apps Script`** e conceda as permissões de execução do script.
+
+#### **Etapa 3: Importar o Fluxo e Conectar as Ferramentas**
+
+1.  **Importe o arquivo JSON** deste fluxo (`BRASILIDADES`) para a sua instância do N8N.
+2.  **Copie o URL do seu novo Webhook:**
+    *   No fluxo recém-importado, clique no nó **`Webhook`**.
+    *   No painel à direita, copie o URL da aba **"Production"**.
+3.  **Cole o Webhook na sua Planilha:**
+    *   Volte ao **Apps Script** da sua planilha.
+    *   Localize a variável referente a este fluxo.
+    *   **Substitua o link antigo** pelo novo URL do seu N8N e salve o projeto.
+4.  **Verifique os Nós Manualmente:**
+    *   Percorra os nós no N8N para confirmar se suas credenciais foram associadas corretamente e se não há configurações "quebradas", especialmente em nós de **Requisição HTTP**.
+
 
 ---
 
