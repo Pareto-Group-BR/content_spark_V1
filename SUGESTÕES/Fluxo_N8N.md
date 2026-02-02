@@ -2,19 +2,19 @@
 
 ## 📚 Índice
 
-*   [1. Visão Geral da Arquitetura e Replicação](#1-visão-geral-da-arquitetura-e-replicação)
-*   [2. Diagrama do Fluxo](#2-diagrama-do-fluxo)
-*   [3. Detalhamento do Fluxo por Fases](#3-detalhamento-do-fluxo-por-fases)
-    *   [FASE 1: Ativação e Coleta de Dados](#fase-1-ativação-e-coleta-de-dados)
-    *   [FASE 2: Pesquisa Aprofundada](#fase-2-pesquisa-aprofundada)
-    *   [FASE 3: Criação de Roteiro](#fase-3-criação-de-roteiro)
-    *   [FASE 4: Geração Visual](#fase-4-geração-visual)
-    *   [FASE 5: Armazenamento e Processamento de Artes](#fase-5-armazenamento-e-processamento-de-artes)
-    *   [FASE 6: Atualização e Notificação](#fase-6-atualização-e-notificação)
-*   [4. Resumo de APIs, Plataformas e Credenciais](#4-resumo-de-apis-plataformas-e-credenciais)
-*   [5. Agentes de IA da Tess Utilizados](#5-agentes-de-ia-da-tess-utilizados)
-*   [6. Fluxo de Processamento em Tempo Real](#6-fluxo-de-processamento-em-tempo-real)
-*   [7. Arquivo JSON](#7-arquivo-json)
+[1. Visão Geral da Arquitetura e Replicação](#1-visão-geral-da-arquitetura-e-replicação)
+[2. Diagrama do Fluxo](#2-diagrama-do-fluxo)
+[3. Detalhamento do Fluxo por Fases](#3-detalhamento-do-fluxo-por-fases)
+    [FASE 1: Ativação e Coleta de Dados](#fase-1-ativação-e-coleta-de-dados)
+    [FASE 2: Pesquisa Aprofundada](#fase-2-pesquisa-aprofundada)
+    [FASE 3: Criação de Roteiro](#fase-3-criação-de-roteiro)
+    [FASE 4: Geração Visual](#fase-4-geração-visual)
+    [FASE 5: Armazenamento e Processamento de Artes](#fase-5-armazenamento-e-processamento-de-artes)
+    [FASE 6: Atualização e Notificação](#fase-6-atualização-e-notificação)
+[4. Resumo de APIs, Plataformas e Credenciais](#4-resumo-de-apis-plataformas-e-credenciais)
+[5. Agentes de IA da Tess Utilizados](#5-agentes-de-ia-da-tess-utilizados)
+[6. Fluxo de Processamento em Tempo Real](#6-fluxo-de-processamento-em-tempo-real)
+[7. Arquivo JSON](#7-arquivo-json)
 
 
 ## 1. Visão Geral da Arquitetura e Replicação
