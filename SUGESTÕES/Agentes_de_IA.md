@@ -2,7 +2,7 @@
 
 Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção de agentes de IA projetados para automação de conteúdo para Instagram com base em sugestões do usuário, os quais são utilizados no fluxo SUGESTÕES do "Content Spark".
 
-## Agentes Disponíveis
+## Resumo dos Agentes
 
 - **[Agente 32754: Pesquisa Aprofundada](#agente-32754-pesquisa-aprofundada)**
   - *Resumo:* Atua como um kit de ferramentas de pesquisa programático, quebrando um tema em tópicos, realizando pesquisa aprofundada para cada um e analisando mídias visuais relacionadas através de chamadas de função específicas.
