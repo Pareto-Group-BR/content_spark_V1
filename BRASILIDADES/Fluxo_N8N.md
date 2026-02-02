@@ -17,8 +17,7 @@ Com certeza! Aqui está um índice em formato Markdown, pronto para ser usado no
     - [Etapa 6: Notificação](#etapa-6-notificação)
 - [5. Tratamento de Erros e Resiliência](#5-tratamento-de-erros-e-resiliência)
 - [6. Variáveis e Expressões Importantes](#6-variáveis-e-expressões-importantes)
-- [7. Configuração e Deploy](#7-configuração-e-deploy)
-- [8. Arquivo JSON](#8-arquivo-json)
+- [7. Arquivo JSON](#7-arquivo-json)
 
 ## 1. Visão Geral
 
@@ -90,6 +89,8 @@ Antes de importar o fluxo, configure suas credenciais no N8N. Para este fluxo, v
     *   **Substitua o link antigo** pelo novo URL do seu N8N e salve o projeto.
 4.  **Verifique os Nós Manualmente:**
     *   Percorra os nós no N8N para confirmar se suas credenciais foram associadas corretamente e se não há configurações "quebradas", especialmente em nós de **Requisição HTTP**.
+
+*Observação: É importante ressaltar que, para UTILIZAR a planilha de Criação de Conteúdo, não é necessário ter acesso ao N8N. Mas sim, ter as permissões do Google AppScript configuradas.*
 
 
 ---
@@ -386,32 +387,7 @@ O fluxo utiliza a sintaxe N8N `{{ $('NomeDonó').item.json.campo }}` para acessa
 
 ---
 
-## 7. Configuração e Deploy
-
-*Observação: É importante ressaltar que, para utilizar a planilha de Criação de Conteúdo, não é necessário ter acesso ao N8N. Mas sim, ter as permissões do Google AppScript configuradas.*
-
-### 7.1 Pré-requisitos
-1. Conta N8N (Self-hosted ou Cloud)
-2. Credenciais configuradas para todas as APIs listadas na Seção 3
-3. Planilhas do Google Sheets criadas:
-   - "Perfis de Referência" - com lista de perfis do Instagram
-   - "BRASILIDADES" - planilha de controle com as colunas mapeadas
-
-### 7.2 Passos para Implementação
-1. Importar o arquivo JSON do fluxo no N8N
-2. Configurar as credenciais de cada API
-3. Verificar os IDs e URLs de planilhas e pastas do Google
-4. Testar o fluxo com uma execução manual
-5. Ativar o gatilho de schedule ou webhook conforme necessário
-
-### 7.3 Monitoramento
-- Verificar os logs de execução no N8N para identificar possíveis erros
-- Acompanhar a planilha "BRASILIDADES" para validar dados gerados
-- Verificar o Google Chat para confirmar envio de notificações
-
----
-
-## 8. Arquivo JSON
+## 7. Arquivo JSON
 
 **Link de Acesso ao arquivo JSON do Fluxo:**
 - [Arquivo JSON do Fluxo N8N](https://cdn.tess.im/assets/uploads/8bdc782a-b147-4f6a-842d-70edb6220f36.json)
