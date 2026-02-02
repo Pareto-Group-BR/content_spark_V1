@@ -4,7 +4,7 @@ Claro! Aqui está um índice para sua documentação, formatado para funcionar c
 
 ## Índice
 
-*   [1. Visão Geral da Arquitetura + Replicação](#1-visão-geral-da-arquitetura-e-replicação)
+*   [1. Visão Geral da Arquitetura e Replicação](#1-visão-geral-da-arquitetura-e-replicação)
 *   [2. Diagrama do Fluxo](#2-diagrama-do-fluxo-mermaid---por-fases)
 *   [3. Detalhamento do Fluxo por Fases](#3-detalhamento-do-fluxo-por-fases)
     *   [FASE 1: Ativação e Coleta de Dados](#fase-1-ativação-e-coleta-de-dados)
