@@ -4,7 +4,8 @@
 
 Este documento detalha o fluxo de trabalho da automação construída na plataforma N8N, denominada **"[PARETO] Agente Criação de Conteúdo (Brasilidades)"**. O objetivo principal desta automação é identificar posts de referência no Instagram, extrair seu conteúdo, traduzi-lo, gerar novas mídias (imagens) baseadas no conteúdo original e, por fim, organizar e notificar sobre o novo conteúdo criado.
 
-O fluxo é projetado para ser robusto, tratando diferentes tipos de posts (imagem única e carrossel) e garantindo que todas as etapas sejam registradas em uma [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=1213580918#gid=1213580918).
+O fluxo é projetado para ser robusto, tratando diferentes tipos de posts (imagem única e carrossel) e garantindo que todas as etapas sejam registradas em uma [Planilha de Controle](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0).
+>IMPORTANTE: Duplique esta planilha, pois trata-se de um TEMPLATE.>
 
 **Link de Acesso ao Fluxo:**
 - [Arquivo JSON do Fluxo N8N](https://cdn.tess.im/assets/uploads/8bdc782a-b147-4f6a-842d-70edb6220f36.json)
