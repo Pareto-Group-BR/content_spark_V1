@@ -146,9 +146,7 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 | :--- | :--- |
 | **Tema *(input do usuário)*** | `Diferença entre IA tradicional e IA Generativa` |
 | **Motivo da Escolha *(input do usuário)*** | Ajudar profissionais de qualquer área a saber como trabalhar melhor com a grande revolução tecnológica do momento, a IA GENERATIVA.  |
-| **Explicacao do Tema *(input do usuário)*** | Essa é uma excelente pergunta e fundamental para entender o atual momento tecnológico. Como a Pareto atua fortemente na integração dessas duas frentes, posso explicar não apenas a teoria, mas como elas coexistem no mercado.
-
-A principal distinção é que a **IA Tradicional (ou Analítica/Discriminativa)** foca em **analisar** dados existentes para encontrar padrões e fazer previsões, enquanto a **IA Generativa** foca em **criar** novos dados e conteúdos a partir do que aprendeu.  |
+| **Explicacao do Tema *(input do usuário)*** | Essa é uma excelente pergunta e fundamental para entender o atual momento tecnológico. Como a Pareto atua fortemente na integração dessas duas frentes, posso explicar não apenas a teoria, mas como elas coexistem no mercado. A principal distinção é que a **IA Tradicional (ou Analítica/Discriminativa)** foca em **analisar** dados existentes para encontrar padrões e fazer previsões, enquanto a **IA Generativa** foca em **criar** novos dados e conteúdos a partir do que aprendeu.  |
 | **Artes** | [Link para a pasta com as imagens](https://drive.google.com/drive/folders/1-6YN6FGYvfckCf28Xne7lPjIvFQ8GTbO) |
 | **Legenda** | "Nem toda inteligência artificial funciona do mesmo jeito. 📡 Algumas seguem regras. Outras criam o inesperado. Saber a diferença pode mudar sua forma de pensar tecnologia. Você sabia disso? Qual das duas você usaria agora? 💡 #inteligenciaartificial #tecnologia #inovacao #reflexão" |
 | **Data de Criação** | 17-12-2025 |
