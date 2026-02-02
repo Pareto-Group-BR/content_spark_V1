@@ -386,4 +386,4 @@ O fluxo utiliza a sintaxe N8N `{{ $('NomeDonó').item.json.campo }}` para acessa
 ## 7. Arquivo JSON
 
 **Link de Acesso ao arquivo JSON do Fluxo:**
-- [Arquivo JSON do Fluxo N8N](https://cdn.tess.im/assets/uploads/8bdc782a-b147-4f6a-842d-70edb6220f36.json)
+- [Arquivo JSON do Fluxo N8N](https://cdn.tess.im/assets/uploads/2ce4845c-0bd8-4dd1-99c2-4a0373259bc0.json?_gl=1*xomccc*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
