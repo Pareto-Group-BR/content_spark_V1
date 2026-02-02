@@ -177,6 +177,8 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 
 Para replicar este fluxo em seu próprio ambiente, siga as etapas abaixo.
 
+> Antes de replicar o fluxo, leia atentamente as seções de [Documentação Técnica - Fluxo N8N: Agente de Criação de Conteúdo (SUGESTÕES)](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Fluxo_N8N.md) e [Agentes de IA - Fluxo SUGESTÕES](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/Agentes_de_IA.md).
+
 ### **Etapa 1: Preparar Ativos (Credenciais, Agentes e Pasta)**
 
 Antes de importar o fluxo, você precisa preparar todos os recursos externos.
