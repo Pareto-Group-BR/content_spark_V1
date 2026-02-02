@@ -117,9 +117,7 @@ O agente é orquestrado pela plataforma **n8n** e se integra com diversas APIs p
 
 ## 5. Fluxo de Trabalho no N8N (Execução Técnica)
 
-Esta seção descreve o passo a passo da automação no n8n, desde a coleta de dados até o registro final. Para mais detalhes sobre os nós presentes no fluxo, APIs utilizadas e credenciais necessárias, consulte a seção [Fluxo do N8N](https://github.com/liviatagliari/pareto_content_spark_brasilidades/blob/main/Fluxo_N8N.md).
-
-Para acessar o arquivo JSON contendo o Fluxo BRASILIDADES, acesse [este link]((https://cdn.tess.im/assets/uploads/2ce4845c-0bd8-4dd1-99c2-4a0373259bc0.json?_gl=1*xomccc*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)).
+Esta seção descreve o passo a passo da automação no n8n, desde a coleta de dados até o registro final. Para mais detalhes sobre os nós presentes no fluxo, APIs utilizadas e credenciais necessárias, consulte a seção [Fluxo do N8N](https://github.com/liviatagliari/pareto_content_spark_brasilidades/blob/main/Fluxo_N8N.md). Para acessar o arquivo JSON contendo o Fluxo BRASILIDADES, acesse [este link](https://cdn.tess.im/assets/uploads/2ce4845c-0bd8-4dd1-99c2-4a0373259bc0.json?_gl=1*xomccc*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw).
 
 1.  **Gatilhos (Schedule e Webhook):** O workflow pode ser iniciado de duas formas:
     *   **Agendamento (Cron):** O fluxo é ativado automaticamente à meia-noite nos dias da semana selecionados pelo usuário na planilha de controle.
