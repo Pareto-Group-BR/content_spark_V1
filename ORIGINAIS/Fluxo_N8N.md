@@ -1,4 +1,4 @@
-# Documentação Detalhada do Fluxo de Automação N8N - ORIGINAIS
+# Documentação Técnica - Fluxo N8N: Agente de Criação de Conteúdo (ORIGINAIS)
 
 ## 📚 Índice
 
