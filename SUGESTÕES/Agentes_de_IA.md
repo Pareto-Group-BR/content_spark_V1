@@ -2,6 +2,8 @@
 
 Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção de agentes de IA projetados para automação de conteúdo para Instagram com base em sugestões do usuário, os quais são utilizados no fluxo SUGESTÕES do "Content Spark".
 
+> IMPORTANTE: Para utilizar os agentes de IA em seu fluxo de automação, é preciso que ter acesso ao Agente de IA no seu Workspace da TESS (recomenda-se duplicá-los para seu workspace).
+
 ### Índice da Documentação de Agentes de IA
 
 ### Índice
