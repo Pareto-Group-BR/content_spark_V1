@@ -2,6 +2,42 @@
 
 Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção de agentes de IA projetados para automação de conteúdo e análise de tendências, os quais são utilizados no fluxo ORIGINAIS do "Content Spark".
 
+> IMPORTANTE: Para utilizar os agentes de IA em seu fluxo de automação, é preciso que ter acesso a cada um deles no seu Workspace da TESS (recomenda-se duplicá-los para o seu workspace).
+
+### Índice
+
+1.  **[Resumo dos Agentes](#resumo-dos-agentes)**
+2.  **[Agente 31523: Tendências da Semana](#agente-31523-tendências-da-semana)**
+    *   [Descrição](#descrição)
+    *   [Prompt](#prompt)
+3.  **[Agente 31107: Hashtags Twitter](#agente-31107-hashtags-twitter)**
+    *   [Descrição](#descrição-1)
+    *   [Prompt](#prompt-1)
+4.  **[Agente 32601: Filtro de Temas](#agente-32601-filtro-de-temas)**
+    *   [Descrição](#descrição-2)
+    *   [Prompt](#prompt-2)
+5.  **[Agente 31104: Identificador de Tendências](#agente-31104-identificador-de-tendências)**
+    *   [Descrição](#descrição-3)
+    *   [Prompt](#prompt-3)
+6.  **[Agente 33079: Analisador de Capa](#agente-33079-analisador-de-capa)**
+    *   [Descrição](#descrição-4)
+    *   [Prompt](#prompt-4)
+7.  **[Agente 31119: Curadoria de Conteúdo Instagram](#agente-31119-curadoria-de-conteúdo-instagram)**
+    *   [Descrição](#descrição-5)
+    *   [Prompt](#prompt-5)
+8.  **[Agente 32754: Pesquisa Aprofundada](#agente-32754-pesquisa-aprofundada)**
+    *   [Descrição](#descrição-6)
+    *   [Prompt](#prompt-6)
+9.  **[Agente 32061: Criador de Roteiro](#agente-32061-criador-de-roteiro)**
+    *   [Descrição](#descrição-7)
+    *   [Prompt](#prompt-7)
+10. **[Agente 32060: Criador de Carrosséis \[Fundo\]](#agente-32060-criador-de-carrosséis-fundo)**
+    *   [Descrição](#descrição-8)
+    *   [Prompt](#prompt-8)
+11. **[Agente 32059: Criar Anúncios em HTML](#agente-32059-criar-anúncios-em-html)**
+    *   [Descrição](#descrição-9)
+    *   [Prompt](#prompt-9)
+
 ## Resumo dos Agentes
 
 - **[Agente 31523: Tendências da Semana](#agente-31523-tendências-da-semana):** Atua como curador de conteúdo, monitorando notícias de "Ciência e Tecnologia", "Entretenimento" e "Negócios" no Brasil para identificar tendências adaptáveis a posts de carrossel motivacional no Instagram.
