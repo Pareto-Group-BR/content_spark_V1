@@ -1,6 +1,6 @@
 # Documentação Técnica - Fluxo N8N: Agente de Criação de Conteúdo (SUGESTÕES)
 
-## Índice
+## 📚 Índice
 
 *   [1. Visão Geral da Arquitetura e Replicação](#1-visão-geral-da-arquitetura-e-replicação)
 *   [2. Diagrama do Fluxo](#2-diagrama-do-fluxo)
