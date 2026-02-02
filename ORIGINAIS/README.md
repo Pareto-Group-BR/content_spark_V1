@@ -244,7 +244,7 @@ Antes de importar o fluxo, configure suas credenciais no N8N para garantir que o
     *   No painel à direita, copie o URL da aba **"Production"**.
 3.  **Cole o Webhook na sua Planilha:**
     *   Volte ao **Apps Script** da sua planilha.
-    *   Localize a variável referente a este fluxo (ex: `WEBHOOK_URL_ORIGINAIS`).
+    *   Localize a variável referente a este fluxo.
     *   **Substitua o link antigo** pelo novo URL do seu N8N e salve o projeto.
 4.  **Verifique os Nós Manualmente:**
     *   Percorra os nós no N8N para confirmar se suas credenciais foram associadas corretamente. Verifique especialmente os nós de **Requisição HTTP**.
