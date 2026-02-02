@@ -46,7 +46,7 @@ Esta seção é destinada à equipe que irá interagir com a automação no dia 
 ### Pré-requisitos
 
 Para utilizar a ferramenta, é indispensável ter acesso de **Editor** à seguinte planilha no Google Sheets:
-*   **Planilha de Controle:** [Agente de Criação de Conteúdo](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit)
+*   **Planilha de Controle (template para replicar):** [Agente de Criação de Conteúdo](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0)
 
 Também é necessário liberar as permissões do AppScript, o que pode ser feito via menu da planilha **"Permissões do Script"**. Essa liberação é feita uma única vez, ao utilizar a planilha pela primeira vez.
 
@@ -237,11 +237,11 @@ Para ilustrar o resultado final do processo, veja abaixo dois exemplos reais de 
 
 ## 8. Links e Recursos
 
-*   **Planilha de Controle:** [Agente de Criação de Conteúdo](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit)
-*   **Pasta de Criativos Gerados:** [Google Drive]([https://drive.google.com/drive/folders/1AK1bYdQyZsdHxH3iN_BchRRmBaZ4bdB9](https://drive.google.com/drive/folders/1SuTClpwIvKs_vyyiftJY8bQpVmqiELYf))
-*   **Workflow no n8n:** [Link do Workflow](https://app.engine.pareto.io/workflow/RFiyrqPeQ5BtZCsM)
-*   **Canal no Google Chat:** [Link do Canal de avisos](https://chat.google.com/room/AAQAbJ7q6g4?cls=7)
-*   **Testes Realizados:**
+*   **Planilha de Controle (template para duplicar):** [Agente de Criação de Conteúdo]([https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0))
+*   **Pasta de Criativos Gerados:** Crie sua própria pasta no Google Drive e substitua o ID presente no fluxo do N8N. fluxo(https://drive.google.com/drive/folders/1SuTClpwIvKs_vyyiftJY8bQpVmqiELYf))
+*   **Workflow no n8n (versão original):** [Link do Workflow](https://app.engine.pareto.io/workflow/RFiyrqPeQ5BtZCsM)
+*   **Canal no Google Chat (versão original):** [Link do Canal de avisos](https://chat.google.com/room/AAQAbJ7q6g4?cls=7)
+*   **Exemplos - Testes Realizados:**
     *   [Teste 1](https://drive.google.com/drive/folders/18J9mKlbema34W0ra0z7I6KaEaZmpJ7AC)
     *   [Teste 2](https://drive.google.com/drive/folders/1NEtO5cV2g4OmbpnWomx4vVxtf31LWi4F)
     *   [Teste 3](https://drive.google.com/drive/folders/1qFRugz_imj_4OREKe8vk2tEFOWZA2y8n)
@@ -253,13 +253,15 @@ Para ilustrar o resultado final do processo, veja abaixo dois exemplos reais de 
 
 Para replicar este fluxo em seu próprio ambiente, siga as etapas abaixo.
 
+> Antes de replicar o fluxo, leia atentamente as seções de [Documentação Técnica - Fluxo N8N: Agente de Criação de Conteúdo (BRASILIDADES)](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/BRASILIDADES/Fluxo_N8N.md) e [Agentes de IA - Fluxo BRASILIDADES](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/BRASILIDADES/Agentes%20de%20IA.md).
+
 ### **Etapa 1: Preparar Ativos (Credenciais, Agentes e Pasta)**
 
 Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 1.  **Credenciais no N8N:** Acesse sua instância do N8N e, na seção **Credentials**, crie as credenciais necessárias (Google Sheets API, Google Drive API, Apify, Tess AI API, HtmlCssToImage API, etc.).
 2.  **Agentes na Tess AI:** Os IDs dos agentes são únicos por workspace. Você precisa recriá-los:
-    *   Consulte a seção **"6. Agentes de IA Utilizados"** deste documento para ver a lista de agentes (ex: 34674, 34683, etc.).
+    *   Consulte a seção **[Agentes de IA - Fluxo BRASILIDADES](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/BRASILIDADES/Agentes%20de%20IA.md)** deste documento para ver a lista de agentes (ex: 34674, 34683, etc.).
     *   Em seu próprio workspace da Tess AI, **crie ou duplique cada agente**, utilizando os mesmos prompts e configurações do fluxo original.
     *   Anote os **novos IDs** de cada um dos seus agentes.
 3.  **Pasta no Drive:** Crie uma pasta principal no seu Google Drive onde as artes serão salvas e copie o **ID da pasta** (a parte final do URL).
