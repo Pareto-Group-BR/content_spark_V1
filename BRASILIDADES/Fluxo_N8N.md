@@ -1,5 +1,26 @@
 # Fluxo da Automação no N8N: Agente de Criação de Conteúdo (Brasilidades)
 
+Com certeza! Aqui está um índice em formato Markdown, pronto para ser usado no GitHub, com base na documentação que você forneceu.
+
+# Índice
+
+- [1. Visão Geral](#1-visão-geral)
+- [2. Arquitetura do Fluxo e Replicação](#2-arquitetura-do-fluxo-e-replicação)
+    - [Passo a Passo para Replicar o Fluxo BRASILIDADES](#passo-a-passo-para-replicar-o-fluxo-brasilidades)
+- [3. APIs Utilizadas e Credenciais](#3-apis-utilizadas-e-credenciais)
+- [4. Etapas Detalhadas do Fluxo](#4-etapas-detalhadas-do-fluxo)
+    - [Etapa 1: Início (Triggers)](#etapa-1-início-triggers)
+    - [Etapa 2: Coleta de Dados](#etapa-2-coleta-de-dados)
+    - [Etapa 3: Processamento e Análise](#etapa-3-processamento-e-análise)
+    - [Etapa 4: Branch de Conteúdo (Tradução e Geração)](#etapa-4-branch-de-conteúdo-tradução-e-geração)
+    - [Etapa 5: Armazenamento e Registro](#etapa-5-armazenamento-e-registro)
+    - [Etapa 6: Notificação](#etapa-6-notificação)
+- [5. Tratamento de Erros e Resiliência](#5-tratamento-de-erros-e-resiliência)
+- [6. Variáveis e Expressões Importantes](#6-variáveis-e-expressões-importantes)
+- [7. Configuração e Deploy](#7-configuração-e-deploy)
+- [8. Conclusão](#8-conclusão)
+- [9. Arquivo JSON](#9-arquivo-json)
+
 ## 1. Visão Geral
 
 Este documento detalha o fluxo de trabalho da automação construída na plataforma N8N, denominada **"[PARETO] Agente Criação de Conteúdo (Brasilidades)"**. O objetivo principal desta automação é identificar posts de referência no Instagram, extrair seu conteúdo, traduzi-lo, gerar novas mídias (imagens) baseadas no conteúdo original e, por fim, organizar e notificar sobre o novo conteúdo criado.
