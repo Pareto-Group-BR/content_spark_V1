@@ -91,3 +91,39 @@ Através do menu **"Pareto AI"** na planilha, o usuário pode:
 *   **Pausar** e **Reativar** as execuções agendadas.
 *   **Verificar o Status** (ativo ou inativo) de cada fluxo.
 *   **Selecionar os Dias de Execução** para os fluxos agendados.
+
+## 5. Passo a Passo para Replicar
+
+Para replicar a suíte Content Spark em seu próprio ambiente, siga as etapas abaixo. Este guia assume que você possui uma instância do N8N e uma Conta Google.
+
+### **Etapa 1: Preparar as Credenciais no N8N**
+
+Antes de importar os fluxos, é crucial configurar suas credenciais. Isso garantirá que o N8N mapeie as contas corretamente durante a importação.
+
+1.  Consulte a documentação específica de cada fluxo (`ORIGINAIS`, `BRASILIDADES`, `SUGESTÕES`), especialmente o documento **"Fluxo_N8N.md"** de cada um, para identificar as credenciais necessárias (ex: Google Sheets, Google Drive, Apify, Tess AI, etc.).
+2.  Em sua instância do N8N, acesse a seção de **Credentials** e adicione uma a uma, utilizando suas próprias chaves de API, tokens e informações de conta.
+
+> **Dica:** É altamente recomendável criar as credenciais **antes** de importar o JSON. Assim, o N8N preencherá os campos automaticamente.
+
+### **Etapa 2: Replicar a Planilha de Controle**
+
+Você precisará de sua própria versão da planilha que serve como centro de comando.
+
+1.  **Faça uma cópia** da planilha de template a partir deste link:
+    *   [**Template - Planilha de Controle Content Spark**](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit)
+2.  Abra sua nova planilha e acesse o menu **"Permissões do Script"** (ou similar) para **conceder as permissões necessárias ao Google Apps Script**. Esta ação é obrigatória e precisa ser feita apenas uma vez.
+3.  A sua cópia da planilha gerará um **novo Webhook** para acionar os fluxos. Este link será usado na próxima etapa.
+
+### **Etapa 3: Importar o Fluxo no N8N e Ajustar**
+
+Agora, importe os fluxos para o seu ambiente.
+
+1.  Acesse a documentação de cada ramo e localize o link para o **arquivo JSON** do fluxo N8N.
+2.  Em sua instância do N8N, importe o arquivo JSON.
+3.  **Substitua o Webhook:**
+    *   No primeiro nó do fluxo (o gatilho "Webhook"), troque o URL existente pelo **novo URL do Webhook** gerado pela sua cópia da planilha.
+4.  **Verifique os Nós Manualmente:** Percorra os nós do fluxo de trabalho.
+    *   Confirme se as credenciais foram associadas corretamente.
+    *   Fique atento a nós de **Requisição HTTP (HTTP Request)**, que podem exigir a inclusão manual de um Token ou API Key diretamente no nó.
+
+Após seguir esses passos para cada um dos três fluxos, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
