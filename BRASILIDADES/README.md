@@ -1,4 +1,4 @@
-# Agente de Criação de Conteúdo - BRASILIDADES
+# Agente de Criação de Conteúdo (BRASILIDADES) - Manual de Operação
 
 Este repositório contém a documentação completa do Agente de Criação de Conteúdo - Brasilidades ("Content Spark - Brasilidades"), uma automação projetada para gerar posts para Instagram com alto potencial de engajamento, baseados em referências internacionais de sucesso.
 
