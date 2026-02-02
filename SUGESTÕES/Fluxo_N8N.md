@@ -3,7 +3,7 @@
 ## Índice
 
 *   [1. Visão Geral da Arquitetura e Replicação](#1-visão-geral-da-arquitetura-e-replicação)
-*   [2. Diagrama do Fluxo](#2-diagrama-do-fluxo-mermaid---por-fases)
+*   [2. Diagrama do Fluxo](#2-diagrama-do-fluxo)
 *   [3. Detalhamento do Fluxo por Fases](#3-detalhamento-do-fluxo-por-fases)
     *   [FASE 1: Ativação e Coleta de Dados](#fase-1-ativação-e-coleta-de-dados)
     *   [FASE 2: Pesquisa Aprofundada](#fase-2-pesquisa-aprofundada)
@@ -52,6 +52,8 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
     *   **Pasta do Drive:** No nó `Create folder1`, cole o **ID da sua pasta** no campo "Parent Folder ID".
     *   **Agentes de IA:** Nos nós que fazem chamadas para a Tess AI (ex: `TESS - Agente de Pesquisa Aprofundada`), **substitua os IDs dos agentes antigos pelos novos IDs** que você criou.
 5.  **Verifique os Nós Manualmente:** Percorra os demais nós para confirmar se suas credenciais foram associadas corretamente.
+
+>*Observação: É importante ressaltar que, para UTILIZAR a planilha de Criação de Conteúdo, não é necessário ter acesso ao N8N. Mas sim, ter as permissões do Google AppScript configuradas.*
 
 
 ## 2. Diagrama do Fluxo
