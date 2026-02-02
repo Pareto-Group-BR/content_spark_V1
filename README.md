@@ -1,169 +1,93 @@
-# Agente de Criação de Conteúdo - Manual de Operação
-
-> Este repositório contém a documentação completa do Agente de Criação de Conteúdo - Originais ("Content Spark - Originais"), uma automação projetada para gerar Carrosséis com **foco motivacional** para Instagram com alto potencial de engajamento, baseados em tendências do momento.
-
-> Cabe destacar que esse foco motivacional foi pré-definido deviso ao objetivo original deste fluxo, com base nas boas práticas d emercaso. Ao duplicar o fluxo, é possível  alterar esse foco diretamente nos prompts dos agentes de IA, em caso de de desejar fazer uma mudança de objetivo.
-
-
----
-
-## 📖 Índice
-
-1.  [**Visão Geral e Objetivo**](#1-visão-geral-e-objetivo)
-2.  [**Estratégia Principal**](#2-estratégia-principal)
-3.  [**Manual de Operação (Para Usuários)**](#3-manual-de-operação-para-usuários)
-    *   [Pré-requisitos](#pré-requisitos)
-    *   [A Planilha de Controle: O Centro de Comando](#a-planilha-de-controle-o-centro-de-comando)
-    *   [Modos de Operação](#modos-de-operação)
-    *   [Gerenciando as Automações Agendadas](#gerenciando-as-automações-agendadas)
-    *   [Solução de Problemas (Troubleshooting)](#solução-de-problemas-troubleshooting)
-4.  [**Arquitetura e Ferramentas**](#4-arquitetura-e-ferramentas)
-5.  [**Fluxo de Trabalho no N8N (Execução Técnica)**](#5-fluxo-de-trabalho-no-n8n-execução-técnica)
-6.  [**Agentes de IA Utilizados**](#6-agentes-de-ia-utilizados)
-7.  [**Exemplos de Saída da Automação**](#7-exemplos-de-saída-da-automação)
-8.  [**Links e Recursos**](#8-links-e-recursos)
+# Content Spark: Suíte de Automação para Criação de Conteúdo no Instagram
 
 ## 1. Visão Geral e Objetivo
 
-Esta automação foi desenhada para resolver o desafio de criar conteúdo de alta qualidade e engajamento para o Instagram, um processo que tradicionalmente consome tempo e exige pesquisa constante de tendências.
+O **Content Spark** é uma suíte de automação projetada para otimizar e escalar a criação de conteúdo para o Instagram. A solução transforma temas, tendências e referências em posts de alto engajamento (carrosséis ou imagens únicas) de forma ágil e inteligente, minimizando a intervenção humana e o tempo de produção.
 
-O **Agente de Criação de Conteúdo** transforma temas e tendências atuais em conteúdo visual completo (carrosséis), de forma totalmente automatizada. O objetivo é fornecer, em minutos, um carrossel com 6 a 10 imagens, textos otimizados e legendas prontas para publicação, com foco em perfis de nicho motivacional. A sua única tarefa é monitorar, aprovar e publicar o conteúdo gerado.
+O objetivo principal é fornecer um fluxo constante de conteúdo relevante e de alta qualidade, pronto para publicação, permitindo que a equipe de marketing e conteúdo se concentre em estratégia, aprovação e análise de resultados.
 
-## 2. Estratégia Principal
+A suíte é orquestrada no N8N e utiliza o Google Sheets como interface central de controle, tornando a operação acessível a todos os usuários, sem a necessidade de conhecimento técnico na plataforma de automação.
 
-A automação opera com um fluxo estratégico que vai da descoberta da ideia à entrega do material pronto, minimizando a intervenção humana.
+## 2. A Estratégia: Três Ramos de Criação de Conteúdo
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│  1️⃣  Identifica Tendências      (Google, Twitter, etc.)       │
-│                      ↓                                        │
-│  2️⃣  Coleta Posts de Referência (Instagram Scraping)         │
-│                      ↓                                        │
-│  3️⃣  Analisa Padrões e Seleciona Tema (IA)                    │
-│                      ↓                                        │
-│  4️⃣  Cria Roteiro, Textos e Legenda (IA)                      │
-│                      ↓                                        │
-│  5️⃣  Gera Imagens para o Carrossel (IA)                       │
-│                      ↓                                        │
-│  6️⃣  Organiza e Registra      (Google Drive & Sheets)        │
-│                      ↓                                        │
-│  7️⃣  Notifica a Equipe          (Email & Google Chat)        │
-└──────────────────────────────────────────────────────────────┘
-```
+O Content Spark opera através de três ramos complementares, cada um com um objetivo estratégico distinto para diversificar a produção de conteúdo:
 
-O resultado final é um conteúdo original e coeso, baseado em dados de tendências, mas com uma execução criativa única.
+| Ramo | Nome do Fluxo | Objetivo Principal | Fonte da Ideia |
+| :--- | :--- | :--- | :--- |
+| **ORIGINAIS** | `Content Spark - Originais` | Criar conteúdo 100% original com base em tendências e temas de alta performance no momento. | Análise de dados (Google Trends, Twitter, etc.) |
+| **BRASILIDADES**| `Content Spark - Brasilidades` | Adaptar posts internacionais de sucesso para o público brasileiro, traduzindo e contextualizando o conteúdo. | Posts de alto engajamento de perfis de referência internacionais. |
+| **SUGESTÕES** | `Content Spark - Sugestões`| Produzir conteúdo sob demanda a partir de ideias e temas específicos fornecidos pela equipe. | Input manual do usuário em uma planilha. |
 
-## 3. Manual de Operação (Para Usuários)
+---
 
-### Pré-requisitos
-*   **Acesso de Editor** à [Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0).
-*   Conta Google para acessar a planilha e o Google Drive.
-*   Fazer parte do canal do Google Chat para receber as notificações (Opcional).
+### **2.1. Content Spark - ORIGINAIS**
 
-### A Planilha de Controle: O Centro de Comando
-A [planilha](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0) é a interface principal para gerenciar toda a automação. As abas mais importantes são:
+Este fluxo é o motor de criação proativa da suíte. Ele foi projetado para gerar carrosséis com foco motivacional, identificando os temas com maior potencial de engajamento antes que saturem.
 
-*   **Conteúdo Original**: Onde você acompanha, revisa e aprova todo o conteúdo gerado pela automação. Contém o tema, a legenda pronta, o link para as artes no Google Drive e as colunas de status.
-*   **Perfis de Referência**: Lista de perfis do Instagram que a IA utiliza como inspiração para entender padrões visuais e de conteúdo. Você pode adicionar ou remover perfis nesta aba.
-*   **Config**: Contém configurações técnicas da automação. **Não altere esta aba** sem orientação.
+**Como funciona:**
+1.  **Análise de Tendências:** A automação monitora fontes como Google Trends, Twitter e APIs de tendências para identificar temas em alta.
+2.  **Seleção Inteligente:** Uma IA analisa os dados coletados, filtra ruídos e seleciona o tema com o maior potencial viral.
+3.  **Pesquisa e Roteirização:** Agentes de IA aprofundam a pesquisa no tema escolhido e estruturam um roteiro completo para o carrossel (de 6 a 10 slides), incluindo textos e a legenda final.
+4.  **Geração Visual:** As descrições de texto são traduzidas em composições visuais, gerando as imagens do carrossel.
+5.  **Entrega:** As artes são salvas no Google Drive e o link, juntamente com a legenda, é registrado na planilha de controle.
 
-### Modos de Operação
-Você pode gerar conteúdo de duas formas:
+Confira mais detalhes do fluxo ORIGINAIS [nesta documentação específica](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/README.md).
 
-1.  **Execução Manual (Sob Demanda)**
-    *   **Quando usar**: Para gerar conteúdo imediatamente, sem esperar o próximo ciclo agendado.
-    *   **Como fazer**: Na planilha, acesse o menu **Pareto AI > ORIGINAIS > Executar fluxo**. Uma confirmação aparecerá, e o processo iniciará em segundo plano, levando de 20 a 25 minutos. Você será notificado via e-mail e Google Chat quando terminar.
+### **2.2. Content Spark - BRASILIDADES**
 
-2.  **Execução Automática (Agendada)**
-    *   **Quando usar**: Este é o modo padrão, ideal para manter um fluxo constante de conteúdo.
-    *   **Como funciona**: A automação é executada automaticamente toda **segunda-feira** e **quarta-feira** à meia-noite (00h00).
+Este fluxo foca em capitalizar sobre o sucesso comprovado de conteúdos internacionais, adaptando-os de forma rápida e eficiente para o mercado brasileiro.
 
-### Gerenciando as Automações Agendadas
-Através do menu **"Pareto AI"** na planilha, você pode controlar os agendamentos:
+**Como funciona:**
+1.  **Coleta de Referências:** A automação extrai os posts mais recentes de uma lista de perfis internacionais de referência.
+2.  **Seleção por Engajamento:** O sistema seleciona o post (imagem única ou carrossel) com a maior taxa de engajamento proporcional.
+3.  **Tradução e Adaptação:** A legenda e o texto na imagem são processados por uma IA que traduz, descreve e reformata o conteúdo para o português, mantendo a mensagem central. O crédito ao post original é sempre incluído.
+4.  **Geração e Entrega:** As novas artes e a legenda traduzida são geradas, salvas no Google Drive e registradas na planilha de controle.
 
-*   **Pausar execução automática**: Interrompe os ciclos automáticos de segunda e quarta. É útil durante períodos de férias, pausas estratégicas ou para manutenções. A execução manual continua disponível.
-*   **Ativar execução automática**: Reativa os ciclos automáticos caso eles estejam pausados.
+Confira mais detalhes do fluxo BRASILIDADES [nesta documentação específica](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/BRASILIDADES/README.md).
 
-### Solução de Problemas (Troubleshooting)
-*   **Link de Artes Quebrado**: Verifique se você tem acesso à pasta do Google Drive. Se o erro persistir, pode ter ocorrido uma falha no upload. Tente gerar novamente ou abra uma issue.
-*   **Menu "Pareto AI" não aparece**: Recarregue a planilha. Se o problema continuar, verifique se sua conta tem as permissões corretas.
-*   **Execução manual falhou**: Aguarde alguns minutos e tente novamente. Se a falha for recorrente, contate o suporte técnico ou abra uma issue no Github.
+### **2.3. Content Spark - SUGESTÕES**
 
-## 4. Arquitetura e Ferramentas
+Este é o fluxo sob demanda, permitindo que a equipe transforme rapidamente uma ideia específica em um post completo e bem estruturado.
 
-A automação integra diversas ferramentas para orquestrar o fluxo de trabalho:
+**Como funciona:**
+1.  **Input Manual:** O usuário preenche uma linha em uma aba específica da planilha, fornecendo o `Tema`, o `Motivo da Escolha` e uma `Explicação`.
+2.  **Enriquecimento e Pesquisa:** A automa'ção utiliza o input inicial como base para uma pesquisa aprofundada, enriquecendo o conteúdo com dados e contexto.
+3.  **Criação de Roteiro e Imagens:** Assim como no fluxo de "Originais", agentes de IA criam o roteiro detalhado, geram as imagens de fundo e montam o carrossel.
+4.  **Entrega Final:** As artes são salvas em uma nova pasta no Google Drive, e o link, junto com a legenda, é inserido na mesma linha da planilha que originou a sugestão.
 
-*   **Orquestrador**: N8N.
-*   **Centro de Controle**: Google Sheets.
-*   **Armazenamento de Mídia**: Google Drive.
-*   **Fontes de Tendências**: Google Trends (via SerpAPI), Twitter API, API Pareto Trends.
-*   **Coleta de Dados**: Apify (para scraping do Instagram).
-*   **Geração de Imagem**: Htmlcsstoimg API (para converter HTML em PNG).
-*   **Inteligência Artificial**: Modelos de linguagem para análise, pesquisa e criação de conteúdo.
-*   **Notificações**: E-mail e Google Chat.
+Confira mais detalhes do fluxo SUGESTÕES [nesta documentação específica](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/README.md).
 
-## 5. Fluxo de Trabalho no N8N (Execução Técnica)
 
-O processo é dividido em fases sequenciais e paralelas, executadas dentro do N8N.
+## 3. Arquitetura e Ferramentas Comuns
 
-```
-[INÍCIO: Gatilho Manual ou Agendado]
-     |
-     +---- [FASE 1: COLETA DE DADOS EM PARALELO] (~2 min)
-     |     |
-     |     +---> Google Trends (Top 10)
-     |     +---> Twitter Hashtags
-     |     +---> API Pareto Trends
-     |     +---> Instagram Scraper (Posts recentes)
-     |
-     +---- [FASE 2: PROCESSAMENTO E SELEÇÃO] (~5 min)
-     |     |
-     |     +---> Consolida dados das fontes.
-     |     +---> IA filtra ruídos e categorias inadequadas.
-     |     +---> IA seleciona o tema final com maior potencial viral.
-     |
-     +---- [FASE 3: PESQUISA E CRIAÇÃO DO ROTEIRO] (~5 min)
-     |     |
-     |     +---> IA pesquisa a fundo o tema (história, dados, sentimento).
-     |     +---> IA estrutura o carrossel (6-10 slides), escreve textos e a legenda.
-     |     +---> IA cria os prompts detalhados para a geração de cada imagem.
-     |
-     +---- [FASE 4: GERAÇÃO VISUAL] (~8 min)
-     |     |
-     |     +---> Para cada slide, gera um HTML com o design.
-     |     +---> Converte cada HTML em uma imagem PNG (1080x1080).
-     |
-     +---- [FASE 5: ARMAZENAMENTO E REGISTRO]
-     |     |
-     |     +---> Cria uma pasta no Google Drive.
-     |     +---> Faz upload das imagens geradas.
-     |     +---> Registra todas as informações na planilha Google Sheets.
-     |
-     +---- [FASE 6: NOTIFICAÇÃO] (~1 min)
-     |     |
-     |     +---> Envia e-mail para a equipe.
-     |     +---> Envia mensagem para o canal do Google Chat.
-     |
-[FIM]
-```
-**Tempo Total Estimado**: 20-25 minutos.
+Todos os fluxos do Content Spark compartilham uma arquitetura robusta e integrada, garantindo consistência e eficiência:
 
-## 6. Agentes de IA Utilizados
+*   **Orquestrador**: **N8N** como motor central que conecta todas as etapas.
+*   **Centro de Controle**: **Google Sheets** como a interface principal para interação do usuário, controle de agendamentos e visualização de resultados.
+*   **Armazenamento de Mídia**: **Google Drive** para armazenar todas as artes geradas de forma organizada.
+*   **Inteligência Artificial**: **Tess AI** e outros modelos de linguagem para análise, pesquisa, roteirização, tradução e criação de conteúdo.
+*   **Coleta de Dados e Geração de Imagem**: Ferramentas como **Apify** (scraping) e **Htmlcsstoimg API** (conversão de HTML para imagem) são utilizadas em diferentes fluxos.
+*   **Notificações**: **E-mail** e **Google Chat** para notificar a equipe sobre a conclusão dos processos.
 
-A automação emprega múltiplos agentes de IA especializados em diferentes tarefas ao longo do fluxo:
+## 4. Manual de Operação Geral
 
-*   **Agente Analista de Tendências**: Filtra e cruza dados de diferentes fontes (Google, Twitter) para identificar os temas com maior potencial de engajamento.
-*   **Agente Curador de Conteúdo**: Analisa os posts de referência e os padrões visuais dos perfis de inspiração para guiar o estilo do conteúdo a ser criado.
-*   **Agente Pesquisador**: Aprofunda-se no tema selecionado, buscando dados, contexto histórico e ângulos únicos para enriquecer o conteúdo.
-*   **Agente Roteirista e Copywriter**: Estrutura a narrativa do carrossel, cria os textos para cada slide (hooks, desenvolvimento, CTA) e redige a legenda final para o Instagram.
-*   **Agente Designer Gráfico**: Traduz as descrições de texto em composições visuais (via código HTML) que são então convertidas em imagens, seguindo uma identidade visual coesa.
+Toda a interação com a suíte Content Spark é centralizada na **[Planilha de Controle](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit)**.
 
-## 7. Exemplos de Saída da Automação
+Cada fluxo possui a sua documentaçãoe specífica no GitHub:
+[ORIGINAIS](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/README.md).
+[BRASILIDADES](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/BRASILIDADES/README.md).
+[SUGESTÕES](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/README.md).
 
-*(Esta seção será preenchida com exemplos concretos de carrosséis e legendas gerados pela automação).*
 
-## 8. Links e Recursos
+### Modos de Execução:
+*   **Agendada:** Os fluxos `ORIGINAIS` e `BRASILIDADES` podem ser configurados para rodar automaticamente em dias e horários específicos, garantindo um suprimento constante de conteúdo.
+*   **Manual (Sob Demanda):**
+    *   Para os fluxos `ORIGINAIS` e `BRASILIDADES`, o usuário pode acionar uma execução imediata através do menu `Pareto AI` na planilha.
+    *   Para o fluxo `SUGESTÕES`, a execução é iniciada ao preencher as informações do tema na aba correspondente e acionar o fluxo pelo mesmo menu.
 
-*   **Planilha de Controle**: [Link para a Planilha](https://docs.google.com/spreadsheets/d/1V3A3ClTlg4waudwwiP1lHlrqNv-I96fNmcYilR_5RUY/edit?gid=0#gid=0)
-*   **Repositório no Github**: [Link para o Repositório](https://github.com/liviatagliari/pareto_content_spark_originais)
-*   **Documentação Técnica do Fluxo**: [Fluxo N8N no Github](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/Fluxo_N8N.md)
+### Gerenciamento:
+Através do menu **"Pareto AI"** na planilha, o usuário pode:
+*   **Executar** fluxos manualmente.
+*   **Pausar** e **Reativar** as execuções agendadas.
+*   **Verificar o Status** (ativo ou inativo) de cada fluxo.
+*   **Selecionar os Dias de Execução** para os fluxos agendados.
