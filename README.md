@@ -88,10 +88,11 @@ Todos os fluxos do Content Spark compartilham uma arquitetura robusta e integrad
 
 ## 4. Manual de Operação Geral
 
-Cada fluxo possui a sua documentaçãoe specífica no GitHub:
+> Cada fluxo possui a sua documentaçãoe specífica no GitHub, confira cada uma delas paa ver detalhes de configuração e implementação:
 [ORIGINAIS](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/ORIGINAIS/README.md).
 [BRASILIDADES](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/BRASILIDADES/README.md).
 [SUGESTÕES](https://github.com/Pareto-Group-BR/content_spark_V1/blob/main/SUGEST%C3%95ES/README.md).
+> 
 
 Toda a interação do usuário (utilizador da automação) com a suíte Content Spark é centralizada em uma Planilha de Google Sheets, a qual possui o seguinte **[modelo para duplicação Planilha de Controle](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0)**.
 
