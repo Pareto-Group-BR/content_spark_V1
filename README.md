@@ -111,19 +111,29 @@ Você precisará de sua própria versão da planilha que serve como centro de co
 
 1.  **Faça uma cópia** da planilha de template a partir deste link:
     *   [**Template - Planilha de Controle Content Spark**](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit)
-2.  Abra sua nova planilha e acesse o menu **"Permissões do Script"** (ou similar) para **conceder as permissões necessárias ao Google Apps Script**. Esta ação é obrigatória e precisa ser feita apenas uma vez.
-3.  A sua cópia da planilha gerará um **novo Webhook** para acionar os fluxos. Este link será usado na próxima etapa.
+2.  Abra sua nova planilha e acesse o menu **`Extensões > Apps Script`**.
+3.  Na tela do Apps Script, clique em `Execuções` e depois no botão para **conceder as permissões necessárias**. Esta ação é obrigatória e precisa ser feita apenas uma vez.
 
-### **Etapa 3: Importar o Fluxo no N8N e Ajustar**
+### **Etapa 3: Importar o Fluxo e Conectar as Ferramentas**
 
-Agora, importe os fluxos para o seu ambiente.
+Com as credenciais e a planilha prontas, o passo final é conectar tudo.
 
-1.  Acesse a documentação de cada ramo e localize o link para o **arquivo JSON** do fluxo N8N.
-2.  Em sua instância do N8N, importe o arquivo JSON.
-3.  **Substitua o Webhook:**
-    *   No primeiro nó do fluxo (o gatilho "Webhook"), troque o URL existente pelo **novo URL do Webhook** gerado pela sua cópia da planilha.
-4.  **Verifique os Nós Manualmente:** Percorra os nós do fluxo de trabalho.
-    *   Confirme se as credenciais foram associadas corretamente.
-    *   Fique atento a nós de **Requisição HTTP (HTTP Request)**, que podem exigir a inclusão manual de um Token ou API Key diretamente no nó.
+1.  **Importe o arquivo JSON** de um dos fluxos para a sua instância do N8N.
+2.  **Copie o URL do seu novo Webhook:**
+    *   Dentro do fluxo recém-importado no N8N, clique no primeiro nó, chamado **`Webhook`**.
+    *   No painel à direita, na seção "Webhook URLs", copie o URL da aba **"Production"**.
+3.  **Cole o Webhook na sua Planilha:**
+    *   Volte para o **Apps Script** da sua planilha (menu `Extensões > Apps Script`).
+    *   No código, localize as URL de cada Webhook (tem uma para ATIVAR, uma para PAUSAR e outra para RODAR MANUALMENTE o fluxo)
+   <img width="976" height="252" alt="image" src="https://github.com/user-attachments/assets/299d431a-4ba0-43bd-b4f2-771e1475f88a" />
+   <img width="977" height="241" alt="image" src="https://github.com/user-attachments/assets/4a492da7-4af6-4e16-bc9a-ec9f2186ecf4" />
+   <img width="938" height="333" alt="image" src="https://github.com/user-attachments/assets/749844a9-ddbf-46b2-b05a-94cbe1a2a09e" />
 
-Após seguir esses passos para cada um dos três fluxos, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
+
+    *   **Substitua o link antigo** pelo novo URL que você copiou do seu N8N.
+    *   Clique no ícone de "Salvar projeto" (disquete).
+4.  **Verifique os Nós Manualmente:**
+    *   Percorra os nós do fluxo de trabalho no N8N para confirmar se suas credenciais foram associadas corretamente.
+    *   Fique atento a nós de **Requisição HTTP (HTTP Request)**, que podem exigir a inclusão manual de um Token ou API Key diretamente no nó, caso a associação automática falhe.
+
+Repita a **Etapa 3** para cada um dos fluxos que desejar replicar. Após isso, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
