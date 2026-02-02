@@ -169,7 +169,7 @@ Abaixo, um exemplo da saída completa da automação, desde a escolha do tema at
 ### **8. Links e Recursos**
 *   **Planilha de Controle (template):** [`[Pareto AI Content Hub] Registro dos Conteúdos Criados - Pareto`](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit?gid=0#gid=0)
 *   **Repositório das Artes:** Google Drive (Crie uma pasta "mãe" para armazenamento das artes criadas e substitua o OD no fluxo N8N)
-*   **Arquivo JSON com o Fluxo N8N:** [Arquivo JSON com o fluxo SUGESTÕES](https://cdn.tess.im/assets/uploads/1e647c64-55a6-49fe-bc75-6bfaf532953b.json?_gl=1*11y8f7p*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
+*   **Arquivo JSON com o Fluxo N8N:** [Arquivo JSON com o fluxo SUGESTÕES](https://cdn.tess.im/assets/uploads/8ca5709e-b748-4d5d-986d-0c7fa67ca41a.json?_gl=1*1laijpv*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDY0Mzky*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjQzOTIkajM2JGwwJGgw*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDY0MzkyJGozNiRsMCRoMA..)
 
 
 
@@ -197,7 +197,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 ### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
-1.  **Importe o arquivo JSON** deste fluxo (`SUGESTÕES`) para a sua instância do N8N. [Link para Download](https://cdn.tess.im/assets/uploads/1e647c64-55a6-49fe-bc75-6bfaf532953b.json?_gl=1*11y8f7p*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
+1.  **Importe o arquivo JSON** deste fluxo (`SUGESTÕES`) para a sua instância do N8N. [Link para Download](https://cdn.tess.im/assets/uploads/8ca5709e-b748-4d5d-986d-0c7fa67ca41a.json?_gl=1*1laijpv*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDY0Mzky*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjQzOTIkajM2JGwwJGgw*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDY0MzkyJGozNiRsMCRoMA..)
 
 2.  **Copie o URL do seu novo Webhook** no nó `Webhook` (aba "Production").
 3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_SUGESTOES`, e salve.
