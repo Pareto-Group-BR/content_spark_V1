@@ -1,14 +1,8 @@
 # Agentes de IA - Fluxo BRASILIDADES
 
-Este documento detalha a configuração, os objetivos e os prompts dos agentes de IA utilizados no projeto.
+Este documento detalha a configuração, os objetivos e os prompts dos agentes de IA utilizados na automação de criação de conteúdo BRASILIDADES.
 
-## Índice
-
-- [Resumo dos Agentes](#resumo-dos-agentes)
-- [Agente 34884 - [PARETO] Tradução de Legenda do Post do Instagram](#agente-34884---pareto-tradução-de-legenda-do-post-do-instagram)
-- [Agente 34357 - [PARETO] Descrever Texto Principal Imagem Instagram](#agente-34357---pareto-descrever-texto-principal-imagem-instagram)
-- [Agente 34360 - Criar anúncios de Imagem em HTML [PARETO] (v2)](#agente-34360---criar-anúncios-de-imagem-em-html-pareto-v2)
-- [Agente 34686 - [PARETO] HTML da nova Imagem editada](#agente-34686---pareto-html-da-nova-imagem-editada)
+> IMPORTANTE: Para utilizar os agentes de IA em seu fluxo de automação, é preciso que ter acesso a cada um deles no seu Workspace da TESS (recomenda-se duplicá-los para o seu workspace).
 
 ---
 
