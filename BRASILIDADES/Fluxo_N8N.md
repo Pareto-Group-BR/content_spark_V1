@@ -2,7 +2,7 @@
 
 Com certeza! Aqui está um índice em formato Markdown, pronto para ser usado no GitHub, com base na documentação que você forneceu.
 
-# Índice
+## 📚 Índice
 
 - [1. Visão Geral](#1-visão-geral)
 - [2. Arquitetura do Fluxo e Replicação](#2-arquitetura-do-fluxo-e-replicação)
