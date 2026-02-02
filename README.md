@@ -1,4 +1,4 @@
-# Content Spark: Suíte de Automação para Criação de Conteúdo no Instagram
+# Content Spark: Automação para Criação de Conteúdo no Instagram
 
 ## 1. Visão Geral e Objetivo
 
