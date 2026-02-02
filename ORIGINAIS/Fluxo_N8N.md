@@ -1,4 +1,4 @@
-# Documentação Detalhada do Fluxo de Automação N8N - Criação de Conteúdo
+# Documentação Detalhada do Fluxo de Automação N8N - ORIGINAIS
 
 ## 📚 Índice
 
