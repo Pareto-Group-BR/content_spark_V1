@@ -142,22 +142,25 @@ Com as credenciais e a planilha prontas, o passo final é conectar tudo.
     *   No painel à direita, na seção "Webhook URLs", copie o URL da aba **"Production"**.
 3.  **Cole o Webhook na sua Planilha:**
     *   Volte para o **Apps Script** da sua planilha (menu `Extensões > Apps Script`).
-    *   No código, localize as **URL de cada Webhook** (tem uma para ATIVAR, uma para PAUSAR e outra para RODAR MANUALMENTE o fluxo)
-   <img width="976" height="252" alt="image" src="https://github.com/user-attachments/assets/299d431a-4ba0-43bd-b4f2-771e1475f88a" />
-   <img width="977" height="241" alt="image" src="https://github.com/user-attachments/assets/4a492da7-4af6-4e16-bc9a-ec9f2186ecf4" />
-   <img width="938" height="333" alt="image" src="https://github.com/user-attachments/assets/749844a9-ddbf-46b2-b05a-94cbe1a2a09e" />
+    *   No código, localize as **URL de cada Webhook** (tem uma para ATIVAR, uma para PAUSAR e outra para RODAR MANUALMENTE o fluxo).
+
+    <img width="976" alt="Imagem do código no Apps Script mostrando a URL do webhook para ativar" src="https://github.com/user-attachments/assets/299d431a-4ba0-43bd-b4f2-771e1475f88a">
+
+    <img width="977" alt="Imagem do código no Apps Script mostrando a URL do webhook para pausar" src="https://github.com/user-attachments/assets/4a492da7-4af6-4e16-bc9a-ec9f2186ecf4">
+
+    <img width="938" alt="Imagem do código no Apps Script mostrando a URL do webhook para rodar manualmente" src="https://github.com/user-attachments/assets/749844a9-ddbf-46b2-b05a-94cbe1a2a09e">
+
     *   **Substitua o link antigo** pelo novo URL que você copiou do seu N8N.
     *   Clique no ícone de "Salvar projeto" (disquete).
 4.  **Verifique os Nós Manualmente:**
     *   Percorra os nós do fluxo de trabalho no N8N para confirmar se suas credenciais foram associadas corretamente.
     *   Fique atento a nós de **Requisição HTTP (HTTP Request)**, que podem exigir a inclusão manual de um Token ou API Key diretamente no nó, caso a associação automática falhe.
 
-<br>
 Repita a **Etapa 3** para cada um dos fluxos que desejar replicar. Após isso, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
 
-> Para cada um dos fluxos de Criação de Conteúdo (BRASILIDADES, ORIGINAIS e SUGESTÕES), recomenda-se configurara um  "Error Workflow" no N8N, de modo a ser alertado em casos de erro nos fluxos. Pode ser um workflow que ative uma mensagem em canais de mensageria (como Google Chat), envie um E-mail, ou outra ação desejada. Segue um exemplo:
-><img width="316" height="351" alt="image" src="https://github.com/user-attachments/assets/427c731b-60c1-49f1-bbfb-c7802cd4fcc6" />
-
-> <img width="898" height="533" alt="image" src="https://github.com/user-attachments/assets/491c4f49-e4a8-40b6-8a77-d279f93bbf6d" />
-
+> Para cada um dos fluxos de Criação de Conteúdo (BRASILIDADES, ORIGINAIS e SUGESTÕES), recomenda-se configurar um "Error Workflow" no N8N, de modo a ser alertado em casos de erro nos fluxos. Pode ser um workflow que ative uma mensagem em canais de mensageria (como Google Chat), envie um E-mail, ou outra ação desejada. Segue um exemplo:
+>
+> <img width="316" alt="Exemplo de configuração de Error Workflow no N8N" src="https://github.com/user-attachments/assets/427c731b-60c1-49f1-bbfb-c7802cd4fcc6">
+>
+> <img width="898" alt="Exemplo de um workflow de erro no N8N" src="https://github.com/user-attachments/assets/491c4f49-e4a8-40b6-8a77-d279f93bbf6d">
 
