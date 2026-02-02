@@ -1,5 +1,22 @@
 # Content Spark: Automação para Criação de Conteúdo no Instagram
 
+# Índice
+
+- [1. Visão Geral e Objetivo](#1-visão-geral-e-objetivo)
+- [2. A Estratégia: Três Ramos de Criação de Conteúdo](#2-a-estratégia-três-ramos-de-criação-de-conteúdo)
+  - [2.1. Content Spark - ORIGINAIS](#21-content-spark---originais)
+  - [2.2. Content Spark - BRASILIDADES](#22-content-spark---brasilidades)
+  - [2.3. Content Spark - SUGESTÕES](#23-content-spark---sugestões)
+- [3. Arquitetura e Ferramentas Comuns](#3-arquitetura-e-ferramentas-comuns)
+- [4. Manual de Operação Geral](#4-manual-de-operação-geral)
+  - [Modos de Execução](#modos-de-execução)
+  - [Gerenciamento](#gerenciamento)
+- [5. Passo a Passo para Replicar](#5-passo-a-passo-para-replicar)
+  - [Etapa 1: Preparar as Credenciais no N8N](#etapa-1-preparar-as-credenciais-no-n8n)
+  - [Etapa 2: Replicar a Planilha de Controle](#etapa-2-replicar-a-planilha-de-controle)
+  - [Etapa 3: Importar o Fluxo e Conectar as Ferramentas](#etapa-3-importar-o-fluxo-e-conectar-as-ferramentas)
+
+
 ## 1. Visão Geral e Objetivo
 
 O **Content Spark** é uma suíte de automação projetada para otimizar e escalar a criação de conteúdo para o Instagram. A solução transforma temas, tendências e referências em posts de alto engajamento (carrosséis ou imagens únicas) de forma ágil e inteligente, minimizando a intervenção humana e o tempo de produção.
@@ -140,6 +157,6 @@ Repita a **Etapa 3** para cada um dos fluxos que desejar replicar. Após isso, s
 
 > Para cada um dos fluxos de Criação de Conteúdo (BRASILIDADES, ORIGINAIS e SUGESTÕES), recomenda-se configurara um  "Error Workflow" no N8N, de modo a ser alertado em casos de erro nos fluxos. Pode ser um workflow que ative uma mensagem em canais de mensageria (como Google Chat), envie um E-mail, ou outra ação desejada. Segue um exemplo:
 >
-> <img width="898" height="533" alt="image" src="https://github.com/user-attachments/assets/491c4f49-e4a8-40b6-8a77-d279f93bbf6d" />
+> <img width="224.5" height="133.25" alt="image" src="https://github.com/user-attachments/assets/491c4f49-e4a8-40b6-8a77-d279f93bbf6d" />
 
 
