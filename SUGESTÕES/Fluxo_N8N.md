@@ -25,6 +25,39 @@ Este fluxo de trabalho, orquestrado no N8N, automatiza a criação de conteúdo 
 
 O fluxo segue 5 fases principais: **Ativação**, **Pesquisa**, **Criação**, **Geração Visual** e **Finalização**.
 
+### 1.1. Passo a Passo para Replicar o Fluxo SUGESTÕES
+
+Para replicar este fluxo em seu próprio ambiente, siga as etapas abaixo.
+
+#### **Etapa 1: Preparar as Credenciais no N8N**
+
+Antes de importar o fluxo, configure suas credenciais no N8N. Para este fluxo, as credenciais essenciais são:
+*   Google Sheets
+*   Google Drive
+*   Tess AI (para os múltiplos agentes de IA)
+*   Htmlcsstoimg API
+*   Google Chat / E-mail (para notificações)
+
+> **Dica:** Crie as credenciais **antes** de importar o JSON para que o N8N preencha os campos automaticamente.
+
+#### **Etapa 2: Replicar a Planilha de Controle**
+
+1.  **Faça uma cópia** do template da planilha: [**Template - Planilha de Controle**](https://docs.google.com/spreadsheets/d/18jAJI2m42CHGPKLJkozDQVHs3cH1msQZuvJHef3G3NY/edit)
+2.  Em sua nova planilha, acesse **`Extensões > Apps Script`** e conceda as permissões de execução do script.
+
+#### **Etapa 3: Importar o Fluxo e Conectar as Ferramentas**
+
+1.  **Importe o arquivo JSON** deste fluxo (`SUGESTÕES`) para a sua instância do N8N.
+2.  **Copie o URL do seu novo Webhook:**
+    *   No fluxo recém-importado, clique no nó **`Webhook`**.
+    *   No painel à direita, copie o URL da aba **"Production"**.
+3.  **Cole o Webhook na sua Planilha:**
+    *   Volte ao **Apps Script** da sua planilha.
+    *   Localize a variável referente a este fluxo.
+    *   **Substitua o link antigo** pelo novo URL do seu N8N e salve o projeto.
+4.  **Verifique os Nós Manualmente:**
+    *   Percorra os nós no N8N para confirmar se suas credenciais foram associadas corretamente. Verifique com atenção os nós que fazem chamadas aos agentes da **Tess AI** para garantir que os IDs e tokens estão corretos.
+
 
 ## 2. Diagrama do Fluxo (Mermaid - Por Fases)
 
