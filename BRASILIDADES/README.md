@@ -281,3 +281,5 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
     *   **Pasta do Drive:** No nó que salva os arquivos no Drive (ex: "Create folder" ou "Upload to Drive"), cole o **ID da sua pasta** no campo apropriado.
     *   **Agentes de IA:** Nos nós que fazem chamadas para a Tess AI, **substitua os IDs dos agentes antigos pelos novos IDs** que você criou.
 5.  **Verifique os Nós Manualmente:** Percorra os demais nós para confirmar se suas credenciais foram associadas corretamente.
+
+> IMPORTANTE: É necessário substituir as variáveis presentes no fluxo do N8N pelas suas específicas. Exemplos de variáveis: {{GOOGLE_SHEET_ID}} e {{TESS_API_TOKEN}}.
