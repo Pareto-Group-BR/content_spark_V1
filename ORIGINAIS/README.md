@@ -244,7 +244,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 ### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
 1.  **Importe o arquivo JSON** deste fluxo (`ORIGINAIS`) para a sua instância do N8N. [Link para Download](https://tess-workflows-files.storage.googleapis.com/0b39b75e6b2f2cd2f019796359567c95a275bcc9/sanitized_n8n_workflow.json) e **substitua todas as variáveis (credenciais, IDs de planilhas, agentes e similares)**.
-2.  **Copie o URL do seu novo Webhook** abra cada um dos nós de `Webhook` do fluxo "[PARETO] Gerenciamento do fluxo de criação de conteúdo" e copie a URL de  "Production" específico deles [Link para Download do arquivo JSON](https://cdn.tess.im/assets/uploads/a3812340-f54f-4953-8a3e-ff1d4c998d3b.json).
+2.  **Copie o URL do seu novo Webhook** abra cada um dos nós de `Webhook` do fluxo "[PARETO] Gerenciamento do fluxo de criação de conteúdo" e copie a URL de  "Production" específico deles [Link para Download do fluxo de Gerenciamento em JSON](https://tess-workflows-files.storage.googleapis.com/2ddbbf26789eaaec7377b525e4c2fb87e249704b/workflow_sanitized.json).
 3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_ORIGINAIS`, e salve.
 4.  **Atualize os IDs no N8N:**
     *   **Pasta do Drive:** No nó que cria a pasta no Drive (ex: `Create folder`), cole o **ID da sua pasta** no campo apropriado.
