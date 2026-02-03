@@ -154,26 +154,26 @@ Para simplificar a duplicação e o gerenciamento dos fluxos, a lógica de ativa
     *   **Substitua os links antigos** pelos novos URLs correspondentes que você copiou do seu fluxo de gerenciamento no N8N.
     *   Clique no ícone de "Salvar projeto" (disquete).
 
-### **Etapa 4: Importar e Configurar os Fluxos de Criação de Conteúdo**
-
-Agora, com o gerenciamento configurado, você importará os fluxos que efetivamente criam o conteúdo.
-
-1.  **Importe o Fluxo de Conteúdo Desejado:**
-    *   Importe o arquivo JSON de um dos fluxos principais (`ORIGINAIS`, `BRASILIDADES` ou `SUGESTÕES`) para a sua instância do N8N.
-
-    <img width="976" alt="Imagem do código no Apps Script mostrando a URL do webhook para ativar" src="https://github.com/user-attachments/assets/299d431a-4ba0-43bd-b4f2-771e1475f88a">
+  <img width="976" alt="Imagem do código no Apps Script mostrando a URL do webhook para ativar" src="https://github.com/user-attachments/assets/299d431a-4ba0-43bd-b4f2-771e1475f88a">
 
     <img width="977" alt="Imagem do código no Apps Script mostrando a URL do webhook para pausar" src="https://github.com/user-attachments/assets/4a492da7-4af6-4e16-bc9a-ec9f2186ecf4">
 
     <img width="938" alt="Imagem do código no Apps Script mostrando a URL do webhook para rodar manualmente" src="https://github.com/user-attachments/assets/749844a9-ddbf-46b2-b05a-94cbe1a2a09e">
 
-4.  **Verifique os Nós Manualmente:**
+### **Etapa 4: Importar e Configurar os Fluxos de Criação de Conteúdo**
+
+Agora, com o gerenciamento configurado, você **importará os fluxos que efetivamente criam o conteúdo**.
+
+1.  **Importe o Fluxo de Conteúdo Desejado:**
+    *   Importe o arquivo JSON de um dos fluxos principais (`ORIGINAIS`, `BRASILIDADES` ou `SUGESTÕES`) para a sua instância do N8N. Você encontra esses arquivos JSON diretamente na documentação específica de cada fluxo.
+
+2.  **Verifique os Nós Manualmente:**
     *   Percorra os nós do fluxo de trabalho no N8N para confirmar se suas credenciais foram associadas corretamente.
     *   Fique atento a nós de **Requisição HTTP (HTTP Request)**, que podem exigir a inclusão manual de um Token ou API Key diretamente no nó, caso a associação automática falhe.
 
-5.  **Repita a Etapa 4** para cada um dos outros fluxos (`BRASILIDADES`, `SUGESTÕES`) que desejar replicar. Após isso, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
+3.  **Repita a Etapa 2** para cada um dos outros fluxos (`BRASILIDADES`, `SUGESTÕES`, `ORIGINAIS`) que desejar replicar. Após isso, sua suíte Content Spark estará pronta para ser executada em seu ambiente.
 
-> Para cada um dos fluxos de Criação de Conteúdo (BRASILIDADES, ORIGINAIS e SUGESTÕES), recomenda-se configurar um "Error Workflow" no N8N, de modo a ser alertado em casos de erro nos fluxos. Pode ser um workflow que ative uma mensagem em canais de mensageria (como Google Chat), envie um E-mail, ou outra ação desejada. Segue um exemplo:
+> Para cada um dos fluxos de Criação de Conteúdo (BRASILIDADES, ORIGINAIS e SUGESTÕES), recomenda-se configurar um **"Error Workflow"** no N8N, de modo a ser alertado em casos de erro nos fluxos. Pode ser um workflow que ative uma mensagem em canais de mensageria (como Google Chat), envie um E-mail, ou outra ação desejada. Segue um exemplo:
 >
 > <img width="316" alt="Exemplo de configuração de Error Workflow no N8N" src="https://github.com/user-attachments/assets/427c731b-60c1-49f1-bbfb-c7802cd4fcc6">
 >
