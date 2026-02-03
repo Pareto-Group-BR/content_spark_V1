@@ -117,7 +117,7 @@ O agente é orquestrado pela plataforma **n8n** e se integra com diversas APIs p
 
 ## 5. Fluxo de Trabalho no N8N (Execução Técnica)
 
-Esta seção descreve o passo a passo da automação no n8n, desde a coleta de dados até o registro final. Para mais detalhes sobre os nós presentes no fluxo, APIs utilizadas e credenciais necessárias, consulte a seção [Fluxo do N8N](https://github.com/liviatagliari/pareto_content_spark_brasilidades/blob/main/Fluxo_N8N.md). Para acessar o arquivo JSON contendo o Fluxo BRASILIDADES, acesse [este link](https://cdn.tess.im/assets/uploads/2ce4845c-0bd8-4dd1-99c2-4a0373259bc0.json?_gl=1*xomccc*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw).
+Esta seção descreve o passo a passo da automação no n8n, desde a coleta de dados até o registro final. Para mais detalhes sobre os nós presentes no fluxo, APIs utilizadas e credenciais necessárias, consulte a seção [Fluxo do N8N](https://github.com/liviatagliari/pareto_content_spark_brasilidades/blob/main/Fluxo_N8N.md). Para acessar o arquivo JSON contendo o Fluxo BRASILIDADES, acesse [este link](https://tess-workflows-files.storage.googleapis.com/65e3d8e6a0c2fffdcbd0b499a31c93f9afc9d2aa/sanitized_workflow.json).
 
 1.  **Gatilhos (Schedule e Webhook):** O workflow pode ser iniciado de duas formas:
     *   **Agendamento (Cron):** O fluxo é ativado automaticamente à meia-noite nos dias da semana selecionados pelo usuário na planilha de controle.
@@ -273,7 +273,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 ### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
-1.  **Importe o arquivo JSON** deste fluxo (`BRASILIDADES`) para a sua instância do N8N. [Link para Dpwnload] (https://cdn.tess.im/assets/uploads/2ce4845c-0bd8-4dd1-99c2-4a0373259bc0.json?_gl=1*xomccc*_gcl_au*MTg4Nzg4OTA0My4xNzY5Njk3NTg4LjE0OTc4MDAyNzUuMTc3MDA1NzgwNS4xNzcwMDYwMjUw*_ga*OTM0Mzg4NjAxLjE3Njk2OTc1ODg.*_ga_K1Q8FJY3BS*czE3NzAwNTY0NjUkbzkkZzEkdDE3NzAwNjAyNTAkajUkbDAkaDA.*_ga_9D17W435GL*czE3NzAwNTI2OTgkbzI4JGcxJHQxNzcwMDYwMjUwJGo1JGwwJGgw)
+1.  **Importe o arquivo JSON** deste fluxo (`BRASILIDADES`) para a sua instância do N8N. [Link para Dpwnload](https://tess-workflows-files.storage.googleapis.com/65e3d8e6a0c2fffdcbd0b499a31c93f9afc9d2aa/sanitized_workflow.json) e **substitua todas as variáveis (credenciais, IDs de planilhas, agentes e similares)**.
 2.  **Copie o URL do seu novo Webhook** abra cada um dos nós de `Webhook` do fluxo "[PARETO] Gerenciamento do fluxo de criação de conteúdo" e copie a URL de  "Production" específico deles [Link para Download do arquivo JSON](https://cdn.tess.im/assets/uploads/a3812340-f54f-4953-8a3e-ff1d4c998d3b.json).
 3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_BRASILIDADES`, e salve.
 4.  **Atualize os IDs no N8N:**
