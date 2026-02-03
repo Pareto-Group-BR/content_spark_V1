@@ -138,7 +138,7 @@ Você precisará de sua própria versão da planilha que serve como centro de co
 Para simplificar a duplicação e o gerenciamento dos fluxos, a lógica de ativação, pausa e agendamento foi centralizada em um workflow à parte. É a partir dele que você obterá os webhooks para controlar os fluxos de criação de conteúdo diretamente pela planilha.
 
 1.  **Importe o Fluxo de Gerenciamento:**
-    *   Importe o arquivo [`(PARETO) Gerenciamento do fluxo de criação de conteúdo.json`](https://cdn.tess.im/assets/uploads/a3812340-f54f-4953-8a3e-ff1d4c998d3b.json) para a sua instância do N8N.
+    *   Importe o arquivo [`(PARETO) Gerenciamento do fluxo de criação de conteúdo.json`](https://tess-workflows-files.storage.googleapis.com/2ddbbf26789eaaec7377b525e4c2fb87e249704b/workflow_sanitized.json) para a sua instância do N8N.
     *   Este fluxo contém os webhooks que serão conectados aos botões da sua Planilha de Controle.
 
 2.  **Copie os URLs dos Webhooks de Gerenciamento:**
@@ -165,7 +165,8 @@ Para simplificar a duplicação e o gerenciamento dos fluxos, a lógica de ativa
 Agora, com o gerenciamento configurado, você **importará os fluxos que efetivamente criam o conteúdo**.
 
 1.  **Importe o Fluxo de Conteúdo Desejado:**
-    *   Importe o arquivo JSON de um dos fluxos principais (`ORIGINAIS`, `BRASILIDADES` ou `SUGESTÕES`) para a sua instância do N8N. Você encontra esses arquivos JSON diretamente na documentação específica de cada fluxo.
+    *   Importe o arquivo JSON de um dos fluxos principais (`ORIGINAIS`, `BRASILIDADES` ou `SUGESTÕES`) para a sua instância do N8N e **substitua todas as variáveis (credenciais, IDs de planilhas, agentes e similares)**.. Você encontra esses arquivos JSON diretamente na documentação específica de cada fluxo.
+    > IMPORTANTE: É fundamental substituir as variáveis presentes no fluxo do N8N pelas suas específicas. Exemplos de variáveis: {{GOOGLE_SHEET_ID}} e {{TESS_API_TOKEN}}.
 
 2.  **Verifique os Nós Manualmente:**
     *   Percorra os nós do fluxo de trabalho no N8N para confirmar se suas credenciais foram associadas corretamente.
