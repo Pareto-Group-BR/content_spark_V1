@@ -241,6 +241,7 @@ Para ilustrar o resultado final do processo, veja abaixo dois exemplos reais de 
 *   **Pasta de Criativos Gerados:** Crie sua própria pasta no Google Drive e substitua o ID presente no fluxo do N8N. fluxo(https://drive.google.com/drive/folders/1SuTClpwIvKs_vyyiftJY8bQpVmqiELYf))
 *   **Workflow no n8n (versão original):** [Link do Workflow](https://app.engine.pareto.io/workflow/RFiyrqPeQ5BtZCsM)
 *   **Canal no Google Chat (versão original):** [Link do Canal de avisos](https://chat.google.com/room/AAQAbJ7q6g4?cls=7)
+*   **Arquivo JSON do Fluxo BRASILIDADES:** [Link do Arquivo](https://tess-workflows-files.storage.googleapis.com/22bb2756067143e3f05e16e2764270261948b750/sanitized_workflow.json)
 *   **Exemplos - Testes Realizados:**
     *   [Teste 1](https://drive.google.com/drive/folders/18J9mKlbema34W0ra0z7I6KaEaZmpJ7AC)
     *   [Teste 2](https://drive.google.com/drive/folders/1NEtO5cV2g4OmbpnWomx4vVxtf31LWi4F)
@@ -273,7 +274,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 ### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
-1.  **Importe o arquivo JSON** deste fluxo (`BRASILIDADES`) para a sua instância do N8N. [Link para Dpwnload](https://tess-workflows-files.storage.googleapis.com/65e3d8e6a0c2fffdcbd0b499a31c93f9afc9d2aa/sanitized_workflow.json) e **substitua todas as variáveis (credenciais, IDs de planilhas, agentes e similares)**.
+1.  **Importe o arquivo JSON** deste fluxo (`BRASILIDADES`) para a sua instância do N8N. [Link para Dpwnload](https://tess-workflows-files.storage.googleapis.com/22bb2756067143e3f05e16e2764270261948b750/sanitized_workflow.json) e **substitua todas as variáveis (credenciais, IDs de planilhas, agentes e similares)**.
 2.  **Copie o URL do seu novo Webhook** abra cada um dos nós de `Webhook` do fluxo "[PARETO] Gerenciamento do fluxo de criação de conteúdo" e copie a URL de  "Production" específico deles [Link para Download do arquivo JSON](https://cdn.tess.im/assets/uploads/a3812340-f54f-4953-8a3e-ff1d4c998d3b.json).
 3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_BRASILIDADES`, e salve.
 4.  **Atualize os IDs no N8N:**
