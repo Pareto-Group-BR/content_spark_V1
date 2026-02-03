@@ -98,7 +98,7 @@ Antes de importar o fluxo, você precisa preparar todos os recursos externos.
 
 #### **Etapa 3: Importar e Configurar o Fluxo no N8N**
 
-1.  **Importe o arquivo JSON** deste fluxo (`ORIGINAIS`) para a sua instância do N8N. [Link para Download](https://tess-workflows-files.storage.googleapis.com/df7728b8ec793d9eca642f34fa521362056f6b9b/sanitized_workflow.json)
+1.  **Importe o arquivo JSON** deste fluxo (`ORIGINAIS`) para a sua instância do N8N. [Link para Download](https://tess-workflows-files.storage.googleapis.com/0b39b75e6b2f2cd2f019796359567c95a275bcc9/sanitized_n8n_workflow.json)
 2.  **Copie o URL do seu novo Webhook** abra cada um dos nós de `Webhook` do fluxo "[PARETO] Gerenciamento do fluxo de criação de conteúdo" e copie a URL de  "Production" específico deles [Link para Download do arquivo JSON](https://cdn.tess.im/assets/uploads/a3812340-f54f-4953-8a3e-ff1d4c998d3b.json).
 3.  **Cole o Webhook na sua Planilha** no Apps Script, na variável `WEBHOOK_URL_ORIGINAIS`, e salve.
 4.  **Atualize os IDs no N8N:**
@@ -505,4 +505,5 @@ Para erros identificados na automação, favor criar uma Issue associada a este 
 > *Obs: Lembre-se de criar as credenciais anteriormente no N8N, isso facilitará na importação do JSON, permitindo que ele seja preenchido com elas.*
 
 Baixe o arquivo JSON completo aqui:  
-[Link para Download](https://tess-workflows-files.storage.googleapis.com/df7728b8ec793d9eca642f34fa521362056f6b9b/sanitized_workflow.json)
+[Link para Download](https://tess-workflows-files.storage.googleapis.com/0b39b75e6b2f2cd2f019796359567c95a275bcc9/sanitized_n8n_workflow.json)
+> IMPORTANTE: É necessário substituir as variáveis presentes no fluxo do N8N pelas suas específicas. Exemplos de variáveis: {{GOOGLE_SHEET_ID}} e {{TESS_API_TOKEN}}.
