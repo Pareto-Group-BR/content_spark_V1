@@ -16,7 +16,7 @@ Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção 
 4.  **[Agente 32601: Filtro de Temas](#agente-32601-filtro-de-temas)**
     *   [Descrição](#descrição-2)
     *   [Prompt](#prompt-2)
-5.  **[Agente 31104: Identificador de Tendências](#agente-31104-identificador-de-tendências)**
+5.  **[Agente 31104: roteiro](#agente-31104-identificador-de-tendências)**
     *   [Descrição](#descrição-3)
     *   [Prompt](#prompt-3)
 6.  **[Agente 33079: Analisador de Capa](#agente-33079-analisador-de-capa)**
@@ -233,6 +233,9 @@ O JSON com os dados de tendências será fornecido a seguir.
 Este agente de IA atua como um Analista de Tendências qualitativo, especializado em identificar temas com potencial motivacional a partir de múltiplas fontes de dados, como Google Trends, Instagram e X (Twitter). Sua função principal é processar informações brutas e não estruturadas, focando em "sinais" de relevância (como viralização e persistência) e na validação cruzada entre plataformas para identificar tendências significativas.
 
 O processo do agente é fundamentado em um sistema de classificação flexível e adaptativo. Ele primeiro extrai e normaliza "sinais" de força, persistência e autoridade de cada dado de entrada, ao mesmo tempo que agrupa temas semanticamente equivalentes (ex: "Sucesso" e "Success"). Em seguida, aplica uma lógica hierárquica para atribuir um status a cada tema ("Confirmado" ou "Potencial"), baseado na força da evidência e na validação cruzada entre as fontes. O resultado final é um único e detalhado output em formato JSON, que não apenas lista os temas mais promissores, mas também fornece uma análise completa para cada um, incluindo os sinais detectados, a justificativa da sua classificação, o nível de urgência para a criação de conteúdo e sugestões de oportunidades criativas.
+
+> É possível **PERSONALIZAR esse prompt**, para adaptar o tipo de tendência para outros temas relevantes para o seu caso (e não necessariamente Motivacional).
+
 
 ### Prompt
 
