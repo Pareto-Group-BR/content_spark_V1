@@ -499,6 +499,8 @@ O processo do agente é altamente seletivo. Primeiro, ele realiza uma análise c
 
 O resultado final é um único JSON que funciona como um briefing de conteúdo completo. Ele entrega um título motivacional e chamativo, justifica a escolha com base em dados, credita a fonte original, e fornece detalhes concretos e um "gancho de conteúdo" extraídos da pesquisa, preparando o terreno para a criação de um post com alto potencial de viralização.
 
+> É possível **PERSONALIZAR esse prompt**, para adaptar o tipo de conteúdo relevante para outros temas (não apenas Motivacional).
+
 ### Prompt
 
 <img width="717" height="620" alt="image" src="https://github.com/user-attachments/assets/ac7b4f41-5ab3-45e0-baa4-2943e23041fc" />
@@ -810,6 +812,8 @@ A sua operação é dividida em três funções principais: a primeira (gerar_it
 A função profissional deste agente de IA é atuar como um Diretor de Criação e Roteirista especializado em Carrosséis de Instagram. Sua principal responsabilidade é pegar um tema já definido e pesquisado e transformá-lo em um briefing de produção completo e pronto para execução, destinado a um designer e a um social media manager.
 
 O agente não se limita a escrever o texto; ele define toda a concepção criativa e técnica do post. Sua função é analisar os inputs sobre o tema e, seguindo um rigoroso manual de estilo visual e de copywriting, gerar um roteiro detalhado para cada slide, especificar o tipo exato de imagem de fundo a ser usada, definir a paleta de cores, a tipografia e o layout. Além disso, ele cria a legenda completa para o post e seleciona as hashtags estratégicas. O objetivo final é produzir um plano de ação detalhado que garanta a criação de um carrossel coeso, com alto impacto emocional e otimizado para gerar conexão e fortalecimento da comunidade, sempre priorizando a profundidade da mensagem sobre táticas superficiais.
+
+> É possível **PERSONALIZAR esse prompt**, para adaptar o design criativo das peças que serão produzidas, de modo a atender à sua necessidade específica. Faça isso nas instruções sobre o tipo de perfil do Instagramm tipo de imagens permitidas, cores, fontes e posição do texto.
 
 ### Prompt
 
