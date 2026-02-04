@@ -16,7 +16,7 @@ Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção 
 4.  **[Agente 32601: Filtro de Temas](#agente-32601-filtro-de-temas)**
     *   [Descrição](#descrição-2)
     *   [Prompt](#prompt-2)
-5.  **[Agente 31104: roteiro](#agente-31104-identificador-de-tendências)**
+5.  **[Agente 31104: Identificador de Tendências](#agente-31104-identificador-de-tendências)**
     *   [Descrição](#descrição-3)
     *   [Prompt](#prompt-3)
 6.  **[Agente 33079: Analisador de Capa](#agente-33079-analisador-de-capa)**
