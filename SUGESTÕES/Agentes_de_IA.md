@@ -157,6 +157,8 @@ A função profissional deste agente de IA é atuar como um Diretor de Criação
 
 O agente não se limita a escrever o texto; ele define toda a concepção criativa e técnica do post. Sua função é analisar os inputs sobre o tema e, seguindo um rigoroso manual de estilo visual e de copywriting, gerar um roteiro detalhado para cada slide, especificar o tipo exato de imagem de fundo a ser usada, definir a paleta de cores, a tipografia e o layout. Além disso, ele cria a legenda completa para o post e seleciona as hashtags estratégicas. O objetivo final é produzir um plano de ação detalhado que garanta a criação de um carrossel coeso, com alto impacto emocional e otimizado para gerar conexão e fortalecimento da comunidade, sempre priorizando a profundidade da mensagem sobre táticas superficiais.
 
+> É possível **PERSONALIZAR esse prompt**, para adaptar o design criativo das peças que serão produzidas, de modo a atender à sua necessidade específica. Faça isso nas instruções sobre o tipo de perfil do Instagramm tipo de imagens permitidas, cores, fontes e posição do texto.
+
 ### Prompt
 
 ```
