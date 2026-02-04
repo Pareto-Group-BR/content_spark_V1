@@ -2,7 +2,7 @@
 
 > Este repositório contém a documentação completa do Agente de Criação de Conteúdo - SUGESTÕES ("Content Spark - SUGESTÕES"), uma automação projetada para gerar Carrosséis com **foco motivacional** para Instagram com alto potencial de engajamento, baseados em tendências do momento. Com isso, as artes e a comunicação serão mais voltadas para esse objetivo.
 
-> Cabe destacar que esse foco motivacional foi pré-definido devido ao objetivo original deste fluxo, com base nas boas práticas de mercaso. **Ao duplicar o fluxo, é possível  alterar esse foco Motivacional diretamente nos prompts dos agentes de IA que criam o ROTEIRO e IMAGEM DE FUNDO, em caso de de desejar fazer uma mudança de objetivo.**
+> Cabe destacar que esse foco motivacional foi pré-definido devido ao objetivo original deste fluxo, com base nas boas práticas de mercaso. **Ao duplicar o fluxo, é possível  alterar esse foco Motivacional diretamente nos prompts do agente de IA que cria o ROTEIRO, em caso de de desejar fazer uma mudança de objetivo.**
 
 ## Índice
 1.  [**Visão Geral e Objetivo**](#1-visão-geral-e-objetivo)
