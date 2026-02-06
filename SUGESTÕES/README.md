@@ -128,7 +128,7 @@ Confira mais detalhes sobre o Fluxo do N8N, com todas as suas etapas, nós, APIs
 Este fluxo utiliza múltiplos agentes da plataforma Tess AI, encadeados para realizar tarefas específicas:
 
 *   **Agente de Pesquisa Aprofundada (ID: 32754):** Responsável por pesquisar e coletar informações detalhadas sobre o tema proposto.
-*   **Criador de Roteiro de Post Instagram (ID: 32061):** Transforma o tema e a pesquisa em um roteiro completo para o carrossel.
+*   **Criador de Roteiro de Post Instagram (ID: 38929):** Transforma o tema e a pesquisa em um roteiro completo para o carrossel.
 *   **Agente Criador Carrosséis Instagram [FUNDO] (ID: 32060):** Gera as imagens de fundo para o carrossel com base no roteiro.
 *   **Criar anúncios de Imagem em HTML (ID: 32059):** Monta os slides do carrossel combinando textos e imagens em formato HTML.
 
