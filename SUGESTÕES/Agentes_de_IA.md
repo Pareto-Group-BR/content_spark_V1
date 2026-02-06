@@ -12,7 +12,7 @@ Este documento detalha a arquitetura, funcionalidade e prompts de uma coleção 
 2.  **[Agente 32754: Pesquisa Aprofundada](#agente-32754-pesquisa-aprofundada)**
     *   [Descrição](#descrição)
     *   [Prompt](#prompt)
-3.  **[Agente 32061: Criador de Roteiro](#agente-32061-criador-de-roteiro)**
+3.  **[Agente 38929: Criador de Roteiro](#agente-38929-criador-de-roteiro)**
     *   [Descrição](#descrição-1)
     *   [Prompt](#prompt-1)
 4.  **[Agente 32060: Criador de Carrosséis [Fundo]](#agente-32060-criador-de-carrosséis-fundo)**
@@ -143,13 +143,13 @@ A sua operação é dividida em três funções principais: a primeira (`gerar_i
 
 ---
 
-## Agente 32061: Criador de Roteiro
+## Agente 38929: Criador de Roteiro
 
-- **ID do agente:** 32061
+- **ID do agente:** 38929
 - **Workspace ID:** 1004533
 - **LLM:** ChatGPT 4.o Latest (Temperatura: Criativa)
 - **Tools:** Ferramentas
-- **Link público:** [https://embed.tess.im/pt-BR/agents/criador-de-roteiro-post-instagram-pareto-novo-design-KuTHCw/public](https://embed.tess.im/pt-BR/agents/criador-de-roteiro-post-instagram-pareto-novo-design-KuTHCw/public)
+- **Link público:** [https://embed.tess.im/pt-BR/agents/criador-de-roteiro-post-instagram-pareto-sugestoes-KjJDG1/public](https://embed.tess.im/pt-BR/agents/criador-de-roteiro-post-instagram-pareto-sugestoes-KjJDG1/public)
 
 ### Descrição
 
